@@ -2,582 +2,366 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Safaricom - Demo HTML Structure</title>
+    <title>Safaricom Training - HTML + MySQL (Training Data)</title>
 
-    <meta name="description" content="Example HTML-only structure for Safaricom training." />
-    <meta name="keywords" content="Safaricom, mobile money, bundles, airtime" />
-    <meta name="author" content="Safaricom Training Demo" />
+    <meta name="description" content="HTML-only Safaricom training page. Includes MySQL schema and sample data shown using HTML tables." />
+    <meta name="keywords" content="Safaricom, M-Pesa, airtime, bundles, MySQL, training" />
+    <meta name="author" content="Safaricom Training" />
 
     <link rel="icon" href="data:," />
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Safaricom - Demo HTML Structure" />
-    <meta property="og:description" content="Example HTML-only structure for Safaricom training." />
+    <meta property="og:title" content="Safaricom Training - HTML + MySQL" />
+    <meta property="og:description" content="HTML-only page with MySQL schema and sample data." />
     <meta property="og:type" content="website" />
 
-    <!-- Twitter -->
     <meta name="twitter:card" content="summary" />
 
-    <!-- Preload example (no JS/CSS) -->
-   <style>
-  /* ===== RESET ===== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-}
+    <link rel="preload" href="#" as="document" />
 
-body {
-  line-height: 1.6;
-  background: #f5f7fb;
-  color: #1a1a1a;
-}
+    <style>
+      :root {
+        --bg: #0b1220;
+        --card: #111b33;
+        --text: #e7eefc;
+        --muted: #b7c3e3;
+        --accent: #2dd4bf;
+        --border: rgba(255, 255, 255, 0.12);
+      }
 
-/* ===== LAYOUT ===== */
-header, footer {
-  background: #00a651; /* Safaricom green vibe */
-  color: white;
-  padding: 20px;
-}
+      * { box-sizing: border-box; }
 
-header h1 {
-  font-size: 28px;
-}
+      body {
+        margin: 0;
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji",
+          "Segoe UI Emoji";
+        background: radial-gradient(1200px circle at 20% 0%, rgba(45, 212, 191, 0.25), transparent 60%), var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+      }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-  margin-top: 10px;
-}
+      a { color: var(--accent); text-decoration: none; }
+      a:hover { text-decoration: underline; }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
+      header, main, footer {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 22px 18px;
+      }
 
-nav a:hover {
-  text-decoration: underline;
-}
+      header {
+        border: 1px solid var(--border);
+        background: linear-gradient(180deg, rgba(17, 27, 51, 0.9), rgba(17, 27, 51, 0.6));
+        border-radius: 14px;
+      }
 
-/* ===== MAIN ===== */
-main {
-  max-width: 1100px;
-  margin: auto;
-  padding: 20px;
-}
+      nav ul { list-style: none; padding: 0; margin: 10px 0; display: flex; flex-wrap: wrap; gap: 10px; }
+      nav a {
+        display: inline-block;
+        padding: 8px 12px;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        background: rgba(0, 0, 0, 0.15);
+      }
 
-/* ===== SECTIONS ===== */
-section {
-  background: white;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-}
+      main section {
+        margin-top: 18px;
+        border: 1px solid var(--border);
+        background: rgba(17, 27, 51, 0.6);
+        border-radius: 14px;
+        padding: 18px;
+      }
 
-/* ===== TABLE ===== */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 10px;
-}
+      h1 { margin: 0 0 6px 0; font-size: 2rem; }
+      h2 { margin: 0 0 12px 0; font-size: 1.5rem; }
+      h3, h4 { margin: 0 0 8px 0; }
+      p { color: var(--muted); }
 
-th, td {
-  border: 1px solid #ddd;
-  padding: 10px;
-  text-align: left;
-}
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+        overflow: hidden;
+        border-radius: 12px;
+        border: 1px solid var(--border);
+      }
 
-th {
-  background: #00a651;
-  color: white;
-}
+      th, td {
+        padding: 10px 12px;
+        border-bottom: 1px solid var(--border);
+      }
 
-/* ===== FORMS ===== */
-input, select, textarea, button {
-  width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
+      th {
+        text-align: left;
+        background: rgba(45, 212, 191, 0.08);
+      }
 
-button {
-  background: #00a651;
-  color: white;
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
-}
+      tr:last-child td, tr:last-child th { border-bottom: none; }
 
-button:hover {
-  background: #007c3f;
-}
+      caption { caption-side: top; text-align: left; color: var(--muted); padding: 10px 12px; }
 
-/* ===== DETAILS (FAQ) ===== */
-details {
-  margin-bottom: 10px;
-  padding: 10px;
-  background: #f0f0f0;
-  border-radius: 5px;
-}
+      form {
+        margin-top: 10px;
+        display: grid;
+        gap: 12px;
+      }
 
-/* ===== FOOTER ===== */
-footer {
-  text-align: center;
-  margin-top: 20px;
-}
+      fieldset {
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 14px;
+        background: rgba(0, 0, 0, 0.12);
+      }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-  }
-}  
-   </style>
-    
+      legend { padding: 0 8px; color: var(--text); }
+
+      input, select, button {
+        font: inherit;
+      }
+
+      input[type="search"], input[type="text"], input[type="tel"], input[type="number"], select {
+        width: 100%;
+        padding: 10px 12px;
+        border-radius: 12px;
+        border: 1px solid var(--border);
+        background: rgba(0, 0, 0, 0.12);
+        color: var(--text);
+      }
+
+      .search-row {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 10px;
+      }
+
+      button {
+        padding: 10px 14px;
+        border-radius: 12px;
+        border: 1px solid var(--border);
+        background: rgba(45, 212, 191, 0.12);
+        color: var(--text);
+        cursor: pointer;
+      }
+
+      button:hover { background: rgba(45, 212, 191, 0.22); }
+
+      footer {
+        color: var(--muted);
+        text-align: center;
+        padding-bottom: 34px;
+      }
+
+      footer ul { list-style: none; padding: 0; margin: 12px 0 0 0; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+
+      details {
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 10px 12px;
+        background: rgba(0, 0, 0, 0.08);
+      }
+
+      summary { cursor: pointer; color: var(--text); }
+
+      blockquote {
+        margin: 12px 0;
+        padding: 10px 12px;
+        border-left: 4px solid var(--accent);
+        background: rgba(45, 212, 191, 0.06);
+        border-radius: 10px;
+        color: var(--muted);
+      }
+
+      abbr[title] { text-decoration: underline dotted; }
+
+      @media (max-width: 640px) {
+        header, main, footer { padding: 18px 12px; }
+      }
+    </style>
   </head>
 
   <body>
-    <a href="#main" id="top" tabindex="-1">Skip to main content</a>
+    <a href="#main" tabindex="-1">Skip to main content</a>
 
-    <header role="banner" aria-label="Primary header">
-      <div>
-        <h1>Safaricom</h1>
-        <p>Mobile services, bundles, and M-Pesa (HTML-only demo)</p>
-      </div>
+    <header role="banner" aria-label="Safaricom header">
+      <h1>Safaricom</h1>
+      <p>HTML-only training structure with example MySQL schema &amp; data.</p>
 
       <nav aria-label="Primary navigation">
         <ul>
           <li><a href="#services">Services</a></li>
           <li><a href="#mpesa">M-Pesa</a></li>
-          <li><a href="#bundles">Bundles</a></li>
+          <li><a href="#bundles">Data Bundles</a></li>
           <li><a href="#support">Support</a></li>
+          <li><a href="#mysql">MySQL Training</a></li>
           <li><a href="#faq">FAQ</a></li>
         </ul>
-
-        <form action="#" method="get" role="search" aria-label="Search form">
-          <label for="site-search">Search</label>
-          <input
-            id="site-search"
-            name="q"
-            type="search"
-            placeholder="Search Safaricom..."
-            autocomplete="on"
-            required
-            minlength="2"
-          />
-          <button type="submit">Search</button>
-          <button type="reset">Reset</button>
-        </form>
       </nav>
-    </header>
 
-    <div role="status" aria-live="polite">
-      <p><strong>Note:</strong> This page is HTML-only (no CSS/JS).</p>
-    </div>
+      <form role="search" action="#" method="get" aria-label="Search safaricom content">
+        <label for="q">Search</label>
+        <input
+          id="q"
+          name="q"
+          type="search"
+          placeholder="Search..."
+          autocomplete="on"
+          minlength="2"
+          required
+        />
+        <button type="submit">Search</button>
+        <button type="reset">Reset</button>
+      </form>
+    </header>
 
     <main id="main" role="main">
       <section aria-labelledby="hero-title">
-        <header>
-          <h2 id="hero-title">Welcome to Safaricom (Training HTML)</h2>
-          <p>
-            This is a structured example containing many standard HTML elements:
-            headings, links, lists, tables, forms, media, details/summary,
-            semantic sections, and more.
-          </p>
-        </header>
-
-        <figure>
-          <img
-            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
-            alt="Safaricom logo placeholder"
-            width="120"
-            height="40"
-            loading="lazy"
-          />
-          <figcaption>Logo placeholder image</figcaption>
-        </figure>
-
-        <div>
-          <a href="#services">Explore services</a>
-          <br />
-          <a href="https://www.safaricom.co.ke/" target="_blank" rel="noopener noreferrer">
-            Visit official website
-          </a>
-        </div>
+        <h2 id="hero-title">Welcome</h2>
+        <p>
+          This document contains normal HTML elements and attributes (no CSS, no JavaScript).
+          The MySQL part is training-only: it shows how tables/rows might look.
+        </p>
       </section>
 
       <section id="services" aria-labelledby="services-title">
-        <h3 id="services-title">Services</h3>
+        <h2 id="services-title">Services</h2>
 
-        <article>
-          <header>
-            <h4>Airtime & Calling</h4>
-            <p>Recharge, buy airtime, and manage your line.</p>
-          </header>
-
-          <p>
-            Example content for airtime section. Use lists, links, and inline formatting:
-            <strong>strong</strong>, <em>emphasis</em>, <mark>highlight</mark>,
-            <small>small text</small>, <code>code</code>,
-            <span>span</span>, <span style="display:none;">hidden</span>.
-          </p>
-
+        <article aria-labelledby="airtime-title">
+          <h3 id="airtime-title">Airtime &amp; Calling</h3>
+          <p>Recharge, buy airtime, and manage your line.</p>
           <ul>
-            <li><a href="#bundles">See bundles</a></li>
-            <li><a href="#support">Support</a></li>
+            <li><a href="#bundles">Bundles</a></li>
+            <li><a href="#support">Contact support</a></li>
           </ul>
         </article>
 
-        <article id="mpesa" aria-labelledby="mpesa-title">
-          <header>
-            <h4 id="mpesa-title">M-Pesa</h4>
-            <p>Send money, pay bills, and manage your wallet.</p>
-          </header>
-
-          <ol>
-            <li>Register</li>
-            <li>Verify number</li>
-            <li>Start using M-Pesa</li>
-          </ol>
-
-          <blockquote cite="https://example.com/">
-            “M-Pesa is easy and convenient.”
-          </blockquote>
-
-          <p>
-            Abbreviation example:
-            <abbr title="Mobile Money">MM</abbr>.
-          </p>
-
-          <dl>
-            <dt>Airtime</dt>
-            <dd>Recharge for calling and SMS.</dd>
-
-            <dt>Bundles</dt>
-            <dd>Data/voice/SMS packages depending on plan.</dd>
-
-            <dt>Wallet</dt>
-            <dd>M-Pesa account balance.</dd>
-          </dl>
+        <article aria-labelledby="mpesa-short-title">
+          <h3 id="mpesa-short-title">M-Pesa</h3>
+          <p>Send money, pay bills, and manage your wallet.</p>
         </article>
       </section>
 
-      <section id="bundles" aria-labelledby="bundles-title">
-        <h3 id="bundles-title">Data Bundles</h3>
+      <section id="mpesa" aria-labelledby="mpesa-title">
+        <h2 id="mpesa-title">M-Pesa</h2>
 
-        <table aria-label="Example data bundle table">
-          <caption>Popular example bundles</caption>
+        <ol>
+          <li>Register (if needed)</li>
+          <li>Verify your number</li>
+          <li>Use wallet features</li>
+        </ol>
+
+        <blockquote cite="https://www.safaricom.co.ke/">M-Pesa is convenient for everyday transactions.</blockquote>
+
+        <p>
+          Abbreviation example: <abbr title="Mobile Money">MM</abbr>.
+        </p>
+
+        <dl>
+          <dt>Wallet</dt>
+          <dd>Stores available balance for payments.</dd>
+          <dt>Bill payments</dt>
+          <dd>Pay services using your wallet.</dd>
+        </dl>
+      </section>
+
+      <section id="bundles" aria-labelledby="bundles-title">
+        <h2 id="bundles-title">Data Bundles</h2>
+
+        <table aria-label="Example data bundles">
+          <caption>Popular training bundles</caption>
           <thead>
             <tr>
-              <th scope="col">Bundle</th>
+              <th scope="col">Bundle Name</th>
               <th scope="col">Validity</th>
+              <th scope="col">Data</th>
               <th scope="col">Price (KES)</th>
-              <th scope="col">Best for</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <th scope="row">1GB Daily</th>
               <td>1 Day</td>
-              <td>Example 50</td>
-              <td>Browsing</td>
+              <td>1 GB</td>
+              <td>50</td>
             </tr>
             <tr>
               <th scope="row">3GB Weekly</th>
               <td>7 Days</td>
-              <td>Example 300</td>
-              <td>Social media</td>
+              <td>3 GB</td>
+              <td>300</td>
             </tr>
             <tr>
               <th scope="row">10GB Monthly</th>
               <td>30 Days</td>
-              <td>Example 950</td>
-              <td>Work & streaming</td>
+              <td>10 GB</td>
+              <td>950</td>
             </tr>
           </tbody>
-          <tfoot>
-            <tr>
-              <td colspan="4">Prices shown are placeholders for training.</td>
-            </tr>
-          </tfoot>
         </table>
+
+        <p>
+          Note: values above are placeholders for training.
+        </p>
       </section>
 
-      <section aria-labelledby="forms-title">
-        <h3 id="forms-title">Example Forms (HTML-only)</h3>
+      <section id="support" aria-labelledby="support-title">
+        <h2 id="support-title">Support</h2>
 
-        <form action="#" method="post" enctype="application/x-www-form-urlencoded">
+        <form action="#" method="get" aria-label="Support request form">
           <fieldset>
-            <legend>Customer Details</legend>
+            <legend>Contact support</legend>
 
             <div>
-              <label for="full-name">Full name</label>
-              <input
-                id="full-name"
-                name="fullName"
-                type="text"
-                autocomplete="name"
-                placeholder="e.g., Brian Kipkorir"
-                required
-                maxlength="80"
-              />
-            </div>
-
-            <div>
-              <label for="msisdn">Phone number</label>
-              <input
-                id="msisdn"
-                name="msisdn"
-                type="tel"
-                inputmode="tel"
-                autocomplete="tel"
-                placeholder="e.g., 07xxxxxxxx"
-                required
-                pattern="^07[0-9]{8}$"
-              />
-            </div>
-
-            <div>
-              <label for="email">Email</label>
-              <input
-                id="email"
-                name="email"
-                type="email"
-                autocomplete="email"
-                placeholder="name@example.com"
-              />
-            </div>
-
-            <div>
-              <label for="dob">Date of birth</label>
-              <input id="dob" name="dob" type="date" />
-            </div>
-
-            <div>
-              <label for="country">Country</label>
-              <select id="country" name="country" required>
+              <label for="topic">Topic</label>
+              <select id="topic" name="topic" required>
                 <option value="">Select...</option>
-                <option value="KE" selected>Kenya</option>
-                <option value="TZ">Tanzania</option>
-                <option value="UG">Uganda</option>
+                <option value="sim">SIM issues</option>
+                <option value="mpesa">M-Pesa issues</option>
+                <option value="bundles">Bundle problems</option>
               </select>
             </div>
 
             <div>
-              <label>Preferred service</label>
-              <div>
-                <input id="svc-mpesa" name="service" type="radio" value="mpesa" checked />
-                <label for="svc-mpesa">M-Pesa</label>
-              </div>
-              <div>
-                <input id="svc-airtime" name="service" type="radio" value="airtime" />
-                <label for="svc-airtime">Airtime</label>
-              </div>
-              <div>
-                <input id="svc-bundles" name="service" type="radio" value="bundles" />
-                <label for="svc-bundles">Bundles</label>
-              </div>
-
-            <div>
-              <label>Interests</label>
-              <div>
-                <input id="i1" name="interests" type="checkbox" value="data" checked />
-                <label for="i1">Data bundles</label>
-              </div>
-              <div>
-                <input id="i2" name="interests" type="checkbox" value="bills" />
-                <label for="i2">Pay bills</label>
-              </div>
-              <div>
-                <input id="i3" name="interests" type="checkbox" value="international" />
-                <label for="i3">International</label>
-              </div>
-
-            <div>
-              <label for="amount">Top-up amount (KES)</label>
+              <label for="detail">Details</label>
               <input
-                id="amount"
-                name="amount"
-                type="number"
-                min="10"
-                max="50000"
-                step="10"
-                value="100"
+                id="detail"
+                name="detail"
+                type="text"
+                maxlength="200"
+                placeholder="Describe your issue..."
+                required
               />
             </div>
 
             <div>
-              <label for="range">Satisfaction level</label>
-              <input id="range" name="satisfaction" type="range" min="0" max="10" value="7" />
-              <meter min="0" max="10" value="7">7/10</meter>
-            </div>
-
-            <div>
-              <label for="message">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                rows="4"
-                cols="40"
-                placeholder="Write your request..."
-                required
-                minlength="10"
-                maxlength="500"
-              ></textarea>
-            </div>
-
-            <div>
-              <label for="attachment">Attachment (optional)</label>
-              <input id="attachment" name="attachment" type="file" />
-              <small id="attachment-help">Accepted formats depend on server (placeholder).</small>
-            </div>
-
-            <div>
-              <input id="terms" name="terms" type="checkbox" required />
-              <label for="terms">I agree to terms (placeholder)</label>
+              <button type="submit">Send</button>
+              <button type="reset">Reset</button>
             </div>
           </fieldset>
-
-          <div>
-            <button type="submit">Submit</button>
-            <button type="button" onclick="void(0)">Button</button>
-          </div>
-        </form>
-
-        <hr />
-
-        <details open>
-          <summary>Training HTML checklist</summary>
-          <ul>
-            <li>Semantic sections: header, nav, main, section, article, footer</li>
-            <li>Interactive elements: form controls, details/summary, links</li>
-            <li>Text semantics: strong, em, mark, code, abbr, blockquote, q</li>
-            <li>Media: img, video (placeholder), audio (placeholder)</li>
-          </ul>
-        </details>
-      </section>
-
-      <section aria-labelledby="media-title">
-        <h3 id="media-title">Media (Placeholders)</h3>
-
-        <video
-          controls
-          width="320"
-          height="180"
-          preload="metadata"
-          poster="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
-        >
-          <source src="data:video/mp4;base64," type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-
-        <audio controls preload="metadata">
-          <source src="data:audio/wav;base64," type="audio/wav" />
-          Your browser does not support the audio element.
-        </audio>
-
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="200"
-          height="60"
-          role="img"
-          aria-label="Simple SVG placeholder"
-        >
-          <title>SVG placeholder</title>
-          <rect x="0" y="0" width="200" height="60" fill="none" stroke="black" />
-          <text x="10" y="35">Safaricom SVG</text>
-        </svg>
-      </section>
-
-      <section id="support" aria-labelledby="support-title">
-        <h3 id="support-title">Support</h3>
-
-        <form action="#" method="get">
-          <label for="support-topic">Topic</label>
-          <select id="support-topic" name="topic" required>
-            <option value="">Select topic...</option>
-            <option value="sim">SIM issues</option>
-            <option value="mpesa">M-Pesa issues</option>
-            <option value="bundles">Bundle problems</option>
-          </select>
-
-          <label for="support-detail">Details</label>
-          <input
-            id="support-detail"
-            name="detail"
-            type="text"
-            required
-            maxlength="200"
-            placeholder="Describe your issue..."
-          />
-
-          <button type="submit">Get help</button>
         </form>
 
         <p>
-          Tip: Use semantic HTML to support accessibility. Links and forms include labels for screen readers.
+          Tip: use labels and semantic sections for accessibility.
         </p>
       </section>
 
-      <section id="faq" aria-labelledby="faq-title">
-        <h3 id="faq-title">Frequently Asked Questions</h3>
-
-        <div role="list" aria-label="FAQ items">
-          <details>
-            <summary>How do I buy data bundles?</summary>
-            <p>Use the bundles menu and follow the prompts (placeholder text).</p>
-          </details>
-
-          <details>
-            <summary>How do I access M-Pesa?</summary>
-            <p>Open your M-Pesa app and sign in or register (placeholder text).</p>
-          </details>
-
-          <details>
-            <summary>How do I contact support?</summary>
-            <p>Go to Support section and submit your request (placeholder text).</p>
-          </details>
-        </div>
-      </section>
-
-      <!-- MySQL Training Content (HTML-only: no real DB connection) -->
       <section id="mysql" aria-labelledby="mysql-title">
-        <h3 id="mysql-title">MySQL Training (Database Schema + Sample Data)</h3>
+        <h2 id="mysql-title">MySQL Training (Schema + Sample Data)</h2>
+
         <p>
-          This section demonstrates <strong>typical MySQL tables</strong> for a Safaricom-like system using <em>HTML only</em>.
-          It does not connect to a database.
+          This section shows example MySQL tables and sample rows using <strong>HTML tables</strong>.
+          There is no database connection (HTML cannot connect to MySQL by itself).
         </p>
 
         <article aria-labelledby="schema-title">
-          <h4 id="schema-title">Schema Overview</h4>
-          <ul>
-            <li><strong>customers</strong>: user profiles (MSISDN, name, email)</li>
-            <li><strong>services</strong>: supported services (Airtime, Bundles, M-Pesa)</li>
-            <li><strong>bundles</strong>: data bundles catalog</li>
-            <li><strong>transactions</strong>: payment and top-up records</li>
-            <li><strong>faqs</strong>: FAQ content</li>
-          </ul>
-        </article>
-
-        <article aria-labelledby="table-list-title">
-          <h4 id="table-list-title">Tables</h4>
-          <table aria-label="MySQL tables list">
-            <caption>Example tables (training)</caption>
+          <h3 id="schema-title">Example schema (conceptual)</h3>
+          <table aria-label="Schema overview">
+            <caption>Typical Safaricom-like tables</caption>
             <thead>
               <tr>
                 <th scope="col">Table</th>
-                <th scope="col">Primary key</th>
-                <th scope="col">Typical columns</th>
+                <th scope="col">Primary Key</th>
+                <th scope="col">Columns (examples)</th>
               </tr>
             </thead>
             <tbody>
@@ -610,151 +394,146 @@ footer {
           </table>
         </article>
 
-        <article aria-labelledby="sample-data-title">
-          <h4 id="sample-data-title">Sample Data (HTML Tables)</h4>
+        <article aria-labelledby="rows-title">
+          <h3 id="rows-title">Sample rows (training data)</h3>
 
-          <h5>bundles</h5>
-          <table aria-label="Example bundles data">
-            <caption>Example rows: bundles</caption>
-            <thead>
-              <tr>
-                <th scope="col">bundle_id</th>
-                <th scope="col">bundle_name</th>
-                <th scope="col">data_gb</th>
-                <th scope="col">validity_days</th>
-                <th scope="col">price_kes</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">101</th>
-                <td>1GB Daily</td>
-                <td>1.0</td>
-                <td>1</td>
-                <td>50</td>
-              </tr>
-              <tr>
-                <th scope="row">103</th>
-                <td>3GB Weekly</td>
-                <td>3.0</td>
-                <td>7</td>
-                <td>300</td>
-              </tr>
-              <tr>
-                <th scope="row">110</th>
-                <td>10GB Monthly</td>
-                <td>10.0</td>
-                <td>30</td>
-                <td>950</td>
-              </tr>
-            </tbody>
-          </table>
+          <section aria-labelledby="bundles-rows-title">
+            <h4 id="bundles-rows-title">bundles</h4>
+            <table aria-label="bundles sample data">
+              <caption>Example bundles rows</caption>
+              <thead>
+                <tr>
+                  <th scope="col">bundle_id</th>
+                  <th scope="col">bundle_name</th>
+                  <th scope="col">data_gb</th>
+                  <th scope="col">validity_days</th>
+                  <th scope="col">price_kes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">101</th>
+                  <td>1GB Daily</td>
+                  <td>1.0</td>
+                  <td>1</td>
+                  <td>50</td>
+                </tr>
+                <tr>
+                  <th scope="row">103</th>
+                  <td>3GB Weekly</td>
+                  <td>3.0</td>
+                  <td>7</td>
+                  <td>300</td>
+                </tr>
+                <tr>
+                  <th scope="row">110</th>
+                  <td>10GB Monthly</td>
+                  <td>10.0</td>
+                  <td>30</td>
+                  <td>950</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
 
-          <h5>customers</h5>
-          <table aria-label="Example customers data">
-            <caption>Example rows: customers</caption>
-            <thead>
-              <tr>
-                <th scope="col">customer_id</th>
-                <th scope="col">full_name</th>
-                <th scope="col">msisdn</th>
-                <th scope="col">email</th>
-                <th scope="col">country_code</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Brian Kipkorir</td>
-                <td>0712345678</td>
-                <td>brian@example.com</td>
-                <td>KE</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Amina Hassan</td>
-                <td>0722223333</td>
-                <td>amina@example.com</td>
-                <td>KE</td>
-              </tr>
-            </tbody>
-          </table>
+          <section aria-labelledby="customers-rows-title">
+            <h4 id="customers-rows-title">customers</h4>
+            <table aria-label="customers sample data">
+              <caption>Example customers rows</caption>
+              <thead>
+                <tr>
+                  <th scope="col">customer_id</th>
+                  <th scope="col">full_name</th>
+                  <th scope="col">msisdn</th>
+                  <th scope="col">email</th>
+                  <th scope="col">country_code</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Brian Kipkorir</td>
+                  <td>0712345678</td>
+                  <td>brian@example.com</td>
+                  <td>KE</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Amina Hassan</td>
+                  <td>0722223333</td>
+                  <td>amina@example.com</td>
+                  <td>KE</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
 
-          <h5>transactions</h5>
-          <table aria-label="Example transactions data">
-            <caption>Example rows: transactions</caption>
-            <thead>
-              <tr>
-                <th scope="col">transaction_id</th>
-                <th scope="col">customer_id</th>
-                <th scope="col">service_id</th>
-                <th scope="col">amount_kes</th>
-                <th scope="col">status</th>
-                <th scope="col">created_at</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">9001</th>
-                <td>1</td>
-                <td>3</td>
-                <td>50</td>
-                <td>SUCCESS</td>
-                <td>2026-05-01 09:15:00</td>
-              </tr>
-              <tr>
-                <th scope="row">9002</th>
-                <td>2</td>
-                <td>2</td>
-                <td>300</td>
-                <td>SUCCESS</td>
-                <td>2026-05-02 18:40:00</td>
-              </tr>
-              <tr>
-                <th scope="row">9003</th>
-                <td>1</td>
-                <td>1</td>
-                <td>950</td>
-                <td>PENDING</td>
-                <td>2026-05-03 11:05:00</td>
-              </tr>
-            </tbody>
-          </table>
+          <section aria-labelledby="transactions-rows-title">
+            <h4 id="transactions-rows-title">transactions</h4>
+            <table aria-label="transactions sample data">
+              <caption>Example transactions rows</caption>
+              <thead>
+                <tr>
+                  <th scope="col">transaction_id</th>
+                  <th scope="col">customer_id</th>
+                  <th scope="col">service_id</th>
+                  <th scope="col">amount_kes</th>
+                  <th scope="col">status</th>
+                  <th scope="col">created_at</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">9001</th>
+                  <td>1</td>
+                  <td>3</td>
+                  <td>50</td>
+                  <td>SUCCESS</td>
+                  <td>2026-05-01 09:15:00</td>
+                </tr>
+                <tr>
+                  <th scope="row">9002</th>
+                  <td>2</td>
+                  <td>2</td>
+                  <td>300</td>
+                  <td>SUCCESS</td>
+                  <td>2026-05-02 18:40:00</td>
+                </tr>
+                <tr>
+                  <th scope="row">9003</th>
+                  <td>1</td>
+                  <td>1</td>
+                  <td>950</td>
+                  <td>PENDING</td>
+                  <td>2026-05-03 11:05:00</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
         </article>
 
-        <article aria-labelledby="forms-sql-title">
-          <h4 id="forms-sql-title">Training Forms (No real DB connection)</h4>
+        <details>
+          <summary>HTML-only “query form” example</summary>
           <p>
-            These forms demonstrate typical inputs you’d use to query/filter a MySQL database.
-            Since there is no backend here, submissions won’t fetch real results.
+            Submitting this form will not query MySQL (no backend). It is only for training form controls.
           </p>
 
           <form action="#mysql" method="get">
             <fieldset>
-              <legend>Simulate Query Inputs</legend>
+              <legend>Simulated query inputs</legend>
 
               <div>
                 <label for="q-msisdn">MSISDN</label>
-                <input id="q-msisdn" name="msisdn" type="tel" inputmode="tel" placeholder="0712345678" />
+                <input id="q-msisdn" name="msisdn" type="tel" placeholder="0712345678" />
               </div>
 
               <div>
-                <label for="q-status">Transaction Status</label>
+                <label for="q-status">Status</label>
                 <select id="q-status" name="status">
                   <option value="">Any</option>
                   <option value="SUCCESS">SUCCESS</option>
                   <option value="PENDING">PENDING</option>
                   <option value="FAILED">FAILED</option>
-                </select>
-              </div>
-
-              <div>
-                <label for="q-service">Service</label>
-                <select id="q-service" name="service">
-                  <option value="">Any</option>
-                  <option value="AIRTIME">Airtime</option>
-                  <option value="BUNDLES">Bundles</option>
-                  <option value="MPESA">M-Pesa</option>
                 </select>
               </div>
 
@@ -765,130 +544,52 @@ footer {
 
               <div>
                 <button type="submit">Submit (HTML-only)</button>
-              </div>
-            </fieldset>
-          </form>
-
-          <form action="#mysql" method="post" enctype="application/x-www-form-urlencoded">
-            <fieldset>
-              <legend>Record a New Transaction (HTML-only)</legend>
-
-              <div>
-                <label for="t-customer">Customer ID</label>
-                <input id="t-customer" name="customerId" type="number" min="1" step="1" required />
-              </div>
-
-              <div>
-                <label for="t-service">Service ID</label>
-                <input id="t-service" name="serviceId" type="number" min="1" step="1" required />
-              </div>
-
-              <div>
-                <label for="t-amount">Amount (KES)</label>
-                <input id="t-amount" name="amountKes" type="number" min="1" step="10" required />
-              </div>
-
-              <div>
-                <label for="t-status">Status</label>
-                <select id="t-status" name="status" required>
-                  <option value="SUCCESS">SUCCESS</option>
-                  <option value="PENDING">PENDING</option>
-                  <option value="FAILED">FAILED</option>
-                </select>
-              </div>
-
-              <div>
-                <label for="t-note">Note</label>
-                <textarea id="t-note" name="note" rows="3" cols="40" maxlength="500" placeholder="Optional training note"></textarea>
-              </div>
-
-              <div>
-                <button type="submit">Create (HTML-only)</button>
                 <button type="reset">Reset</button>
               </div>
             </fieldset>
           </form>
-        </article>
+        </details>
       </section>
 
+      <section id="faq" aria-labelledby="faq-title">
+        <h2 id="faq-title">Frequently Asked Questions</h2>
+
+        <div role="list" aria-label="FAQ list">
+          <details open>
+            <summary>How do I buy data bundles?</summary>
+            <p>Use the bundles section and choose an option (training text).</p>
+          </details>
+
+          <details>
+            <summary>How do I access M-Pesa?</summary>
+            <p>Open the M-Pesa app and sign in or register (training text).</p>
+          </details>
+
+          <details>
+            <summary>How do I contact support?</summary>
+            <p>Use the Support form and submit your request (training text).</p>
+          </details>
+        </div>
+      </section>
     </main>
 
-    <footer role="contentinfo" aria-label="Primary footer">
+    <footer role="contentinfo" aria-label="Safaricom footer">
       <nav aria-label="Footer navigation">
         <ul>
-          <li><a href="#top">Back to top</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#support">Support</a></li>
-          <li><a href="mailto:support@example.com">Email support</a></li>
+          <li><a href="#main">Back to main</a></li>
+          <li><a href="#mysql">MySQL training</a></li>
         </ul>
       </nav>
 
       <address>
-        Safaricom (Training Demo)<br />
+        Safaricom Training Demo<br />
         Nairobi, Kenya
       </address>
 
-      <small>&copy; <time datetime="2026">2026</time> Safaricom Training HTML Demo</small>
+      <small>
+        &copy; <time datetime="2026">2026</time> Safaricom Training HTML-only demo
+      </small>
     </footer>
-    // ===== Smooth scroll for anchor links =====
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-  link.addEventListener("click", function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute("href"));
-    if (target) {
-      target.scrollIntoView({ behavior: "smooth" });
-    }
-  });
-});
-
-// ===== Form submit handling =====
-const mainForm = document.querySelector("form");
-
-if (mainForm) {
-  mainForm.addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    const name = document.getElementById("full-name").value;
-    const phone = document.getElementById("msisdn").value;
-    const message = document.getElementById("message").value;
-
-    if (!name || !phone || !message) {
-      alert("Please fill in all required fields!");
-      return;
-    }
-
-    alert(`Thank you ${name}! Your request has been received.`);
-    mainForm.reset();
-  });
-}
-
-// ===== Live satisfaction meter update =====
-const rangeInput = document.getElementById("range");
-const meter = document.querySelector("meter");
-
-if (rangeInput && meter) {
-  rangeInput.addEventListener("input", () => {
-    meter.value = rangeInput.value;
-  });
-}
-
-// ===== Simple navigation highlight on scroll =====
-const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll("nav a");
-
-window.addEventListener("scroll", () => {
-  let current = "";
-
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop;
-    if (scrollY >= sectionTop - 60) {
-      current = section.getAttribute("id");
-    }
-  });
-
-  navLinks.forEach(link => {
-    link.style.opacity = link.getAttribute("href") === `#${current}` ? "1" : "0.7";
-  });
-});
   </body>
 </html>
+
