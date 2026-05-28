@@ -1,0 +1,14 @@
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: ampath
+      POSTGRES_USER: ampath
+      POSTGRES_PASSWORD: ampath
+    ports:
+      - "5432:5432"
+    volumes:
+      - ampath_db:/var/lib/postgresql/data
+
+volumes:
+  ampath_db:

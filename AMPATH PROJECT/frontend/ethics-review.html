@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ethics Review Workflow - AMPATH</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <h2>AMPATH RESEARCH</h2>
+      <ul>
+        <li>
+          <a href="research-dashboard.html"
+            ><i class="fa fa-chart-line"></i><span>Command Center</span></a
+          >
+        </li>
+        <li>
+          <a href="research-proposal.html"
+            ><i class="fa fa-flask"></i><span>Proposals</span></a
+          >
+        </li>
+        <li>
+          <a href="ethics-dashboard.html"
+            ><i class="fa fa-shield-halved"></i><span>Ethics</span></a
+          >
+        </li>
+        <li>
+          <a href="clinical-trials.html"
+            ><i class="fa fa-microscope"></i><span>Clinical Trials</span></a
+          >
+        </li>
+        <li>
+          <a href="publications.html"
+            ><i class="fa fa-book"></i><span>Publications</span></a
+          >
+        </li>
+        <li>
+          <a href="research-documents.html"
+            ><i class="fa fa-folder-open"></i><span>Documents</span></a
+          >
+        </li>
+        <li>
+          <a href="grants-management.html"
+            ><i class="fa fa-hand-holding-dollar"></i><span>Grants</span></a
+          >
+        </li>
+        <li>
+          <a href="research-analytics.html"
+            ><i class="fa fa-chart-pie"></i><span>Analytics</span></a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <div class="main-content">
+      <div class="topbar">
+        <div>
+          <h2>Ethics Review</h2>
+          <p style="color: gray; font-size: 14px">
+            Proposal Submitted → Department Review → Ethics Review →
+            Revision/Approval → Active Monitoring.
+          </p>
+        </div>
+        <div class="profile">
+          <img src="https://i.pravatar.cc/100" alt="ethics committee" />
+          <h4>Ethics Reviewer</h4>
+        </div>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Revision Requests</h3>
+          <h1>4</h1>
+        </div>
+        <div class="card">
+          <h3>Approvals</h3>
+          <h1>12</h1>
+        </div>
+        <div class="card">
+          <h3>Compliance Checks</h3>
+          <h1>9</h1>
+        </div>
+        <div class="card">
+          <h3>Digital Signatures</h3>
+          <h1>Enabled</h1>
+        </div>
+      </div>
+
+      <div class="analytics">
+        <div class="chart-box">
+          <h2>IRB Review Details (placeholder)</h2>
+          <div style="margin-top: 12px">
+            <label style="font-size: 14px">Select Proposal</label>
+            <select
+              style="
+                width: 100%;
+                padding: 12px;
+                border-radius: 12px;
+                border: 1px solid #dbe3ee;
+                outline: none;
+                margin-bottom: 10px;
+              "
+            >
+              <option>IRB-2026-014 (R-PRO-012)</option>
+              <option>IRB-2026-010 (R-PRO-009)</option>
+              <option>IRB-2026-008 (R-PRO-004)</option>
+            </select>
+
+            <div class="alert alert-success">
+              Ethical considerations checklist: complete (placeholder)
+            </div>
+            <div class="alert alert-warning">
+              Consent form needs minor revisions (placeholder)
+            </div>
+            <div class="alert alert-danger">
+              Risk-benefit section requires clarification (placeholder)
+            </div>
+          </div>
+
+          <div style="margin-top: 14px">
+            <h2>Review Comments</h2>
+            <textarea
+              rows="9"
+              style="
+                width: 100%;
+                padding: 12px;
+                border-radius: 12px;
+                border: 1px solid #dbe3ee;
+                outline: none;
+                margin-bottom: 10px;
+              "
+              placeholder="Write reviewer comments, revision notes, and compliance findings..."
+            ></textarea>
+          </div>
+        </div>
+
+        <div class="activity-box">
+          <h2>Decision & Signatures</h2>
+          <p style="color: gray; font-size: 13px; line-height: 1.6">
+            Choose approve or request revisions. Track signatures and meeting
+            schedules.
+          </p>
+
+          <div style="margin-top: 12px">
+            <label style="font-size: 14px"
+              >Meeting Schedule (placeholder)</label
+            >
+            <input
+              type="date"
+              style="
+                width: 100%;
+                padding: 12px;
+                border-radius: 12px;
+                border: 1px solid #dbe3ee;
+                outline: none;
+                margin-bottom: 10px;
+              "
+            />
+
+            <div
+              style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px"
+            >
+              <button class="btn" style="width: 100%">
+                <i class="fa fa-check"></i> Approve
+              </button>
+              <button class="btn" style="width: 100%">
+                <i class="fa fa-rotate"></i> Request Revision
+              </button>
+            </div>
+
+            <div style="margin-top: 12px" class="alert alert-warning">
+              Digital signature capture UI placeholder.
+            </div>
+
+            <div style="margin-top: 14px">
+              <button class="btn" style="width: 100%">
+                <i class="fa fa-file-signature"></i> Capture Approval Signature
+                (placeholder)
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="analytics">
+        <div class="chart-box">
+          <h2>Workflow Status</h2>
+          <p style="color: gray; font-size: 13px; line-height: 1.6">
+            Monitor the proposal lifecycle from submission through monitoring
+            and final report.
+          </p>
+          <div style="margin-top: 12px" class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>Stage</th>
+                  <th>Owner</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Proposal Submitted</td>
+                  <td>Researchers</td>
+                  <td><span class="status active">Done</span></td>
+                </tr>
+                <tr>
+                  <td>Department Review</td>
+                  <td>Department Reviewer</td>
+                  <td><span class="status active">Done</span></td>
+                </tr>
+                <tr>
+                  <td>Ethics Committee Review</td>
+                  <td>Ethics Committee</td>
+                  <td><span class="status pending">In Progress</span></td>
+                </tr>
+                <tr>
+                  <td>Revision Required / Approved</td>
+                  <td>Researchers</td>
+                  <td><span class="status pending">Pending Decision</span></td>
+                </tr>
+                <tr>
+                  <td>Research Active</td>
+                  <td>Study Team</td>
+                  <td><span class="status pending">Locked</span></td>
+                </tr>
+                <tr>
+                  <td>Monitoring</td>
+                  <td>Ethics + Study Team</td>
+                  <td><span class="status pending">Locked</span></td>
+                </tr>
+                <tr>
+                  <td>Final Report Submitted</td>
+                  <td>Researchers</td>
+                  <td><span class="status pending">Locked</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="activity-box">
+          <h2>Compliance Verification</h2>
+          <p style="color: gray; font-size: 13px; line-height: 1.6">
+            Validate protocol compliance, ethical requirements, and consent
+            readiness.
+          </p>
+          <div style="margin-top: 12px">
+            <div class="alert alert-success">
+              Protocol integrity: verified (placeholder)
+            </div>
+            <div class="alert alert-warning">
+              Consent template review: pending
+            </div>
+            <div class="alert alert-danger">
+              Adverse event monitoring plan: needs updates
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

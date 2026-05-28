@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emergency Patients - AMPATH</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <h2>AMPATH EMERGENCY</h2>
+      <ul>
+        <li>
+          <a href="emergency-dashboard.html">
+            <i class="fa fa-house"></i>
+            <span>Emergency Command</span>
+          </a>
+        </li>
+        <li>
+          <a href="emergency-patients.html" class="active">
+            <i class="fa fa-user-injured"></i>
+            <span>Emergency Patients</span>
+          </a>
+        </li>
+        <li>
+          <a href="icu-monitoring.html">
+            <i class="fa fa-bed"></i>
+            <span>ICU Monitoring</span>
+          </a>
+        </li>
+        <li>
+          <a href="emergency-alerts.html">
+            <i class="fa fa-bell"></i>
+            <span>Emergency Alerts</span>
+          </a>
+        </li>
+        <li>
+          <a href="emergency-hotline.html">
+            <i class="fa fa-phone"></i>
+            <span>Hotline</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+      <div class="topbar">
+        <div>
+          <h2>Emergency Patient Management</h2>
+          <p style="color: gray; font-size: 14px">
+            Registration, triage, priority classification, and critical queue
+            tracking (placeholders)
+          </p>
+        </div>
+        <div class="profile">
+          <img src="https://i.pravatar.cc/100" alt="triage" />
+          <h4>Triage Nurse</h4>
+        </div>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Critical</h3>
+          <h1>3</h1>
+        </div>
+        <div class="card">
+          <h3>High</h3>
+          <h1>7</h1>
+        </div>
+        <div class="card">
+          <h3>Medium</h3>
+          <h1>11</h1>
+        </div>
+        <div class="card">
+          <h3>Low</h3>
+          <h1>6</h1>
+        </div>
+      </div>
+
+      <div class="analytics">
+        <div class="chart-box">
+          <h2>Emergency Patient Registration (Placeholder)</h2>
+          <p class="muted" style="margin-top: 8px; line-height: 1.6">
+            Add patient details, assign triage level, and track stabilization
+            progress.
+          </p>
+
+          <div style="margin-top: 14px">
+            <label class="muted" style="font-size: 13px">Full Name</label>
+            <input
+              type="text"
+              placeholder="Patient name"
+              style="
+                width: 100%;
+                padding: 12px;
+                margin-top: 8px;
+                margin-bottom: 10px;
+                border-radius: 12px;
+                border: 1px solid #dbe3ee;
+                outline: none;
+              "
+            />
+
+            <label class="muted" style="font-size: 13px">Age / Gender</label>
+            <input
+              type="text"
+              placeholder="e.g., 34 / Male"
+              style="
+                width: 100%;
+                padding: 12px;
+                margin-top: 8px;
+                margin-bottom: 10px;
+                border-radius: 12px;
+                border: 1px solid #dbe3ee;
+                outline: none;
+              "
+            />
+
+            <label class="muted" style="font-size: 13px">Triage Priority</label>
+            <select
+              style="
+                width: 100%;
+                padding: 12px;
+                margin-top: 8px;
+                margin-bottom: 10px;
+                border-radius: 12px;
+                border: 1px solid #dbe3ee;
+                outline: none;
+              "
+            >
+              <option>Critical</option>
+              <option>High</option>
+              <option>Medium</option>
+              <option>Low</option>
+            </select>
+
+            <label class="muted" style="font-size: 13px"
+              >Medical History Access</label
+            >
+            <button
+              class="btn"
+              style="
+                width: 100%;
+                background: #0b3d91;
+                color: #fff;
+                margin-top: 8px;
+              "
+            >
+              <i class="fa fa-database"></i> Load History (placeholder)
+            </button>
+
+            <label class="muted" style="font-size: 13px; margin-top: 14px"
+              >Emergency Notes</label
+            >
+            <textarea
+              rows="5"
+              placeholder="Rapid treatment record / trauma notes"
+              style="
+                width: 100%;
+                padding: 12px;
+                margin-top: 8px;
+                margin-bottom: 10px;
+                border-radius: 12px;
+                border: 1px solid #dbe3ee;
+                outline: none;
+              "
+            ></textarea>
+
+            <button
+              class="btn"
+              style="width: 100%; background: #b00020; color: #fff"
+            >
+              <i class="fa fa-user-plus"></i> Register & Triage
+            </button>
+          </div>
+        </div>
+
+        <div class="activity-box">
+          <h2>Critical Condition Tracking</h2>
+          <br />
+          <div class="alert alert-danger">
+            Critical: ICU bed pending - 2 patients
+          </div>
+          <div class="alert alert-warning">
+            High: Stabilization in progress - 4 patients
+          </div>
+          <div class="alert alert-success">
+            Medium/Low: Treatment queue active - 8 patients
+          </div>
+
+          <div style="margin-top: 16px">
+            <h2 style="margin-bottom: 8px">Rapid Actions</h2>
+            <div style="display: grid; grid-template-columns: 1fr; gap: 10px">
+              <button class="btn" style="background: #0b3d91; color: #fff">
+                <i class="fa fa-stethoscope"></i> Start Stabilization
+              </button>
+              <button class="btn" style="background: #dbe3ee; color: #0b3d91">
+                <i class="fa fa-notes-medical"></i> Update Treatment Record
+              </button>
+              <button class="btn" style="background: #dbe3ee; color: #0b3d91">
+                <i class="fa fa-right-left"></i> Discharge/Admission Placeholder
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="table-container">
+        <h2>Emergency Queue (Placeholder)</h2>
+        <p class="muted" style="margin-top: 8px">
+          Triage priority and stabilization state will appear here.
+        </p>
+        <br />
+
+        <table>
+          <thead>
+            <tr>
+              <th>Priority</th>
+              <th>Patient</th>
+              <th>Condition</th>
+              <th>Assigned Zone</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="status pending">Critical</span></td>
+              <td>John M.</td>
+              <td>Trauma • Respiratory distress</td>
+              <td>Stabilization Zone A</td>
+              <td><span class="status active">Awaiting ICU</span></td>
+            </tr>
+            <tr>
+              <td><span class="status pending">High</span></td>
+              <td>Mary K.</td>
+              <td>Severe dehydration</td>
+              <td>Zone B</td>
+              <td><span class="status pending">In treatment</span></td>
+            </tr>
+            <tr>
+              <td><span class="status active">Medium</span></td>
+              <td>Peter S.</td>
+              <td>Minor injury</td>
+              <td>General Queue</td>
+              <td><span class="status active">Scheduled</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

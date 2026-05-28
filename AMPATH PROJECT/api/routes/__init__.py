@@ -1,0 +1,2 @@
+"""AMPATH API route package."""
+

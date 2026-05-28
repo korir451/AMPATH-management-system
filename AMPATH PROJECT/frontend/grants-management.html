@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grants Management - AMPATH</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <h2>AMPATH RESEARCH</h2>
+      <ul>
+        <li>
+          <a href="research-dashboard.html"
+            ><i class="fa fa-chart-line"></i><span>Command Center</span></a
+          >
+        </li>
+        <li>
+          <a href="research-proposal.html"
+            ><i class="fa fa-flask"></i><span>Proposals</span></a
+          >
+        </li>
+        <li>
+          <a href="ethics-dashboard.html"
+            ><i class="fa fa-shield-halved"></i><span>Ethics</span></a
+          >
+        </li>
+        <li>
+          <a href="clinical-trials.html"
+            ><i class="fa fa-microscope"></i><span>Clinical Trials</span></a
+          >
+        </li>
+        <li>
+          <a href="publications.html"
+            ><i class="fa fa-book"></i><span>Publications</span></a
+          >
+        </li>
+        <li>
+          <a href="research-documents.html"
+            ><i class="fa fa-folder-open"></i><span>Documents</span></a
+          >
+        </li>
+        <li>
+          <a href="grants-management.html" class="active"
+            ><i class="fa fa-hand-holding-dollar"></i><span>Grants</span></a
+          >
+        </li>
+        <li>
+          <a href="research-analytics.html"
+            ><i class="fa fa-chart-pie"></i><span>Analytics</span></a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <div class="main-content">
+      <div class="topbar">
+        <div>
+          <h2>Research Funding & Grants</h2>
+          <p style="color: gray; font-size: 14px">
+            Funding applications, budget monitoring, sponsors, research
+            expenses, and financial analytics.
+          </p>
+        </div>
+        <div class="profile">
+          <img src="https://i.pravatar.cc/100" alt="grants" />
+          <h4>Grants Officer</h4>
+        </div>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Applications</h3>
+          <h1>18</h1>
+        </div>
+        <div class="card">
+          <h3>Active Grants</h3>
+          <h1>9</h1>
+        </div>
+        <div class="card">
+          <h3>Budget Utilization</h3>
+          <h1>72%</h1>
+        </div>
+        <div class="card">
+          <h3>Outstanding Requests</h3>
+          <h1>4</h1>
+        </div>
+      </div>
+
+      <div class="analytics">
+        <div class="chart-box">
+          <h2>Grant Tracking</h2>
+          <div class="table-container" style="margin-top: 12px">
+            <table>
+              <thead>
+                <tr>
+                  <th>Grant ID</th>
+                  <th>Funding Source</th>
+                  <th>Budget</th>
+                  <th>Spent</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>G-2026-01</td>
+                  <td>National Research Fund</td>
+                  <td>$450,000</td>
+                  <td>$320,000</td>
+                  <td><span class="status active">Active</span></td>
+                </tr>
+                <tr>
+                  <td>G-2026-02</td>
+                  <td>Health Innovation Sponsor</td>
+                  <td>$280,000</td>
+                  <td>$110,000</td>
+                  <td><span class="status pending">In Review</span></td>
+                </tr>
+                <tr>
+                  <td>G-2026-03</td>
+                  <td>Global Community Health</td>
+                  <td>$610,000</td>
+                  <td>$450,000</td>
+                  <td><span class="status pending">Reporting</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div style="margin-top: 14px">
+            <button class="btn" style="width: 100%">
+              <i class="fa fa-file-medical"></i> Apply / Update Grant
+              (placeholder)
+            </button>
+          </div>
+        </div>
+
+        <div class="activity-box">
+          <h2>Budget Monitoring</h2>
+          <p style="color: gray; font-size: 13px; line-height: 1.6">
+            Track expenses and sponsor funding allocation.
+          </p>
+
+          <div style="margin-top: 12px">
+            <div class="alert alert-success">
+              Upcoming expense cycle: 2026-06-01
+            </div>
+            <div class="alert alert-warning">
+              Budget overruns flagged (placeholder)
+            </div>
+            <div class="alert alert-danger">
+              Compliance documents pending for sponsor audit
+            </div>
+          </div>
+
+          <div style="margin-top: 14px">
+            <a
+              href="research-analytics.html"
+              class="btn"
+              style="display: inline-block; text-decoration: none"
+            >
+              <i class="fa fa-chart-pie"></i> Financial Analytics
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

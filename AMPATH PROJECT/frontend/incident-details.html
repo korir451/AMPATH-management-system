@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Incident Details - AMPATH</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <h2>AMPATH STAFF</h2>
+
+      <ul>
+        <li>
+          <a href="employee-dashboard.html">
+            <i class="fa fa-house"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="incident-dashboard.html" class="active">
+            <i class="fa fa-triangle-exclamation"></i>
+            <span>Incident Command</span>
+          </a>
+        </li>
+        <li>
+          <a href="appointments.html">
+            <i class="fa fa-calendar"></i>
+            <span>Appointments</span>
+          </a>
+        </li>
+        <li>
+          <a href="patients.html">
+            <i class="fa fa-user-injured"></i>
+            <span>Patients</span>
+          </a>
+        </li>
+        <li>
+          <a href="attendance.html">
+            <i class="fa fa-clock"></i>
+            <span>Attendance</span>
+          </a>
+        </li>
+        <li>
+          <a href="tasks.html">
+            <i class="fa fa-list-check"></i>
+            <span>Tasks</span>
+          </a>
+        </li>
+        <li>
+          <a href="department_radiology.html">
+            <i class="fa fa-building"></i>
+            <span>Departments</span>
+          </a>
+        </li>
+        <li>
+          <a href="employee_login.html">
+            <i class="fa fa-right-from-bracket"></i>
+            <span>Logout</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+      <div class="topbar">
+        <div>
+          <h2>Incident Details</h2>
+          <p style="color: gray; font-size: 14px">
+            Reference: <b>INC-2026-00041</b> • Status: <b>RESOLVED</b>
+          </p>
+        </div>
+        <div class="profile">
+          <img src="https://i.pravatar.cc/100" alt="staff" />
+          <h4>Investigator</h4>
+        </div>
+      </div>
+
+      <!-- INCIDENT SUMMARY -->
+      <div class="cards">
+        <div class="card">
+          <h3>Severity</h3>
+          <h1 style="color: #c62828">High</h1>
+        </div>
+        <div class="card">
+          <h3>Department</h3>
+          <h1>Radiology</h1>
+        </div>
+        <div class="card">
+          <h3>Type</h3>
+          <h1>Equipment Failure</h1>
+        </div>
+        <div class="card">
+          <h3>Emergency</h3>
+          <h1><span class="status active">No</span></h1>
+        </div>
+      </div>
+
+      <div class="analytics">
+        <div class="chart-box">
+          <h2>Incident Information</h2>
+          <p class="muted" style="margin-top: 8px; line-height: 1.6">
+            Placeholder details: reporter info, incident location, witness/staff
+            involved, patient involvement, and timestamp.
+          </p>
+
+          <table style="margin-top: 16px">
+            <thead>
+              <tr>
+                <th>Field</th>
+                <th>Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Date &amp; Time</td>
+                <td>2026-05-20 10:12</td>
+              </tr>
+              <tr>
+                <td>Location</td>
+                <td>Radiology Imaging Ward</td>
+              </tr>
+              <tr>
+                <td>Reporter</td>
+                <td>Staff Member (placeholder)</td>
+              </tr>
+              <tr>
+                <td>Patient Involved</td>
+                <td>Yes (placeholder)</td>
+              </tr>
+              <tr>
+                <td>Witnesses</td>
+                <td>2 witnesses (placeholder)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="activity-box">
+          <h2>Workflow Timeline</h2>
+          <br />
+          <div class="alert alert-danger">NEW → OPEN</div>
+          <div class="alert alert-warning">UNDER INVESTIGATION</div>
+          <div class="alert alert-warning">ESCALATED</div>
+          <div class="alert alert-success">ACTION TAKEN</div>
+          <div class="alert alert-success">RESOLVED → CLOSED</div>
+
+          <div style="margin-top: 14px">
+            <a
+              href="incident-investigation.html"
+              class="btn"
+              style="width: 100%; text-decoration: none"
+            >
+              <i class="fa fa-stethoscope"></i> Open Investigation View
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="table-container">
+        <h2>Evidence</h2>
+        <p class="muted" style="margin-top: 8px">
+          Evidence viewer placeholder (images/videos/PDF downloads).
+        </p>
+        <br />
+        <div class="grid" style="grid-template-columns: repeat(2, 1fr)">
+          <div class="card">
+            <h3>Photo Attachment</h3>
+            <p class="muted">placeholder.jpg</p>
+            <button class="btn" style="width: 100%">
+              <i class="fa fa-eye"></i> View
+            </button>
+          </div>
+          <div class="card">
+            <h3>PDF Report</h3>
+            <p class="muted">incident-summary.pdf</p>
+            <button class="btn" style="width: 100%">
+              <i class="fa fa-file-pdf"></i> Download
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="table-container" style="margin-top: 20px">
+        <h2>Action Buttons</h2>
+        <p class="muted" style="margin-top: 8px">
+          Backend-ready placeholders for role-based actions.
+        </p>
+        <br />
+        <div style="display: flex; gap: 12px; flex-wrap: wrap">
+          <a
+            href="incident-investigation.html"
+            class="btn"
+            style="flex: 1; min-width: 240px; text-decoration: none; background: #0b3d91"
+          >
+            <i class="fa fa-notes-medical"></i> Add Investigation Note
+          </a>
+          <a
+            href="incident-reports.html"
+            class="btn"
+            style="flex: 1; min-width: 240px; text-decoration: none; background: #dbe3ee; color: #0b3d91"
+          >
+            <i class="fa fa-clipboard-list"></i> View All Reports
+          </a>
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 12px; margin-top: 16px">
+        <a
+          href="incident-dashboard.html"
+          class="btn"
+          style="flex: 1; background: #dbe3ee; color: #0b3d91; text-align: center; text-decoration: none"
+        >
+          <i class="fa fa-arrow-left"></i> Back to Command Center
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
+

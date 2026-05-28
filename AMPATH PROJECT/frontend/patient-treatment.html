@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Patient Treatment - AMPATH</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <h2>AMPATH</h2>
+
+      <ul>
+        <li>
+          <a href="employee_dashboard.html">
+            <i class="fa fa-house"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="patients.html" class="active">
+            <i class="fa fa-user-injured"></i>
+            <span>Patients</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="appointments.html">
+            <i class="fa fa-calendar"></i>
+            <span>Appointments</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="incidents.html">
+            <i class="fa fa-triangle-exclamation"></i>
+            <span>Incidents</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="attendance.html">
+            <i class="fa fa-clock"></i>
+            <span>Attendance</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="tasks.html">
+            <i class="fa fa-list-check"></i>
+            <span>Tasks</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="department_radiology.html">
+            <i class="fa fa-building"></i>
+            <span>Departments</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="employee_login.html">
+            <i class="fa fa-right-from-bracket"></i>
+            <span>Logout</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+      <div class="topbar">
+        <div>
+          <h2>Treatment Notes</h2>
+          <p style="color: gray; font-size: 14px">
+            Add treatment notes, monitoring updates, and upload files
+          </p>
+        </div>
+
+        <div class="profile">
+          <img src="https://i.pravatar.cc/100" alt="patient" />
+          <h4>John Doe</h4>
+        </div>
+      </div>
+
+      <div class="analytics">
+        <div class="chart-box">
+          <h2>Add New Note</h2>
+          <p class="muted" style="margin-top: 8px">
+            API-ready form placeholder
+          </p>
+
+          <form style="margin-top: 15px">
+            <input
+              type="text"
+              placeholder="Note Title (e.g., Daily Monitoring)"
+              style="width: 100%; padding: 10px; margin-bottom: 10px"
+              required
+            />
+
+            <textarea
+              placeholder="Treatment description, dosage changes, follow-ups"
+              rows="6"
+              style="width: 100%; padding: 10px; margin-bottom: 10px"
+              required
+            ></textarea>
+
+            <select
+              style="width: 100%; padding: 10px; margin-bottom: 10px"
+              required
+            >
+              <option value="">Treatment Status</option>
+              <option>Planned</option>
+              <option>In Progress</option>
+              <option>Completed</option>
+            </select>
+
+            <input
+              type="file"
+              style="width: 100%; margin-bottom: 10px"
+              accept="image/*,.pdf,.docx"
+            />
+
+            <button class="btn" style="width: 100%">
+              <i class="fa fa-save"></i> Save Treatment Note
+            </button>
+          </form>
+        </div>
+
+        <div class="activity-box">
+          <h2>Admission Status</h2>
+          <br />
+          <div class="alert alert-success">Current status: <b>Admitted</b></div>
+          <div class="alert alert-warning">Ward: Radiology Imaging Ward</div>
+          <div class="alert alert-danger">Discharge Date: —</div>
+
+          <div style="margin-top: 12px">
+            <a href="patient-details.html" class="btn" style="width: 100%">
+              <i class="fa fa-user"></i> Back to Profile
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="table-container">
+        <h2>Previous Treatment Notes</h2>
+        <br />
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Title</th>
+              <th>Provider</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2026-05-19</td>
+              <td>Initial imaging + risk assessment</td>
+              <td>Dr. Smith</td>
+              <td><span class="status active">Completed</span></td>
+            </tr>
+            <tr>
+              <td>2026-05-20</td>
+              <td>Medication reconciliation</td>
+              <td>Nursing Team</td>
+              <td><span class="status pending">In Progress</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

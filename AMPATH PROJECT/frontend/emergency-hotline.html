@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en"> 
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emergency Hotline - AMPATH</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <h2>AMPATH EMERGENCY</h2>
+      <ul>
+        <li>
+          <a href="emergency-dashboard.html">
+            <i class="fa fa-house"></i>
+            <span>Emergency Command</span>
+          </a>
+        </li>
+        <li>
+          <a href="ambulance-dashboard.html">
+            <i class="fa fa-ambulance"></i>
+            <span>Ambulance Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="emergency-patients.html">
+            <i class="fa fa-user-injured"></i>
+            <span>Emergency Patients</span>
+          </a>
+        </li>
+        <li>
+          <a href="emergency-hotline.html" class="active">
+            <i class="fa fa-phone"></i>
+            <span>Hotline / Dispatch</span>
+          </a>
+        </li>
+        <li>
+          <a href="emergency-alerts.html">
+            <i class="fa fa-bell"></i>
+            <span>Emergency Alerts</span>
+          </a>
+        </li>
+        <li>
+          <a href="emergency-panic-hotline.html">
+            <i class="fa fa-shield-halved"></i>
+            <span>Panic Alert</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="main-content">
+      <div class="topbar">
+        <div>
+          <h2>Emergency Hotline & Dispatch</h2>
+          <p style="color: gray; font-size: 14px">
+            Operator console: intake calls, dispatch requests, logging, and
+            escalation placeholders.
+          </p>
+        </div>
+        <div class="profile">
+          <img src="https://i.pravatar.cc/100" alt="operator" />
+          <h4>Hotline Operator</h4>
+        </div>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Active Calls</h3>
+          <h1>3</h1>
+        </div>
+        <div class="card">
+          <h3>Dispatches Today</h3>
+          <h1>26</h1>
+        </div>
+        <div class="card">
+          <h3>Critical Triage</h3>
+          <h1 style="color: #b00020">2</h1>
+        </div>
+        <div class="card">
+          <h3>Queue</h3>
+          <h1>5</h1>
+        </div>
+      </div>
+
+      <div class="analytics">
+        <div class="chart-box">
+          <h2>Call Intake Form (Placeholder)</h2>
+          <p class="muted" style="margin-top: 8px; line-height: 1.6">
+            Collect caller details, location, symptoms, and triage priority.
+          </p>
+
+          <div style="margin-top: 14px">
+            <label class="muted" style="font-size: 13px">Caller Name</label>
+            <input
+              type="text"
+              placeholder="e.g., John Wairimu"
+              style="
+                width: 100%;
+                padding: 12px;
+                margin-top: 8px;
+                margin-bottom: 10px;
+                border-radius: 12px;
+                border: 1px solid #dbe3ee;
+                outline: none;
+              "
+            />
+
+            <label class="muted" style="font-size: 13px">Phone Number</label>
+            <input
+              type="text"
+              placeholder="e.g., 07xxxxxxxx"
+              style="
+                width: 100%;
+                padding: 12px;
+                margin-top: 8px;
+                margin-bottom: 10px;
+                border-radius: 12px;
+                border: 1px solid #dbe3ee;
+                outline: none;
+              "
+            />
+
+            <label class="muted" style="font-size: 13px"
+              >Location / Landmark</label
+            >
+            <input
+              type="text"
+              placeholder="Nearest landmark"
+              style="
+                width: 100%;
+                padding: 12px;
+                margin-top: 8px;
+                margin-bottom: 10px;
+                border-radius: 12px;
+                border: 1px solid #dbe3ee;
+                outline: none;
+              "
+            />
+
+            <label class="muted" style="font-size: 13px"
+              >Symptoms / Incident Type</label
+            >
+            <select
+              style="
+                width: 100%;
+                padding: 12px;
+                margin-top: 8px;
+                margin-bottom: 10px;
+                border-radius: 12px;
+                border: 1px solid #dbe3ee;
+                outline: none;
+              "
+            >
+              <option>Select</option>
+              <option>Trauma</option>
+              <option>Cardiac Arrest</option>
+              <option>Stroke</option>
+              <option>Severe Bleeding</option>
+              <option>Respiratory Distress</option>
+              <option>Other</option>
+            </select>
+
+            <label class="muted" style="font-size: 13px">Triage Priority</label>
+            <select
+              style="
+                width: 100%;
+                padding: 12px;
+                margin-top: 8px;
+                margin-bottom: 10px;
+                border-radius: 12px;
+                border: 1px solid #dbe3ee;
+                outline: none;
+              "
+            >
+              <option>Critical</option>
+              <option>High</option>
+              <option>Medium</option>
+              <option>Low</option>
+            </select>
+
+            <label class="muted" style="font-size: 13px">Notes</label>
+            <textarea
+              rows="4"
+              placeholder="Record call notes, ETA details, and instructions given"
+              style="
+                width: 100%;
+                padding: 12px;
+                margin-top: 8px;
+                margin-bottom: 10px;
+                border-radius: 12px;
+                border: 1px solid #dbe3ee;
+                outline: none;
+              "
+            ></textarea>
+
+            <div
+              style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px"
+            >
+              <button class="btn" style="background: #0b3d91; color: #fff">
+                <i class="fa fa-paper-plane"></i> Log Call
+              </button>
+              <button class="btn" style="background: #b00020; color: #fff">
+                <i class="fa fa-ambulance"></i> Dispatch Ambulance
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="activity-box">
+          <h2>Dispatch Controls (Placeholder)</h2>
+          <br />
+
+          <div class="alert alert-warning">
+            SMS / Voice / Video integration placeholders
+          </div>
+
+          <div style="margin-top: 12px">
+            <h2 style="margin-bottom: 8px">Communication</h2>
+            <button
+              class="btn"
+              style="
+                width: 100%;
+                background: #dbe3ee;
+                color: #0b3d91;
+                margin-bottom: 10px;
+              "
+              onclick="alert('Send SMS placeholder')"
+            >
+              <i class="fa fa-comment-sms"></i> Send SMS to Caller
+            </button>
+
+            <button
+              class="btn"
+              style="
+                width: 100%;
+                background: #dbe3ee;
+                color: #0b3d91;
+                margin-bottom: 10px;
+              "
+              onclick="alert('Start voice call placeholder')"
+            >
+              <i class="fa fa-phone-volume"></i> Start Voice Call
+            </button>
+
+            <button
+              class="btn"
+              style="width: 100%; background: #dbe3ee; color: #0b3d91"
+              onclick="alert('Start video call placeholder')"
+            >
+              <i class="fa fa-video"></i> Start Video Briefing
+            </button>
+          </div>
+
+          <div style="margin-top: 16px">
+            <h2 style="margin-bottom: 8px">Operator Safety</h2>
+            <button
+              class="btn"
+              style="width: 100%; background: #b00020; color: #fff"
+              onclick="window.location.href = 'emergency-panic-hotline.html'"
+            >
+              <i class="fa fa-shield-halved"></i> Trigger Panic Alert
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="table-container">
+        <h2>Hotline Call & Dispatch Log (Placeholder)</h2>
+        <p class="muted" style="margin-top: 8px">
+          Recent events with operator and dispatch status.
+        </p>
+        <br />
+
+        <table>
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Caller</th>
+              <th>Location</th>
+              <th>Triage</th>
+              <th>Dispatch</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>10:38</td>
+              <td>John W.</td>
+              <td>Reception Gate</td>
+              <td><span class="status active">High</span></td>
+              <td>AMB-014</td>
+              <td><span class="status active">Dispatched</span></td>
+            </tr>
+            <tr>
+              <td>10:22</td>
+              <td>Mary K.</td>
+              <td>Ward 3</td>
+              <td><span class="status pending">Critical</span></td>
+              <td>Pending</td>
+              <td><span class="status pending">Queued</span></td>
+            </tr>
+            <tr>
+              <td>10:05</td>
+              <td>Peter S.</td>
+              <td>Zone B</td>
+              <td><span class="status pending">Medium</span></td>
+              <td>AMB-001</td>
+              <td><span class="status active">In transit</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

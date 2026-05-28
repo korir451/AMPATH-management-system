@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Billing - AMPATH</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <h2>AMPATH</h2>
+      <ul>
+        <li>
+          <a href="patient_dashboard.html">
+            <i class="fa fa-house"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="patient_appointments.html">
+            <i class="fa fa-calendar"></i>
+            <span>Appointments</span>
+          </a>
+        </li>
+        <li>
+          <a href="patient_medical_records.html">
+            <i class="fa fa-file-medical"></i>
+            <span>Records</span>
+          </a>
+        </li>
+        <li>
+          <a href="patient_lab_results.html">
+            <i class="fa fa-vials"></i>
+            <span>Lab Results</span>
+          </a>
+        </li>
+        <li>
+          <a href="patient_prescriptions.html">
+            <i class="fa fa-pills"></i>
+            <span>Prescriptions</span>
+          </a>
+        </li>
+        <li>
+          <a href="patient_billing.html" class="active">
+            <i class="fa fa-credit-card"></i>
+            <span>Billing</span>
+          </a>
+        </li>
+        <li>
+          <a href="patient_login.html">
+            <i class="fa fa-right-from-bracket"></i>
+            <span>Logout</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="main-content">
+      <div class="topbar">
+        <div>
+          <h2>My Billing</h2>
+          <p style="color: gray; font-size: 14px">
+            Invoices, payments, and balance
+          </p>
+        </div>
+        <div class="profile">
+          <img src="https://i.pravatar.cc/100" alt="patient" />
+          <h4>Patient</h4>
+        </div>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Total Invoices</h3>
+          <h1>6</h1>
+        </div>
+        <div class="card">
+          <h3>Pending Balance</h3>
+          <h1>KES 1,200</h1>
+        </div>
+        <div class="card">
+          <h3>Paid</h3>
+          <h1>KES 9,850</h1>
+        </div>
+        <div class="card">
+          <h3>Refunds</h3>
+          <h1>0</h1>
+        </div>
+      </div>
+
+      <div class="analytics">
+        <div class="chart-box">
+          <h2>Payment Overview</h2>
+          <div class="chart-placeholder"></div>
+          <p style="margin-top: 15px; color: gray">
+            Payment chart will be connected later (stub).
+          </p>
+        </div>
+
+        <div class="activity-box">
+          <h2>Make Payment</h2>
+          <br />
+          <div class="alert alert-success">Payment portal ready (stub)</div>
+          <div class="alert alert-warning">
+            Keep your invoice number for reference (stub)
+          </div>
+          <div class="alert alert-danger">
+            Large payments may require confirmation (stub)
+          </div>
+
+          <div class="form-container" style="padding: 20px; margin-top: 14px">
+            <div class="form-group" style="margin-bottom: 12px">
+              <label>Invoice Number</label>
+              <input type="text" placeholder="e.g., INV-2026-001" />
+            </div>
+            <button class="btn" type="button" style="width: 100%">
+              <i class="fa fa-credit-card"></i> Pay Now
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="table-container">
+        <h2>Invoice History</h2>
+        <br />
+        <table>
+          <thead>
+            <tr>
+              <th>Invoice</th>
+              <th>Date</th>
+              <th>Amount</th>
+              <th>Status</th>
+              <th>Balance</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>INV-2026-001</td>
+              <td>2026-05-20</td>
+              <td>KES 4,000</td>
+              <td><span class="status active">Paid</span></td>
+              <td>KES 0</td>
+            </tr>
+            <tr>
+              <td>INV-2026-014</td>
+              <td>2026-05-18</td>
+              <td>KES 2,200</td>
+              <td><span class="status pending">Partial</span></td>
+              <td>KES 1,200</td>
+            </tr>
+            <tr>
+              <td>INV-2026-020</td>
+              <td>2026-05-10</td>
+              <td>KES 3,650</td>
+              <td><span class="status active">Paid</span></td>
+              <td>KES 0</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

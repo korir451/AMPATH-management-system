@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Patient Support - AMPATH</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <h2>CONTACT AMPATH</h2>
+      <ul>
+        <li>
+          <a href="contact-home.html"
+            ><i class="fa fa-headset"></i><span>Home</span></a
+          >
+        </li>
+        <li>
+          <a href="contact-directory.html"
+            ><i class="fa fa-address-book"></i><span>Directory</span></a
+          >
+        </li>
+        <li>
+          <a href="support-center.html"
+            ><i class="fa fa-life-ring"></i><span>Support Center</span></a
+          >
+        </li>
+        <li>
+          <a href="help-center.html"
+            ><i class="fa fa-circle-question"></i><span>Help / FAQ</span></a
+          >
+        </li>
+        <li>
+          <a href="inquiry-form.html"
+            ><i class="fa fa-file-signature"></i><span>Inquiry Form</span></a
+          >
+        </li>
+        <li>
+          <a href="emergency-contacts.html"
+            ><i class="fa fa-truck-medical"></i><span>Emergency</span></a
+          >
+        </li>
+        <li>
+          <a href="locations.html"
+            ><i class="fa fa-location-dot"></i><span>Locations</span></a
+          >
+        </li>
+        <li>
+          <a href="patient-support.html" class="active"
+            ><i class="fa fa-user-injured"></i><span>Patient Support</span></a
+          >
+        </li>
+        <li>
+          <a href="staff-contact-center.html"
+            ><i class="fa fa-user-shield"></i><span>Staff Support</span></a
+          >
+        </li>
+        <li>
+          <a href="outreach-contacts.html"
+            ><i class="fa fa-people-arrows"></i><span>Outreach</span></a
+          >
+        </li>
+        <li>
+          <a href="contact-analytics.html"
+            ><i class="fa fa-chart-line"></i><span>Analytics</span></a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <div class="main-content">
+      <div class="topbar">
+        <div>
+          <h2>Patient Support Center</h2>
+          <p style="color: gray; font-size: 14px">
+            Appointment assistance, billing support, records requests,
+            prescriptions and telemedicine help (placeholders).
+          </p>
+        </div>
+        <div class="profile">
+          <img src="https://i.pravatar.cc/100" alt="patient" />
+          <h4>Patient Care</h4>
+        </div>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Appointments</h3>
+          <h1>Help</h1>
+        </div>
+        <div class="card">
+          <h3>Billing</h3>
+          <h1>Support</h1>
+        </div>
+        <div class="card">
+          <h3>Records</h3>
+          <h1>Requests</h1>
+        </div>
+        <div class="card">
+          <h3>Complaints</h3>
+          <h1>Resolved</h1>
+        </div>
+      </div>
+
+      <div class="analytics">
+        <div class="chart-box">
+          <h2>Patient Care Quick Actions</h2>
+          <p style="color: gray; font-size: 13px; line-height: 1.6">
+            Choose what you need—then submit an inquiry form to get a tracking
+            number.
+          </p>
+
+          <div
+            style="
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 12px;
+              margin-top: 12px;
+            "
+          >
+            <a
+              class="btn"
+              style="text-decoration: none; display: block"
+              href="inquiry-form.html"
+              ><i class="fa fa-calendar"></i> Appointment Assistance</a
+            >
+            <a
+              class="btn"
+              style="text-decoration: none; display: block"
+              href="inquiry-form.html"
+              ><i class="fa fa-receipt"></i> Billing Support</a
+            >
+            <a
+              class="btn"
+              style="text-decoration: none; display: block"
+              href="inquiry-form.html"
+              ><i class="fa fa-folder-open"></i> Medical Records Request</a
+            >
+            <a
+              class="btn"
+              style="text-decoration: none; display: block"
+              href="inquiry-form.html"
+              ><i class="fa fa-pills"></i> Prescription Support</a
+            >
+            <a
+              class="btn"
+              style="text-decoration: none; display: block"
+              href="inquiry-form.html"
+              ><i class="fa fa-video"></i> Telemedicine Assistance</a
+            >
+            <a
+              class="btn"
+              style="text-decoration: none; display: block"
+              href="inquiry-form.html"
+              ><i class="fa fa-clipboard-check"></i> Patient Rights &
+              Complaints</a
+            >
+          </div>
+
+          <div class="alert alert-warning" style="margin-top: 14px">
+            Backend integrations for direct actions pending.
+          </div>
+        </div>
+
+        <div class="activity-box">
+          <h2>Patient Feedback (placeholder)</h2>
+          <p style="color: gray; font-size: 13px; line-height: 1.6">
+            Share satisfaction and improvement suggestions.
+          </p>
+
+          <div style="margin-top: 12px">
+            <label style="font-size: 14px">How was your experience?</label>
+            <select
+              style="
+                width: 100%;
+                padding: 12px;
+                border-radius: 12px;
+                border: 1px solid #dbe3ee;
+                outline: none;
+                margin-bottom: 10px;
+              "
+            >
+              <option>Select rating</option>
+              <option>Excellent</option>
+              <option>Good</option>
+              <option>Fair</option>
+              <option>Poor</option>
+            </select>
+
+            <label style="font-size: 14px">Your feedback</label>
+            <textarea
+              rows="7"
+              style="
+                width: 100%;
+                padding: 12px;
+                border-radius: 12px;
+                border: 1px solid #dbe3ee;
+                outline: none;
+                margin-bottom: 10px;
+              "
+            ></textarea>
+
+            <button
+              class="btn"
+              style="width: 100%"
+              onclick="alert('Feedback submitted (placeholder)')"
+            >
+              <i class="fa fa-paper-plane"></i> Submit Feedback
+            </button>
+          </div>
+
+          <div style="margin-top: 12px" class="alert alert-success">
+            Your feedback helps improve care (placeholder).
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

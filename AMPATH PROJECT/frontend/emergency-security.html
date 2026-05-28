@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emergency Security - AMPATH SOC</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <h2>AMPATH SOC</h2>
+      <ul>
+        <li>
+          <a href="security-dashboard.html"
+            ><i class="fa fa-shield-halved"></i><span>Dashboard</span></a
+          >
+        </li>
+        <li>
+          <a href="roles-permissions.html"
+            ><i class="fa fa-user-lock"></i><span>Roles & Permissions</span></a
+          >
+        </li>
+        <li>
+          <a href="users-management.html"
+            ><i class="fa fa-users"></i><span>Users</span></a
+          >
+        </li>
+        <li>
+          <a href="audit-logs.html"
+            ><i class="fa fa-scroll"></i><span>Audit Logs</span></a
+          >
+        </li>
+        <li>
+          <a href="threat-monitoring.html"
+            ><i class="fa fa-bolt"></i><span>Threat Monitoring</span></a
+          >
+        </li>
+        <li>
+          <a href="infrastructure-monitoring.html"
+            ><i class="fa fa-server"></i><span>Infrastructure</span></a
+          >
+        </li>
+        <li>
+          <a href="surveillance-center.html"
+            ><i class="fa fa-video"></i><span>Surveillance</span></a
+          >
+        </li>
+        <li>
+          <a href="emergency-security.html" class="active"
+            ><i class="fa fa-bell"></i><span>Emergency Controls</span></a
+          >
+        </li>
+        <li>
+          <a href="compliance-center.html"
+            ><i class="fa fa-shield-heart"></i><span>Compliance</span></a
+          >
+        </li>
+        <li>
+          <a href="backup-recovery.html"
+            ><i class="fa fa-database"></i><span>Backup & DR</span></a
+          >
+        </li>
+        <li>
+          <a href="security-analytics.html"
+            ><i class="fa fa-chart-line"></i><span>Analytics</span></a
+          >
+        </li>
+        <li>
+          <a href="security-reports.html"
+            ><i class="fa fa-file-export"></i><span>Reports</span></a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <div class="main-content">
+      <div class="topbar">
+        <div>
+          <h2>Emergency Security Control</h2>
+          <p style="color: gray; font-size: 14px">
+            Panic alert system, lockdown workflows and rapid response
+            (placeholders).
+          </p>
+        </div>
+        <div class="profile">
+          <img src="https://i.pravatar.cc/100" alt="emergency" />
+          <h4>Emergency Officer</h4>
+        </div>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Panic Alerts</h3>
+          <h1>0</h1>
+        </div>
+        <div class="card">
+          <h3>Lockdown Status</h3>
+          <h1>Unlocked</h1>
+        </div>
+        <div class="card">
+          <h3>Escalations</h3>
+          <h1>2</h1>
+        </div>
+        <div class="card">
+          <h3>Evacuation Plan</h3>
+          <h1>Ready</h1>
+        </div>
+      </div>
+
+      <div class="analytics">
+        <div class="chart-box">
+          <h2>Rapid Response Panel</h2>
+          <div
+            style="
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 12px;
+              margin-top: 12px;
+            "
+          >
+            <button class="btn" onclick="alert('Trigger panic (placeholder)')">
+              <i class="fa fa-bolt"></i> Trigger Panic
+            </button>
+            <button
+              class="btn"
+              onclick="alert('Start lockdown (placeholder)')"
+              style="background: #0b3d91; color: white"
+            >
+              <i class="fa fa-lock"></i> Lockdown
+            </button>
+            <button class="btn" onclick="alert('Fire emergency (placeholder)')">
+              <i class="fa fa-fire-extinguisher"></i> Fire Control
+            </button>
+            <button
+              class="btn"
+              onclick="alert('Evacuate ward (placeholder)')"
+              style="background: #0b3d91; color: white"
+            >
+              <i class="fa fa-person-walking"></i> Evacuation
+            </button>
+          </div>
+          <div style="margin-top: 12px">
+            <div class="alert alert-warning">
+              Emergency communication routing pending
+            </div>
+          </div>
+        </div>
+        <div class="activity-box">
+          <h2>Crisis Coordination</h2>
+          <div class="table-container" style="margin-top: 12px">
+            <table>
+              <thead>
+                <tr>
+                  <th>Team</th>
+                  <th>Status</th>
+                  <th>ETA</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Security</td>
+                  <td><span class="status active">On Call</span></td>
+                  <td>—</td>
+                </tr>
+                <tr>
+                  <td>ICT</td>
+                  <td><span class="status pending">Responding</span></td>
+                  <td>10m</td>
+                </tr>
+                <tr>
+                  <td>Compliance</td>
+                  <td><span class="status pending">Reviewing</span></td>
+                  <td>—</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

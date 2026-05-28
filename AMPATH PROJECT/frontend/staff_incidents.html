@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Staff Incidents - AMPATH</title>
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <h2>AMPATH STAFF</h2>
+
+      <ul>
+        <li>
+          <a href="employee-dashboard.html">
+            <i class="fa fa-house"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="staff-incidents.html" class="active">
+            <i class="fa fa-triangle-exclamation"></i>
+            <span>Incidents</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="attendance.html">
+            <i class="fa fa-clock"></i>
+            <span>Attendance</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="tasks.html">
+            <i class="fa fa-list-check"></i>
+            <span>Tasks</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="employee-login.html">
+            <i class="fa fa-right-from-bracket"></i>
+            <span>Logout</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+      <!-- TOPBAR -->
+      <div class="topbar">
+        <div>
+          <h2>Incident Reporting System</h2>
+          <p style="color: gray; font-size: 14px">
+            Report, track, and manage hospital incidents in real time
+          </p>
+        </div>
+
+        <div class="profile">
+          <img src="https://i.pravatar.cc/100" alt="staff" />
+          <h4>Staff Portal</h4>
+        </div>
+      </div>
+
+      <!-- KPI CARDS -->
+      <div class="cards">
+        <div class="card">
+          <h3>Total Incidents</h3>
+          <h1>18</h1>
+        </div>
+
+        <div class="card">
+          <h3>Open Cases</h3>
+          <h1>6</h1>
+        </div>
+
+        <div class="card">
+          <h3>Resolved</h3>
+          <h1>10</h1>
+        </div>
+
+        <div class="card">
+          <h3>Critical</h3>
+          <h1>2</h1>
+        </div>
+      </div>
+
+      <!-- REPORT INCIDENT FORM -->
+      <div class="analytics">
+        <div class="chart-box">
+          <h2>Report New Incident</h2>
+
+          <form style="margin-top: 15px">
+            <div
+              style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px"
+            >
+              <div>
+                <input
+                  type="text"
+                  placeholder="Incident Title"
+                  style="
+                    width: 100%;
+                    padding: 12px;
+                    border-radius: 12px;
+                    border: 1px solid #dbe3ee;
+                    outline: none;
+                    margin-bottom: 10px;
+                  "
+                  required
+                />
+              </div>
+
+              <div>
+                <select
+                  id="incidentDepartment"
+                  style="
+                    width: 100%;
+                    padding: 12px;
+                    border-radius: 12px;
+                    border: 1px solid #dbe3ee;
+                    outline: none;
+                    margin-bottom: 10px;
+                  "
+                  required
+                >
+                  <option value="">Select Department</option>
+                  <option>Radiology</option>
+                  <option>Laboratory</option>
+                  <option>Emergency</option>
+                  <option>Pharmacy</option>
+                  <option>Nursing</option>
+                  <option>ICT</option>
+                </select>
+              </div>
+            </div>
+
+            <div style="height: 2px"></div>
+
+            <select
+              id="incidentType"
+              style="
+                width: 100%;
+                padding: 12px;
+                border-radius: 12px;
+                border: 1px solid #dbe3ee;
+                outline: none;
+                margin-bottom: 10px;
+              "
+              required
+            >
+              <option value="">Incident Type (auto directs)</option>
+              <option value="Network Breach">Network Breach</option>
+              <option value="System Outage">System Outage</option>
+              <option value="Equipment Failure">Equipment Failure</option>
+              <option value="Medication Error">Medication Error</option>
+              <option value="Data Loss">Data Loss</option>
+              <option value="Other">Other</option>
+            </select>
+
+            <div
+              style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px"
+            >
+              <select
+                style="
+                  width: 100%;
+                  padding: 12px;
+                  border-radius: 12px;
+                  border: 1px solid #dbe3ee;
+                  outline: none;
+                  margin-bottom: 10px;
+                "
+                required
+              >
+                <option value="">Severity Level</option>
+                <option>Low</option>
+                <option>Medium</option>
+                <option>High</option>
+                <option>Critical</option>
+              </select>
+
+              <div>
+                <input
+                  type="file"
+                  style="
+                    width: 100%;
+                    padding: 12px;
+                    border-radius: 12px;
+                    border: 1px dashed #dbe3ee;
+                    outline: none;
+                    margin-bottom: 10px;
+                  "
+                  accept="image/*,.pdf,.docx"
+                />
+              </div>
+            </div>
+
+            <textarea
+              placeholder="Describe the incident in detail"
+              rows="5"
+              style="
+                width: 100%;
+                padding: 12px;
+                border-radius: 12px;
+                border: 1px solid #dbe3ee;
+                outline: none;
+                margin-bottom: 10px;
+              "
+              required
+            ></textarea>
+
+            <button class="btn" style="width: 100%; padding: 13px 18px">
+              <i class="fa fa-paper-plane"></i> Submit Incident Report
+            </button>
+          </form>
+        </div>
+
+        <!-- ALERTS -->
+        <div class="activity-box">
+          <h2>Incident Alerts</h2>
+          <br />
+
+          <div class="alert alert-danger">
+            Critical incident reported in ICU
+          </div>
+
+          <div class="alert alert-warning">
+            Delayed response in laboratory queue
+          </div>
+
+          <div class="alert alert-success">
+            Equipment issue resolved in Radiology
+          </div>
+        </div>
+      </div>
+
+      <!-- INCIDENT TABLE -->
+      <div class="table-container">
+        <h2>Incident Records</h2>
+
+        <br />
+
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Incident</th>
+              <th>Department</th>
+              <th>Severity</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>2026-05-20</td>
+              <td>Equipment failure</td>
+              <td>Radiology</td>
+              <td>High</td>
+              <td><span class="status pending">Open</span></td>
+            </tr>
+
+            <tr>
+              <td>2026-05-19</td>
+              <td>Patient delay</td>
+              <td>Outpatient</td>
+              <td>Medium</td>
+              <td><span class="status active">Resolved</span></td>
+            </tr>
+
+            <tr>
+              <td>2026-05-18</td>
+              <td>Lab sample mix-up</td>
+              <td>Laboratory</td>
+              <td>Critical</td>
+              <td><span class="status pending">Investigating</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

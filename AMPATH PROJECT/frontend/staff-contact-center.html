@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Staff Support - AMPATH</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <h2>CONTACT AMPATH</h2>
+      <ul>
+        <li>
+          <a href="contact-home.html"
+            ><i class="fa fa-headset"></i><span>Home</span></a
+          >
+        </li>
+        <li>
+          <a href="contact-directory.html"
+            ><i class="fa fa-address-book"></i><span>Directory</span></a
+          >
+        </li>
+        <li>
+          <a href="support-center.html"
+            ><i class="fa fa-life-ring"></i><span>Support Center</span></a
+          >
+        </li>
+        <li>
+          <a href="help-center.html"
+            ><i class="fa fa-circle-question"></i><span>Help / FAQ</span></a
+          >
+        </li>
+        <li>
+          <a href="inquiry-form.html"
+            ><i class="fa fa-file-signature"></i><span>Inquiry Form</span></a
+          >
+        </li>
+        <li>
+          <a href="emergency-contacts.html"
+            ><i class="fa fa-truck-medical"></i><span>Emergency</span></a
+          >
+        </li>
+        <li>
+          <a href="locations.html"
+            ><i class="fa fa-location-dot"></i><span>Locations</span></a
+          >
+        </li>
+        <li>
+          <a href="patient-support.html"
+            ><i class="fa fa-user-injured"></i><span>Patient Support</span></a
+          >
+        </li>
+        <li>
+          <a href="staff-contact-center.html" class="active"
+            ><i class="fa fa-user-shield"></i><span>Staff Support</span></a
+          >
+        </li>
+        <li>
+          <a href="outreach-contacts.html"
+            ><i class="fa fa-people-arrows"></i><span>Outreach</span></a
+          >
+        </li>
+        <li>
+          <a href="contact-analytics.html"
+            ><i class="fa fa-chart-line"></i><span>Analytics</span></a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <div class="main-content">
+      <div class="topbar">
+        <div>
+          <h2>Staff Support Center</h2>
+          <p style="color: gray; font-size: 14px">
+            HR, IT, internal routing and staff ticket placeholders.
+          </p>
+        </div>
+        <div class="profile">
+          <img src="https://i.pravatar.cc/100" alt="staff" />
+          <h4>Internal Support</h4>
+        </div>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Open Staff Tickets</h3>
+          <h1>41</h1>
+        </div>
+        <div class="card">
+          <h3>IT Queue</h3>
+          <h1>7</h1>
+        </div>
+        <div class="card">
+          <h3>HR Requests</h3>
+          <h1>5</h1>
+        </div>
+        <div class="card">
+          <h3>Escalations</h3>
+          <h1>2</h1>
+        </div>
+      </div>
+
+      <div class="analytics">
+        <div class="chart-box">
+          <h2>Staff Support Options</h2>
+          <p style="color: gray; font-size: 13px; line-height: 1.6">
+            Route requests via Inquiry Form (placeholder).
+          </p>
+
+          <div
+            style="
+              margin-top: 12px;
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 12px;
+            "
+          >
+            <a
+              class="btn"
+              style="text-decoration: none; display: block"
+              href="inquiry-form.html"
+              ><i class="fa fa-laptop"></i> IT Support</a
+            >
+            <a
+              class="btn"
+              style="
+                text-decoration: none;
+                display: block;
+                background: #0b3d91;
+                color: white;
+              "
+              href="inquiry-form.html"
+              ><i class="fa fa-user-tie"></i> HR & Payroll</a
+            >
+            <a
+              class="btn"
+              style="text-decoration: none; display: block"
+              href="inquiry-form.html"
+              ><i class="fa fa-clipboard-check"></i> Department Routing</a
+            >
+            <a
+              class="btn"
+              style="
+                text-decoration: none;
+                display: block;
+                background: #0b3d91;
+                color: white;
+              "
+              href="inquiry-form.html"
+              ><i class="fa fa-shield-halved"></i> Security Issues</a
+            >
+          </div>
+
+          <div class="alert alert-warning" style="margin-top: 12px">
+            Internal messaging backend pending.
+          </div>
+        </div>
+
+        <div class="activity-box">
+          <h2>Staff Directory (placeholder)</h2>
+          <div class="table-container" style="margin-top: 12px">
+            <table>
+              <thead>
+                <tr>
+                  <th>Team</th>
+                  <th>Contact</th>
+                  <th>Routing</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>IT Helpdesk</td>
+                  <td>ict@ampath.org</td>
+                  <td><span class="status active">Auto</span></td>
+                </tr>
+                <tr>
+                  <td>HR Office</td>
+                  <td>hr@ampath.org</td>
+                  <td><span class="status pending">Manual</span></td>
+                </tr>
+                <tr>
+                  <td>Security</td>
+                  <td>security@ampath.org</td>
+                  <td><span class="status active">On-call</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <button
+            class="btn"
+            style="width: 100%; margin-top: 14px"
+            onclick="alert('Create internal ticket (placeholder)')"
+          >
+            <i class="fa fa-ticket"></i> Create Internal Ticket
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

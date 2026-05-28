@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Patient History - AMPATH</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <h2>AMPATH</h2>
+
+      <ul>
+        <li>
+          <a href="employee_dashboard.html">
+            <i class="fa fa-house"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="patients.html" class="active">
+            <i class="fa fa-user-injured"></i>
+            <span>Patients</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="appointments.html">
+            <i class="fa fa-calendar"></i>
+            <span>Appointments</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="incidents.html">
+            <i class="fa fa-triangle-exclamation"></i>
+            <span>Incidents</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="attendance.html">
+            <i class="fa fa-clock"></i>
+            <span>Attendance</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="tasks.html">
+            <i class="fa fa-list-check"></i>
+            <span>Tasks</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="department_radiology.html">
+            <i class="fa fa-building"></i>
+            <span>Departments</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="employee_login.html">
+            <i class="fa fa-right-from-bracket"></i>
+            <span>Logout</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+      <div class="topbar">
+        <div>
+          <h2>Patient Full History</h2>
+          <p style="color: gray; font-size: 14px">
+            Diagnoses, surgeries, allergies, admissions
+          </p>
+        </div>
+
+        <div class="profile">
+          <img src="https://i.pravatar.cc/100" alt="patient" />
+          <h4>John Doe</h4>
+        </div>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Patient ID</h3>
+          <h1 style="font-size: 26px; color: #1e88e5">P-1042</h1>
+        </div>
+        <div class="card">
+          <h3>Admission Status</h3>
+          <h1><span class="status active">Admitted</span></h1>
+        </div>
+        <div class="card">
+          <h3>Primary Department</h3>
+          <h1>Radiology</h1>
+        </div>
+        <div class="card">
+          <h3>Last Review</h3>
+          <h1>2026-05-20</h1>
+        </div>
+      </div>
+
+      <div class="analytics">
+        <div class="chart-box">
+          <h2>Allergies</h2>
+          <p class="muted" style="margin-top: 8px; line-height: 1.6">
+            Placeholder: Penicillin (mild reaction), Latex (no known reaction)
+          </p>
+
+          <h2 style="margin-top: 22px">Chronic Conditions</h2>
+          <p class="muted" style="margin-top: 8px; line-height: 1.6">
+            Placeholder: Hypertension, Diabetes Type II
+          </p>
+
+          <h2 style="margin-top: 22px">Past Surgeries</h2>
+          <p class="muted" style="margin-top: 8px; line-height: 1.6">
+            Placeholder: Appendectomy (2018)
+          </p>
+        </div>
+
+        <div class="activity-box">
+          <h2>Timeline</h2>
+          <br />
+
+          <div class="alert alert-success">
+            2026-05-19 Admission: Radiology Imaging Ward
+          </div>
+          <div class="alert alert-warning">
+            2026-05-20 Lab: Blood tests in progress
+          </div>
+          <div class="alert alert-danger">
+            2026-05-21 Incident: Equipment calibration issue
+          </div>
+        </div>
+      </div>
+
+      <div class="table-container">
+        <h2>Treatment Notes (Summary)</h2>
+        <p class="muted" style="margin-top: 8px">
+          Treatment history placeholder for backend integration
+        </p>
+        <br />
+
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Provider</th>
+              <th>Note</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2026-05-19</td>
+              <td>Dr. Smith</td>
+              <td>Initial imaging + risk assessment completed</td>
+              <td><span class="status active">Completed</span></td>
+            </tr>
+            <tr>
+              <td>2026-05-20</td>
+              <td>Nurse Team</td>
+              <td>Medication reconciliation and monitoring</td>
+              <td><span class="status pending">In Progress</span></td>
+            </tr>
+            <tr>
+              <td>2026-05-22</td>
+              <td>ICT Officer</td>
+              <td>Records sync after system outage</td>
+              <td><span class="status pending">Investigating</span></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div style="display: flex; gap: 12px; margin-top: 16px">
+          <a
+            href="patient-details.html"
+            class="btn"
+            style="flex: 1; background: #dbe3ee; color: #0b3d91"
+            >Back to Profile</a
+          >
+          <a href="patient-treatment.html" class="btn" style="flex: 1"
+            >Treatment Notes</a
+          >
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doctor Schedule - AMPATH</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <h2>DOCTOR PORTAL</h2>
+      <ul>
+        <li><a href="appointments-dashboard.html"><i class="fa fa-calendar-check"></i><span>Dashboard</span></a></li>
+        <li><a href="doctor-schedule.html" class="active"><i class="fa fa-user-doctor"></i><span>My Schedule</span></a></li>
+        <li><a href="staff-schedules.html"><i class="fa fa-people-group"></i><span>Staff Schedules</span></a></li>
+      </ul>
+    </div>
+
+    <div class="main-content">
+      <div class="topbar">
+        <div>
+          <h2>Doctor Availability & Queue</h2>
+          <p style="color: gray; font-size: 14px">Daily queue + patient info access placeholders</p>
+        </div>
+        <div class="profile">
+          <img src="https://i.pravatar.cc/100" alt="doctor" />
+          <h4>Dr. Achieng</h4>
+        </div>
+      </div>
+
+      <div class="cards">
+        <div class="card"><h3>Today Appointments</h3><h1>32</h1></div>
+        <div class="card"><h3>Available Slots</h3><h1>8</h1></div>
+        <div class="card"><h3>Pending Approvals</h3><h1>3</h1></div>
+        <div class="card"><h3>Emergency Queue</h3><h1 style="color:#b00020">2</h1></div>
+      </div>
+
+      <div class="analytics">
+        <div class="chart-box">
+          <h2>Availability Slots (Placeholder)</h2>
+          <p class="muted" style="margin-top: 8px">Color-coded schedule for appointments (future calendar widget)</p>
+          <div class="grid" style="grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 12px">
+            <div class="alert alert-success">09:00 - 09:30 Available</div>
+            <div class="alert alert-warning">10:00 - 10:30 Partially booked</div>
+            <div class="alert alert-danger">11:00 - 11:30 Emergency reserved</div>
+            <div class="alert alert-success">14:00 - 14:30 Available</div>
+          </div>
+          <button class="btn" style="width:100%; background:#0b3d91; color:white; margin-top:14px">
+            <i class="fa fa-calendar"></i> Update Availability (placeholder)
+          </button>
+        </div>
+
+        <div class="activity-box">
+          <h2>Daily Appointment Queue</h2>
+          <br />
+          <div class="alert alert-warning">Queue #12 • Consultation • 10:10</div>
+          <div class="alert alert-success">Queue #13 • Follow-up • 10:25</div>
+          <div class="alert alert-danger">Queue #14 • Emergency • 10:35</div>
+          <button class="btn" style="width:100%; background:#dbe3ee; color:#0b3d91; margin-top:14px">
+            <i class="fa fa-check"></i> Approve Selected (placeholder)
+          </button>
+        </div>
+      </div>
+
+      <div class="table-container">
+        <h2>Patient Info Access (Placeholder)</h2>
+        <p class="muted" style="margin-top: 8px">Patient details visible to the doctor (future integration)</p>
+        <br />
+        <table>
+          <thead>
+            <tr>
+              <th>Patient</th>
+              <th>Reason</th>
+              <th>Status</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Jane W.</td>
+              <td>Chest pain follow-up</td>
+              <td><span class="status active">Approved</span></td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>Peter S.</td>
+              <td>Trauma triage</td>
+              <td><span class="status pending">Pending</span></td>
+              <td>Urgent case</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
+

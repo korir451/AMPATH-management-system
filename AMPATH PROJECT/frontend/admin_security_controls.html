@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Security Controls - AMPATH</title>
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <h2>AMPATH ADMIN</h2>
+
+      <ul>
+        <li>
+          <a href="security-dashboard.html">
+            <i class="fa fa-house"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="admin_security_controls.html" class="active">
+            <i class="fa fa-shield-halved"></i>
+            <span>Security</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="users-management.html">
+            <i class="fa fa-users"></i>
+            <span>User Management</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="roles-permissions.html">
+            <i class="fa fa-user-gear"></i>
+            <span>Roles</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="audit-logs.html">
+            <i class="fa fa-file-lines"></i>
+            <span>Audit Logs</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="employee-login.html">
+            <i class="fa fa-right-from-bracket"></i>
+            <span>Logout</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+      <!-- TOPBAR -->
+      <div class="topbar">
+        <div>
+          <h2>Security Control Center</h2>
+          <p style="color: gray; font-size: 14px">
+            Manage access, roles, permissions & system security
+          </p>
+        </div>
+
+        <div class="profile">
+          <img src="https://i.pravatar.cc/100" alt="admin" />
+          <h4>System Admin</h4>
+        </div>
+      </div>
+
+      <!-- SECURITY CARDS -->
+      <div class="cards">
+        <div class="card">
+          <h3>Active Users</h3>
+          <h1>145</h1>
+        </div>
+
+        <div class="card">
+          <h3>Blocked Accounts</h3>
+          <h1>12</h1>
+        </div>
+
+        <div class="card">
+          <h3>Failed Logins</h3>
+          <h1>8</h1>
+        </div>
+
+        <div class="card">
+          <h3>Security Level</h3>
+          <h1>High</h1>
+        </div>
+      </div>
+
+      <!-- SECURITY SETTINGS -->
+      <div class="analytics">
+        <!-- CONTROLS -->
+        <div class="chart-box">
+          <h2>Security Settings</h2>
+
+          <form style="margin-top: 15px">
+            <label>Enable Two-Factor Authentication</label><br />
+            <select style="width: 100%; padding: 10px; margin-bottom: 10px">
+              <option>Enabled</option>
+              <option>Disabled</option>
+            </select>
+
+            <label>Password Policy</label><br />
+            <select style="width: 100%; padding: 10px; margin-bottom: 10px">
+              <option>Strong (Recommended)</option>
+              <option>Medium</option>
+              <option>Weak</option>
+            </select>
+
+            <label>Session Timeout (minutes)</label><br />
+            <input
+              type="number"
+              value="15"
+              style="width: 100%; padding: 10px; margin-bottom: 10px"
+            />
+
+            <label>Login Attempts Limit</label><br />
+            <input
+              type="number"
+              value="5"
+              style="width: 100%; padding: 10px; margin-bottom: 10px"
+            />
+
+            <button class="btn" style="width: 100%">
+              <i class="fa fa-save"></i> Save Security Settings
+            </button>
+          </form>
+        </div>
+
+        <!-- ALERTS -->
+        <div class="activity-box">
+          <h2>Security Alerts</h2>
+          <br />
+
+          <div class="alert alert-danger">
+            Multiple failed login attempts detected
+          </div>
+
+          <div class="alert alert-warning">Unusual access from new device</div>
+
+          <div class="alert alert-success">System firewall is active</div>
+        </div>
+      </div>
+
+      <!-- AUDIT TABLE -->
+      <div class="table-container">
+        <h2>Recent Security Activity</h2>
+
+        <br />
+
+        <table>
+          <thead>
+            <tr>
+              <th>User</th>
+              <th>Action</th>
+              <th>IP Address</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>Admin</td>
+              <td>Login</td>
+              <td>192.168.1.10</td>
+              <td><span class="status active">Success</span></td>
+            </tr>
+
+            <tr>
+              <td>Doctor John</td>
+              <td>Access Patient Records</td>
+              <td>192.168.1.22</td>
+              <td><span class="status active">Allowed</span></td>
+            </tr>
+
+            <tr>
+              <td>Unknown</td>
+              <td>Login Attempt</td>
+              <td>102.45.33.11</td>
+              <td><span class="status pending">Blocked</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

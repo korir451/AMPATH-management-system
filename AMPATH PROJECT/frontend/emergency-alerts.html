@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emergency Alerts - AMPATH</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <h2>AMPATH EMERGENCY</h2>
+      <ul>
+        <li>
+          <a href="emergency-dashboard.html">
+            <i class="fa fa-house"></i>
+            <span>Emergency Command</span>
+          </a>
+        </li>
+        <li>
+          <a href="emergency-alerts.html" class="active">
+            <i class="fa fa-bell"></i>
+            <span>Emergency Alerts</span>
+          </a>
+        </li>
+        <li>
+          <a href="emergency-hotline.html">
+            <i class="fa fa-phone"></i>
+            <span>Hotline</span>
+          </a>
+        </li>
+        <li>
+          <a href="emergency-analytics.html">
+            <i class="fa fa-chart-line"></i>
+            <span>Analytics</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+      <div class="topbar">
+        <div>
+          <h2>Notification & Alert System</h2>
+          <p style="color: gray; font-size: 14px">
+            Real-time emergency notifications + broadcast center (placeholders)
+          </p>
+        </div>
+        <div class="profile">
+          <img src="https://i.pravatar.cc/100" alt="alerts" />
+          <h4>Emergency Dispatcher</h4>
+        </div>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Alert Level</h3>
+          <h1 style="color:#b00020">Critical</h1>
+        </div>
+        <div class="card">
+          <h3>Red Alerts</h3>
+          <h1>2</h1>
+        </div>
+        <div class="card">
+          <h3>Orange Alerts</h3>
+          <h1>3</h1>
+        </div>
+        <div class="card">
+          <h3>Yellow Alerts</h3>
+          <h1>5</h1>
+        </div>
+        <div class="card">
+          <h3>Green Status</h3>
+          <h1>Active</h1>
+        </div>
+        <div class="card">
+          <h3>Escalations</h3>
+          <h1>1</h1>
+        </div>
+      </div>
+
+      <div class="analytics">
+        <div class="chart-box">
+          <h2>Emergency Broadcast Center</h2>
+          <p class="muted" style="margin-top: 8px; line-height: 1.6">
+            Send department-wide emergency broadcasts with escalation rules (UI placeholder).
+          </p>
+
+          <div style="margin-top: 14px">
+            <label class="muted" style="font-size: 13px">Target Department</label>
+            <select
+              style="width: 100%; padding: 12px; margin-top: 8px; margin-bottom: 10px; border-radius: 12px; border: 1px solid #dbe3ee; outline: none"
+            >
+              <option>All Departments</option>
+              <option>Radiology</option>
+              <option>Laboratory</option>
+              <option>Pharmacy</option>
+              <option>Emergency</option>
+              <option>ICT</option>
+              <option>Security</option>
+              <option>Administration</option>
+            </select>
+
+            <label class="muted" style="font-size: 13px">Alert Level</label>
+            <select
+              style="width: 100%; padding: 12px; margin-top: 8px; margin-bottom: 10px; border-radius: 12px; border: 1px solid #dbe3ee; outline: none"
+            >
+              <option>Green</option>
+              <option>Yellow</option>
+              <option>Orange</option>
+              <option>Red</option>
+              <option>Critical</option>
+            </select>
+
+            <label class="muted" style="font-size: 13px">Message</label>
+            <textarea
+              rows="4"
+              style="width: 100%; padding: 12px; margin-top: 8px; margin-bottom: 10px; border-radius: 12px; border: 1px solid #dbe3ee; outline: none"
+              placeholder="Write emergency message to be broadcast"
+            ></textarea>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px">
+              <button class="btn" style="width: 100%; background:#b00020; color:#fff">
+                <i class="fa fa-bullhorn"></i> Broadcast
+              </button>
+              <button class="btn" style="width: 100%; background:#dbe3ee; color:#0b3d91">
+                <i class="fa fa-route"></i> Escalate
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="activity-box">
+          <h2>Emergency Notification Feed</h2>
+          <br />
+          <div class="alert alert-danger">[10:20] CRITICAL: ICU bed overflow risk</div>
+          <div class="alert alert-warning">[10:12] ORANGE: Mass casualty incident - triage required</div>
+          <div class="alert alert-success">[10:05] GREEN: Ambulance dispatch completed</div>
+          <div class="alert alert-warning">[09:58] YELLOW: ICT instability - contingency running</div>
+
+          <div style="margin-top: 16px">
+            <h2 style="margin-bottom: 8px">Channels (Placeholder)</h2>
+            <div class="alert alert-success">SMS alerts: placeholder</div>
+            <div class="alert alert-warning">Email alerts: placeholder</div>
+            <div class="alert alert-danger">Push notifications: placeholder</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="table-container">
+        <h2>Escalation Notifications (Placeholder)</h2>
+        <p class="muted" style="margin-top: 8px">Audit log of escalation triggers will appear here.</p>
+        <br />
+
+        <table>
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Level</th>
+              <th>Department</th>
+              <th>Escalated To</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>10:05</td>
+              <td><span class="status pending">Critical</span></td>
+              <td>Emergency</td>
+              <td>Emergency Officer</td>
+              <td><span class="status active">Triggered</span></td>
+            </tr>
+            <tr>
+              <td>09:58</td>
+              <td><span class="status pending">Red</span></td>
+              <td>Security</td>
+              <td>Admin Security</td>
+              <td><span class="status pending">Acknowledged</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
+

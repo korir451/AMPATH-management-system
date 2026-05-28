@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Analytics - AMPATH</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <h2>CONTACT AMPATH</h2>
+      <ul>
+        <li>
+          <a href="contact-home.html"
+            ><i class="fa fa-headset"></i><span>Home</span></a
+          >
+        </li>
+        <li>
+          <a href="contact-directory.html"
+            ><i class="fa fa-address-book"></i><span>Directory</span></a
+          >
+        </li>
+        <li>
+          <a href="support-center.html"
+            ><i class="fa fa-life-ring"></i><span>Support Center</span></a
+          >
+        </li>
+        <li>
+          <a href="help-center.html"
+            ><i class="fa fa-circle-question"></i><span>Help / FAQ</span></a
+          >
+        </li>
+        <li>
+          <a href="inquiry-form.html"
+            ><i class="fa fa-file-signature"></i><span>Inquiry Form</span></a
+          >
+        </li>
+        <li>
+          <a href="emergency-contacts.html"
+            ><i class="fa fa-truck-medical"></i><span>Emergency</span></a
+          >
+        </li>
+        <li>
+          <a href="locations.html"
+            ><i class="fa fa-location-dot"></i><span>Locations</span></a
+          >
+        </li>
+        <li>
+          <a href="patient-support.html"
+            ><i class="fa fa-user-injured"></i><span>Patient Support</span></a
+          >
+        </li>
+        <li>
+          <a href="staff-contact-center.html"
+            ><i class="fa fa-user-shield"></i><span>Staff Support</span></a
+          >
+        </li>
+        <li>
+          <a href="outreach-contacts.html"
+            ><i class="fa fa-people-arrows"></i><span>Outreach</span></a
+          >
+        </li>
+        <li>
+          <a href="contact-analytics.html" class="active"
+            ><i class="fa fa-chart-line"></i><span>Analytics</span></a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <div class="main-content">
+      <div class="topbar">
+        <div>
+          <h2>Contact Analytics & Reports</h2>
+          <p style="color: gray; font-size: 14px">
+            Inquiry volume, response times, SLA and placeholders for exports.
+          </p>
+        </div>
+        <div class="profile">
+          <img src="https://i.pravatar.cc/100" alt="analytics" />
+          <h4>Insights</h4>
+        </div>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Inquiries (30d)</h3>
+          <h1>1,284</h1>
+        </div>
+        <div class="card">
+          <h3>Avg Response</h3>
+          <h1>12m</h1>
+        </div>
+        <div class="card">
+          <h3>Resolution Rate</h3>
+          <h1>91%</h1>
+        </div>
+        <div class="card">
+          <h3>Critical Emergencies</h3>
+          <h1>17</h1>
+        </div>
+      </div>
+
+      <div class="analytics">
+        <div class="chart-box">
+          <h2>Department Response Times (placeholder)</h2>
+          <div class="table-container" style="margin-top: 12px">
+            <table>
+              <thead>
+                <tr>
+                  <th>Department</th>
+                  <th>P50 Response</th>
+                  <th>P90 Response</th>
+                  <th>Trend</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Emergency</td>
+                  <td>8m</td>
+                  <td>21m</td>
+                  <td><span class="status active">↑ Improved</span></td>
+                </tr>
+                <tr>
+                  <td>Billing</td>
+                  <td>18m</td>
+                  <td>45m</td>
+                  <td><span class="status pending">→ Stable</span></td>
+                </tr>
+                <tr>
+                  <td>Records</td>
+                  <td>22m</td>
+                  <td>55m</td>
+                  <td><span class="status pending">↓</span></td>
+                </tr>
+                <tr>
+                  <td>IT Support</td>
+                  <td>14m</td>
+                  <td>35m</td>
+                  <td><span class="status active">↑ Improved</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <button
+            class="btn"
+            style="width: 100%; margin-top: 14px"
+            onclick="alert('Export report (placeholder)')"
+          >
+            <i class="fa fa-file-export"></i> Export Reports
+          </button>
+        </div>
+
+        <div class="activity-box">
+          <h2>Customer Satisfaction (placeholder)</h2>
+          <p style="color: gray; font-size: 13px; line-height: 1.6">
+            Heatmaps and survey analytics pending.
+          </p>
+          <div class="alert alert-success" style="margin-top: 12px">
+            CSAT: 4.6/5 (placeholder)
+          </div>
+          <div class="alert alert-warning" style="margin-top: 10px">
+            Complaint categories: pending integration
+          </div>
+          <div class="alert alert-danger" style="margin-top: 10px">
+            Emergency escalation metrics pending
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

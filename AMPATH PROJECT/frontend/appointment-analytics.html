@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Appointment Analytics - AMPATH</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <h2>ANALYTICS</h2>
+      <ul>
+        <li>
+          <a href="appointments-dashboard.html"
+            ><i class="fa fa-calendar-check"></i><span>Dashboard</span></a
+          >
+        </li>
+        <li>
+          <a href="appointment-analytics.html" class="active"
+            ><i class="fa fa-chart-line"></i><span>Analytics</span></a
+          >
+        </li>
+        <li>
+          <a href="appointment-reports.html"
+            ><i class="fa fa-file-export"></i><span>Reports</span></a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <div class="main-content">
+      <div class="topbar">
+        <div>
+          <h2>Appointment Analytics</h2>
+          <p style="color: gray; font-size: 14px">
+            Trends, utilization, queue performance (placeholders)
+          </p>
+        </div>
+        <div class="profile">
+          <img src="https://i.pravatar.cc/100" alt="analyst" />
+          <h4>Analytics Officer</h4>
+        </div>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Trends</h3>
+          <h1>+8%</h1>
+        </div>
+        <div class="card">
+          <h3>Missed Rate</h3>
+          <h1 style="color: #b00020">3.4%</h1>
+        </div>
+        <div class="card">
+          <h3>Avg Waiting</h3>
+          <h1>27m</h1>
+        </div>
+        <div class="card">
+          <h3>Revenue</h3>
+          <h1>5.2M</h1>
+        </div>
+      </div>
+
+      <div class="analytics">
+        <div class="chart-box">
+          <h2>Department Utilization (Placeholder)</h2>
+          <div class="alert alert-warning" style="margin-top: 14px">
+            Charts pending backend integration
+          </div>
+          <button
+            class="btn"
+            style="
+              width: 100%;
+              background: #0b3d91;
+              color: white;
+              margin-top: 14px;
+            "
+          >
+            <i class="fa fa-rotate"></i> Refresh Analytics (placeholder)
+          </button>
+        </div>
+        <div class="activity-box">
+          <h2>Doctor Performance (Placeholder)</h2>
+          <div class="alert alert-success">
+            Top: Dr. Achieng • 92% utilization
+          </div>
+          <div class="alert alert-warning">
+            Needs attention: Dr. Njeri • 71% utilization
+          </div>
+          <div style="margin-top: 12px">
+            <label class="muted" style="font-size: 13px">Range</label>
+            <select
+              style="
+                width: 100%;
+                padding: 12px;
+                border-radius: 12px;
+                border: 1px solid #dbe3ee;
+                outline: none;
+                margin-top: 8px;
+              "
+            >
+              <option>Last 7 days</option>
+              <option>Last 30 days</option>
+              <option>This Quarter</option>
+              <option>This Year</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="table-container">
+        <h2>Export Center</h2>
+        <br />
+        <div
+          class="grid"
+          style="grid-template-columns: repeat(2, 1fr); gap: 12px"
+        >
+          <button class="btn" style="background: #0b3d91; color: white">
+            <i class="fa fa-file-pdf"></i> Export PDF
+          </button>
+          <button class="btn" style="background: #dbe3ee; color: #0b3d91">
+            <i class="fa fa-file-excel"></i> Export Excel
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

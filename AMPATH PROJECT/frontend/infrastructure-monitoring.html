@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Infrastructure Monitoring - AMPATH SOC</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <h2>AMPATH SOC</h2>
+      <ul>
+        <li>
+          <a href="security-dashboard.html"
+            ><i class="fa fa-shield-halved"></i><span>Dashboard</span></a
+          >
+        </li>
+        <li>
+          <a href="roles-permissions.html"
+            ><i class="fa fa-user-lock"></i><span>Roles & Permissions</span></a
+          >
+        </li>
+        <li>
+          <a href="users-management.html"
+            ><i class="fa fa-users"></i><span>Users</span></a
+          >
+        </li>
+        <li>
+          <a href="audit-logs.html"
+            ><i class="fa fa-scroll"></i><span>Audit Logs</span></a
+          >
+        </li>
+        <li>
+          <a href="threat-monitoring.html"
+            ><i class="fa fa-bolt"></i><span>Threat Monitoring</span></a
+          >
+        </li>
+        <li>
+          <a href="infrastructure-monitoring.html" class="active"
+            ><i class="fa fa-server"></i><span>Infrastructure</span></a
+          >
+        </li>
+        <li>
+          <a href="surveillance-center.html"
+            ><i class="fa fa-video"></i><span>Surveillance</span></a
+          >
+        </li>
+        <li>
+          <a href="emergency-security.html"
+            ><i class="fa fa-bell"></i><span>Emergency Controls</span></a
+          >
+        </li>
+        <li>
+          <a href="compliance-center.html"
+            ><i class="fa fa-shield-heart"></i><span>Compliance</span></a
+          >
+        </li>
+        <li>
+          <a href="backup-recovery.html"
+            ><i class="fa fa-database"></i><span>Backup & DR</span></a
+          >
+        </li>
+        <li>
+          <a href="security-analytics.html"
+            ><i class="fa fa-chart-line"></i><span>Analytics</span></a
+          >
+        </li>
+        <li>
+          <a href="security-reports.html"
+            ><i class="fa fa-file-export"></i><span>Reports</span></a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <div class="main-content">
+      <div class="topbar">
+        <div>
+          <h2>Infrastructure & Server Monitoring</h2>
+          <p style="color: gray; font-size: 14px">
+            API, DB, CPU/RAM, storage and uptime placeholders.
+          </p>
+        </div>
+        <div class="profile">
+          <img src="https://i.pravatar.cc/100" alt="infra" />
+          <h4>IT Operations</h4>
+        </div>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <h3>System Uptime</h3>
+          <h1>99.97%</h1>
+        </div>
+        <div class="card">
+          <h3>Database</h3>
+          <h1>Healthy</h1>
+        </div>
+        <div class="card">
+          <h3>API Latency</h3>
+          <h1>120ms</h1>
+        </div>
+        <div class="card">
+          <h3>Storage</h3>
+          <h1>62%</h1>
+        </div>
+      </div>
+
+      <div class="analytics">
+        <div class="chart-box">
+          <h2>System Health (placeholder)</h2>
+          <div class="table-container" style="margin-top: 12px">
+            <table>
+              <thead>
+                <tr>
+                  <th>Service</th>
+                  <th>Status</th>
+                  <th>CPU/RAM</th>
+                  <th>Network</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>AMPATH API</td>
+                  <td><span class="status active">Online</span></td>
+                  <td>34% / 41%</td>
+                  <td><span class="status active">Stable</span></td>
+                </tr>
+                <tr>
+                  <td>PostgreSQL</td>
+                  <td><span class="status active">Healthy</span></td>
+                  <td>28% / 52%</td>
+                  <td><span class="status active">Stable</span></td>
+                </tr>
+                <tr>
+                  <td>File Storage</td>
+                  <td><span class="status pending">Monitoring</span></td>
+                  <td>—</td>
+                  <td><span class="status pending">Watch</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div
+            style="
+              margin-top: 14px;
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 12px;
+            "
+          >
+            <button
+              class="btn"
+              onclick="alert('Run backup check (placeholder)')"
+            >
+              <i class="fa fa-database"></i> Backup Check
+            </button>
+            <button
+              class="btn"
+              onclick="alert('API health report (placeholder)')"
+            >
+              <i class="fa fa-file-export"></i> Export Health
+            </button>
+          </div>
+        </div>
+        <div class="activity-box">
+          <h2>Performance Analytics (placeholder)</h2>
+          <div style="margin-top: 12px">
+            <div class="alert alert-success">CPU threshold safe</div>
+            <div class="alert alert-warning">
+              Network retransmits elevated (placeholder)
+            </div>
+            <div class="alert alert-danger">
+              DB replication lag monitoring (placeholder)
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

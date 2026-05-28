@@ -1,0 +1,19 @@
+{
+  "name": "ampath-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "echo \"Frontend skeleton is static for now (frontend/index.html).\"",
+    "build": "echo \"No build step yet.\"",
+    "start": "npx serve -l 5173 ."
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "serve": "^14.2.4"
+  }
+}
+

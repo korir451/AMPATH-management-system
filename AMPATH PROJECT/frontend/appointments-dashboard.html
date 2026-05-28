@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Appointments Dashboard - AMPATH</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <h2>AMPATH SCHEDULING</h2>
+      <ul>
+        <li>
+          <a href="index.html">
+            <i class="fa fa-house"></i>
+            <span>Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="appointments-dashboard.html" class="active">
+            <i class="fa fa-calendar-check"></i>
+            <span>Appointments</span>
+          </a>
+        </li>
+        <li>
+          <a href="book-appointment.html">
+            <i class="fa fa-plus"></i>
+            <span>Book</span>
+          </a>
+        </li>
+        <li>
+          <a href="patient-appointments.html">
+            <i class="fa fa-user"></i>
+            <span>My Appointments</span>
+          </a>
+        </li>
+        <li>
+          <a href="queue-management.html">
+            <i class="fa fa-list-ol"></i>
+            <span>Queue</span>
+          </a>
+        </li>
+        <li>
+          <a href="telemedicine.html">
+            <i class="fa fa-video"></i>
+            <span>Telemedicine</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="main-content">
+      <div class="topbar">
+        <div>
+          <h2>Central Appointments Dashboard</h2>
+          <p style="color: gray; font-size: 14px">
+            Real-time overview (UI placeholders ready for backend integration).
+          </p>
+        </div>
+        <div class="profile">
+          <img src="https://i.pravatar.cc/100" alt="scheduler" />
+          <h4>Scheduling Officer</h4>
+        </div>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Appointments Today</h3>
+          <h1>148</h1>
+        </div>
+        <div class="card">
+          <h3>Pending Approvals</h3>
+          <h1>12</h1>
+        </div>
+        <div class="card">
+          <h3>Completed Appointments</h3>
+          <h1>126</h1>
+        </div>
+        <div class="card">
+          <h3>Emergency Bookings</h3>
+          <h1 style="color:#b00020">7</h1>
+        </div>
+        <div class="card">
+          <h3>Available Doctors</h3>
+          <h1>24</h1>
+        </div>
+        <div class="card">
+          <h3>Active Departments</h3>
+          <h1>18</h1>
+        </div>
+        <div class="card">
+          <h3>Missed Appointments</h3>
+          <h1 style="color:#b00020">5</h1>
+        </div>
+        <div class="card">
+          <h3>Online Consultations</h3>
+          <h1>16</h1>
+        </div>
+      </div>
+
+      <div class="analytics">
+        <div class="chart-box">
+          <h2>Quick Booking</h2>
+          <p class="muted" style="margin-top: 8px; line-height: 1.6">
+            Fast action panel for new or emergency bookings.
+          </p>
+
+          <div style="margin-top: 12px">
+            <label class="muted" style="font-size: 13px">Department</label>
+            <select
+              style="width: 100%; padding: 12px; margin-top: 8px; margin-bottom: 10px; border-radius: 12px; border: 1px solid #dbe3ee; outline: none"
+            >
+              <option>Radiology</option>
+              <option>Laboratory</option>
+              <option>Pharmacy</option>
+              <option>Emergency</option>
+              <option>Cardiology</option>
+              <option>Oncology</option>
+              <option>Pediatrics</option>
+              <option>Orthopedics</option>
+            </select>
+
+            <label class="muted" style="font-size: 13px">Appointment Type</label>
+            <select
+              style="width: 100%; padding: 12px; margin-top: 8px; margin-bottom: 10px; border-radius: 12px; border: 1px solid #dbe3ee; outline: none"
+            >
+              <option>Consultation</option>
+              <option>Follow-up</option>
+              <option>Emergency</option>
+              <option>Lab Test</option>
+              <option>Radiology Scan</option>
+              <option>Therapy Session</option>
+              <option>Counseling</option>
+              <option>Vaccination</option>
+              <option>Telemedicine</option>
+            </select>
+
+            <label class="muted" style="font-size: 13px">Patient Identifier</label>
+            <input
+              type="text"
+              placeholder="Patient ID or name"
+              style="width: 100%; padding: 12px; border-radius: 12px; border: 1px solid #dbe3ee; outline: none; margin-bottom: 10px"
+            />
+
+            <button
+              class="btn"
+              style="width: 100%; background:#0b3d91; color:white"
+            >
+              <i class="fa fa-calendar-plus"></i> Create Booking (placeholder)
+            </button>
+          </div>
+        </div>
+
+        <div class="activity-box">
+          <h2>Appointment Overview</h2>
+          <br />
+          <div class="alert alert-success">Online consultations active: 16</div>
+          <div class="alert alert-warning">Pending approvals: 12</div>
+          <div class="alert alert-danger">Emergency bookings: 7</div>
+          <div style="margin-top: 14px">
+            <h2 style="margin-bottom: 10px">Search & Filters (Placeholder)</h2>
+            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 10px">
+              <input type="text" placeholder="Search by patient" />
+              <input type="text" placeholder="Search by doctor" />
+              <select style="width:100%; padding:12px; border-radius:12px; border:1px solid #dbe3ee; outline:none">
+                <option>All Departments</option>
+                <option>Radiology</option>
+                <option>Laboratory</option>
+                <option>Pharmacy</option>
+                <option>Emergency</option>
+              </select>
+              <select style="width:100%; padding:12px; border-radius:12px; border:1px solid #dbe3ee; outline:none">
+                <option>All Statuses</option>
+                <option>Requested</option>
+                <option>Pending Approval</option>
+                <option>Approved</option>
+                <option>Checked In</option>
+                <option>Completed</option>
+                <option>Cancelled</option>
+              </select>
+            </div>
+            <button
+              class="btn"
+              style="width: 100%; background:#dbe3ee; color:#0b3d91; margin-top: 12px"
+            >
+              <i class="fa fa-filter"></i> Apply Filters (placeholder)
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="table-container">
+        <h2>Upcoming Appointments (Placeholder)</h2>
+        <p class="muted" style="margin-top: 8px">
+          Booking queue with times, department, and status.
+        </p>
+        <br />
+
+        <table>
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Patient</th>
+              <th>Department</th>
+              <th>Doctor</th>
+              <th>Type</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>09:30</td>
+              <td>Jane W.</td>
+              <td>Radiology</td>
+              <td>Dr. Achieng</td>
+              <td>Scan</td>
+              <td><span class="status active">Approved</span></td>
+            </tr>
+            <tr>
+              <td>10:10</td>
+              <td>Brian K.</td>
+              <td>Laboratory</td>
+              <td>Lab Team</td>
+              <td>Lab Test</td>
+              <td><span class="status pending">Pending</span></td>
+            </tr>
+            <tr>
+              <td>11:00</td>
+              <td>Mary K.</td>
+              <td>Emergency</td>
+              <td>ER Consultant</td>
+              <td>Emergency</td>
+              <td><span class="status active">Scheduled</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="table-container">
+        <h2>Calendar Views (Placeholder)</h2>
+        <p class="muted" style="margin-top: 8px">
+          Daily / weekly / monthly calendar widgets will be added.
+        </p>
+        <br />
+        <div class="grid" style="grid-template-columns: repeat(3, 1fr); gap: 12px">
+          <button class="btn" style="background:#0b3d91; color:white">Daily</button>
+          <button class="btn" style="background:#dbe3ee; color:#0b3d91">Weekly</button>
+          <button class="btn" style="background:#dbe3ee; color:#0b3d91">Monthly</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

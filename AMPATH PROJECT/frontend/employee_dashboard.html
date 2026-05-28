@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Dashboard - AMPATH</title>
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <h2>AMPATH</h2>
+
+      <ul>
+        <li>
+          <a href="employee-dashboard.html" class="active">
+            <i class="fa fa-house"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="patients.html" class="active">
+            <i class="fa fa-user-injured"></i>
+            <span>Patients</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="appointments.html">
+            <i class="fa fa-calendar"></i>
+            <span>Appointments</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="incidents.html">
+            <i class="fa fa-triangle-exclamation"></i>
+            <span>Incidents</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="attendance.html">
+            <i class="fa fa-clock"></i>
+            <span>Attendance</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="tasks.html">
+            <i class="fa fa-list-check"></i>
+            <span>Tasks</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="employee-login.html">
+            <i class="fa fa-right-from-bracket"></i>
+            <span>Logout</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+      <!-- TOPBAR -->
+      <div class="topbar">
+        <div>
+          <h2>Employee Dashboard</h2>
+          <p style="color: gray; font-size: 14px">Welcome back, Dr. Admin</p>
+        </div>
+
+        <div class="profile">
+          <img src="https://i.pravatar.cc/100" alt="employee" />
+          <h4>Dr. Admin</h4>
+        </div>
+      </div>
+
+      <!-- KPI CARDS -->
+      <div class="cards">
+        <div class="card">
+          <h3>Today's Patients</h3>
+          <h1>18</h1>
+        </div>
+
+        <div class="card">
+          <h3>Pending Appointments</h3>
+          <h1>6</h1>
+        </div>
+
+        <div class="card">
+          <h3>Open Incidents</h3>
+          <h1>3</h1>
+        </div>
+
+        <div class="card">
+          <h3>Completed Tasks</h3>
+          <h1>12</h1>
+        </div>
+      </div>
+
+      <!-- ANALYTICS SECTION -->
+      <div class="analytics">
+        <!-- WORK OVERVIEW -->
+        <div class="chart-box">
+          <h2>Work Performance Overview</h2>
+
+          <div class="chart-placeholder"></div>
+
+          <p style="margin-top: 15px; color: gray">
+            Weekly performance and workload distribution.
+          </p>
+        </div>
+
+        <!-- ALERTS -->
+        <div class="activity-box">
+          <h2>System Alerts</h2>
+          <br />
+
+          <div class="alert alert-danger">
+            Critical patient case requires attention
+          </div>
+
+          <div class="alert alert-warning">Low pharmacy stock detected</div>
+
+          <div class="alert alert-success">New assignment received</div>
+        </div>
+      </div>
+
+      <!-- TASK TABLE -->
+      <div class="table-container">
+        <h2>My Tasks</h2>
+
+        <br />
+
+        <table>
+          <thead>
+            <tr>
+              <th>Task</th>
+              <th>Department</th>
+              <th>Deadline</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>Check patient vitals</td>
+              <td>Nursing</td>
+              <td>Today</td>
+              <td><span class="status active">Completed</span></td>
+            </tr>
+
+            <tr>
+              <td>Review lab results</td>
+              <td>Laboratory</td>
+              <td>Today</td>
+              <td><span class="status pending">Pending</span></td>
+            </tr>
+
+            <tr>
+              <td>Update patient records</td>
+              <td>ICT</td>
+              <td>Tomorrow</td>
+              <td><span class="status pending">In Progress</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

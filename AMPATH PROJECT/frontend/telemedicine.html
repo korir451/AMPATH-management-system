@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Telemedicine - AMPATH</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <h2>TELEMEDICINE</h2>
+      <ul>
+        <li><a href="appointments-dashboard.html"><i class="fa fa-calendar-check"></i><span>Dashboard</span></a></li>
+        <li><a href="telemedicine.html" class="active"><i class="fa fa-video"></i><span>Sessions</span></a></li>
+        <li><a href="book-appointment.html"><i class="fa fa-plus"></i><span>Book</span></a></li>
+      </ul>
+    </div>
+
+    <div class="main-content">
+      <div class="topbar">
+        <div>
+          <h2>Online Consultations</h2>
+          <p style="color: gray; font-size: 14px">Virtual waiting room + booking placeholders</p>
+        </div>
+        <div class="profile">
+          <img src="https://i.pravatar.cc/100" alt="telemed" />
+          <h4>Virtual Care</h4>
+        </div>
+      </div>
+
+      <div class="analytics">
+        <div class="chart-box">
+          <h2>Video Session Placeholder</h2>
+          <p class="muted" style="margin-top: 8px">
+            Connect backend to create telemedicine sessions and generate room tokens.
+          </p>
+          <div class="alert alert-warning" style="margin-top: 14px">
+            Virtual waiting room UI placeholder
+          </div>
+
+          <div style="margin-top: 16px">
+            <label class="muted" style="font-size: 13px">Session Code</label>
+            <input type="text" placeholder="e.g., TM-58392" style="width:100%; padding:12px; border-radius:12px; border:1px solid #dbe3ee; outline:none; margin-top:8px; margin-bottom:10px" />
+
+            <button class="btn" style="width:100%; background:#0b3d91; color:white" onclick="alert('Joining session (placeholder)')">
+              <i class="fa fa-video"></i> Join Video (placeholder)
+            </button>
+          </div>
+        </div>
+
+        <div class="activity-box">
+          <h2>Digital Consultation Tools</h2>
+          <br />
+          <div class="alert alert-success">Chat placeholder</div>
+          <div class="alert alert-warning">File sharing placeholder</div>
+          <div class="alert alert-danger">E-prescriptions placeholder</div>
+
+          <button class="btn" style="width:100%; background:#dbe3ee; color:#0b3d91; margin-top:14px" onclick="alert('Prescriptions generated (placeholder)')">
+            <i class="fa fa-pills"></i> Generate Prescription (placeholder)
+          </button>
+        </div>
+      </div>
+
+      <div class="table-container">
+        <h2>Upcoming Telemedicine Appointments</h2>
+        <br />
+        <table>
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Patient</th>
+              <th>Doctor</th>
+              <th>Status</th>
+              <th>Join</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>09:45</td>
+              <td>Jane W.</td>
+              <td>Dr. Otieno</td>
+              <td><span class="status active">Approved</span></td>
+              <td><button class="btn" style="padding:8px 12px; background:#0b3d91; color:#fff">Join</button></td>
+            </tr>
+            <tr>
+              <td>11:20</td>
+              <td>Mary K.</td>
+              <td>Dr. Achieng</td>
+              <td><span class="status pending">Pending</span></td>
+              <td><button class="btn" style="padding:8px 12px; background:#dbe3ee; color:#0b3d91" disabled>Join</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
+

@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Incident Analytics - AMPATH</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <h2>AMPATH STAFF</h2>
+
+      <ul>
+        <li>
+          <a href="employee-dashboard.html">
+            <i class="fa fa-house"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="incident-dashboard.html" class="active">
+            <i class="fa fa-triangle-exclamation"></i>
+            <span>Incident Command</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="appointments.html">
+            <i class="fa fa-calendar"></i>
+            <span>Appointments</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="patients.html">
+            <i class="fa fa-user-injured"></i>
+            <span>Patients</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="attendance.html">
+            <i class="fa fa-clock"></i>
+            <span>Attendance</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="tasks.html">
+            <i class="fa fa-list-check"></i>
+            <span>Tasks</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="department_radiology.html">
+            <i class="fa fa-building"></i>
+            <span>Departments</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="employee_login.html">
+            <i class="fa fa-right-from-bracket"></i>
+            <span>Logout</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+      <div class="topbar">
+        <div>
+          <h2>Incident Analytics</h2>
+          <p style="color: gray; font-size: 14px">
+            Trends, severity distribution, and resolution analytics (UI
+            placeholder)
+          </p>
+        </div>
+
+        <div class="profile">
+          <img src="https://i.pravatar.cc/100" alt="staff" />
+          <h4>Analytics</h4>
+        </div>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Open Incidents</h3>
+          <h1>6</h1>
+        </div>
+        <div class="card">
+          <h3>Critical This Week</h3>
+          <h1>2</h1>
+        </div>
+        <div class="card">
+          <h3>Avg. Resolution Time</h3>
+          <h1>3.2d</h1>
+        </div>
+        <div class="card">
+          <h3>Escalations</h3>
+          <h1>4</h1>
+        </div>
+      </div>
+
+      <div class="analytics">
+        <div class="chart-box">
+          <h2>Severity Distribution</h2>
+          <p class="muted" style="margin-top: 8px; line-height: 1.6">
+            Placeholder chart. Connect to backend for real metrics and export.
+          </p>
+
+          <div class="alert alert-warning" style="margin-top: 14px">
+            Severity chart placeholder
+          </div>
+
+          <div style="margin-top: 14px">
+            <label class="muted" style="font-size: 13px">Range</label>
+            <select
+              style="
+                width: 100%;
+                padding: 10px;
+                margin-top: 8px;
+                margin-bottom: 10px;
+              "
+            >
+              <option>Last 7 days</option>
+              <option>Last 30 days</option>
+              <option>This Quarter</option>
+              <option>This Year</option>
+            </select>
+            <button class="btn" style="width: 100%">
+              <i class="fa fa-rotate"></i> Refresh Analytics
+            </button>
+          </div>
+        </div>
+
+        <div class="activity-box">
+          <h2>Department Risk Analysis</h2>
+          <br />
+          <div class="alert alert-danger">Emergency: High risk</div>
+          <div class="alert alert-warning">ICT: Medium risk</div>
+          <div class="alert alert-success">Radiology: Improving</div>
+          <div class="alert alert-warning">Laboratory: Needs review</div>
+
+          <div style="margin-top: 14px">
+            <a
+              href="department-incidents.html"
+              class="btn"
+              style="width: 100%; text-decoration: none; background: #0b3d91"
+            >
+              <i class="fa fa-chart-column"></i> Open Department Incidents
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="table-container">
+        <h2>Reports & Exports</h2>
+        <p class="muted" style="margin-top: 8px">
+          Printable report placeholders (PDF/Excel export UI)
+        </p>
+        <br />
+
+        <div class="grid" style="grid-template-columns: repeat(2, 1fr)">
+          <a
+            href="incident-reports.html"
+            class="btn"
+            style="
+              text-align: center;
+              text-decoration: none;
+              background: #0b3d91;
+            "
+          >
+            <i class="fa fa-file-alt"></i> View Monthly/Weekly Reports
+          </a>
+          <a
+            href="#"
+            class="btn"
+            style="
+              text-align: center;
+              text-decoration: none;
+              background: #dbe3ee;
+              color: #0b3d91;
+            "
+          >
+            <i class="fa fa-file-export"></i> Export to Excel
+          </a>
+          <a
+            href="#"
+            class="btn"
+            style="
+              text-align: center;
+              text-decoration: none;
+              background: #dbe3ee;
+              color: #0b3d91;
+            "
+          >
+            <i class="fa fa-file-pdf"></i> Export to PDF
+          </a>
+          <a
+            href="#"
+            class="btn"
+            style="
+              text-align: center;
+              text-decoration: none;
+              background: #dbe3ee;
+              color: #0b3d91;
+            "
+          >
+            <i class="fa fa-print"></i> Print
+          </a>
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 12px; margin-top: 16px">
+        <a
+          href="incident-dashboard.html"
+          class="btn"
+          style="
+            flex: 1;
+            background: #dbe3ee;
+            color: #0b3d91;
+            text-align: center;
+            text-decoration: none;
+          "
+        >
+          <i class="fa fa-arrow-left"></i> Back to Command Center
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

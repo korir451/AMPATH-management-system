@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Appointments - AMPATH</title>
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <h2>AMPATH</h2>
+
+      <ul>
+        <li>
+          <a href="patient-dashboard.html">
+            <i class="fa fa-house"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="patient_appointments.html" class="active">
+            <i class="fa fa-calendar"></i>
+            <span>Appointments</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="patient_medical_records.html">
+            <i class="fa fa-file-medical"></i>
+            <span>Records</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="patient_lab_results.html">
+            <i class="fa fa-vials"></i>
+            <span>Lab Results</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="patient_billing.html">
+            <i class="fa fa-credit-card"></i>
+            <span>Billing</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="patient-login.html">
+            <i class="fa fa-right-from-bracket"></i>
+            <span>Logout</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+      <!-- TOPBAR -->
+      <div class="topbar">
+        <div>
+          <h2>My Appointments</h2>
+          <p style="color: gray; font-size: 14px">
+            Book, view, and manage your hospital appointments
+          </p>
+        </div>
+
+        <div class="profile">
+          <img src="https://i.pravatar.cc/100" alt="patient" />
+          <h4>Patient Portal</h4>
+        </div>
+      </div>
+
+      <!-- KPI CARDS -->
+      <div class="cards">
+        <div class="card">
+          <h3>Total Appointments</h3>
+          <h1>5</h1>
+        </div>
+
+        <div class="card">
+          <h3>Upcoming</h3>
+          <h1>2</h1>
+        </div>
+
+        <div class="card">
+          <h3>Completed</h3>
+          <h1>3</h1>
+        </div>
+
+        <div class="card">
+          <h3>Cancelled</h3>
+          <h1>0</h1>
+        </div>
+      </div>
+
+      <!-- BOOK APPOINTMENT + INFO -->
+      <div class="analytics">
+        <!-- FORM -->
+        <div class="chart-box">
+          <h2>Book New Appointment</h2>
+
+          <form style="margin-top: 15px">
+            <input
+              type="text"
+              placeholder="Full Name"
+              style="width: 100%; padding: 10px; margin-bottom: 10px"
+              required
+            />
+
+            <input
+              type="date"
+              style="width: 100%; padding: 10px; margin-bottom: 10px"
+              required
+            />
+
+            <select
+              style="width: 100%; padding: 10px; margin-bottom: 10px"
+              required
+            >
+              <option value="">Select Department</option>
+              <option>General Medicine</option>
+              <option>Radiology</option>
+              <option>Cardiology</option>
+              <option>Pediatrics</option>
+              <option>Laboratory</option>
+              <option>Emergency</option>
+            </select>
+
+            <select
+              style="width: 100%; padding: 10px; margin-bottom: 10px"
+              required
+            >
+              <option value="">Select Doctor</option>
+              <option>Dr. Smith</option>
+              <option>Dr. Jane</option>
+              <option>Dr. Kelvin</option>
+              <option>Any Available Doctor</option>
+            </select>
+
+            <textarea
+              placeholder="Describe your condition"
+              rows="4"
+              style="width: 100%; padding: 10px; margin-bottom: 10px"
+            ></textarea>
+
+            <button class="btn" style="width: 100%">
+              <i class="fa fa-calendar-check"></i> Book Appointment
+            </button>
+          </form>
+        </div>
+
+        <!-- INFO -->
+        <div class="activity-box">
+          <h2>Important Info</h2>
+          <br />
+
+          <div class="alert alert-success">
+            Appointments confirmed via SMS/email
+          </div>
+
+          <div class="alert alert-warning">
+            Arrive 15 minutes before your time
+          </div>
+
+          <div class="alert alert-danger">
+            Missed appointments may require rebooking
+          </div>
+        </div>
+      </div>
+
+      <!-- APPOINTMENT TABLE -->
+      <div class="table-container">
+        <h2>My Appointment History</h2>
+
+        <br />
+
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Department</th>
+              <th>Doctor</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>2026-05-20</td>
+              <td>Cardiology</td>
+              <td>Dr. Smith</td>
+              <td><span class="status active">Completed</span></td>
+            </tr>
+
+            <tr>
+              <td>2026-05-25</td>
+              <td>Radiology</td>
+              <td>Dr. Kelvin</td>
+              <td><span class="status pending">Upcoming</span></td>
+            </tr>
+
+            <tr>
+              <td>2026-05-28</td>
+              <td>Pediatrics</td>
+              <td>Dr. Jane</td>
+              <td><span class="status pending">Scheduled</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ambulance Dashboard - AMPATH</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <h2>AMPATH EMERGENCY</h2>
+      <ul>
+        <li>
+          <a href="emergency-dashboard.html">
+            <i class="fa fa-house"></i>
+            <span>Emergency Command</span>
+          </a>
+        </li>
+        <li>
+          <a href="ambulance-dashboard.html" class="active">
+            <i class="fa fa-ambulance"></i>
+            <span>Ambulance Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="ambulance-tracking.html">
+            <i class="fa fa-location-dot"></i>
+            <span>Ambulance Tracking</span>
+          </a>
+        </li>
+        <li>
+          <a href="icu-monitoring.html">
+            <i class="fa fa-heart-pulse"></i>
+            <span>ICU Monitoring</span>
+          </a>
+        </li>
+        <li>
+          <a href="emergency-hotline.html">
+            <i class="fa fa-phone"></i>
+            <span>Hotline</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+      <div class="topbar">
+        <div>
+          <h2>Ambulance Management</h2>
+          <p style="color: gray; font-size: 14px">
+            Dispatch, driver assignments, and emergency vehicle operations (UI placeholder)
+          </p>
+        </div>
+        <div class="profile">
+          <img src="https://i.pravatar.cc/100" alt="ambulance" />
+          <h4>Dispatch Officer</h4>
+        </div>
+      </div>
+
+      <!-- KPI CARDS -->
+      <div class="cards">
+        <div class="card">
+          <h3>Available</h3>
+          <h1>5</h1>
+        </div>
+        <div class="card">
+          <h3>En Route</h3>
+          <h1>2</h1>
+        </div>
+        <div class="card">
+          <h3>At Scene</h3>
+          <h1>1</h1>
+        </div>
+        <div class="card">
+          <h3>Returning</h3>
+          <h1>3</h1>
+        </div>
+        <div class="card">
+          <h3>Under Maintenance</h3>
+          <h1>1</h1>
+        </div>
+        <div class="card">
+          <h3>Active Dispatches</h3>
+          <h1>4</h1>
+        </div>
+      </div>
+
+      <!-- DISPATCH FORM + LOGS -->
+      <div class="analytics">
+        <div class="chart-box">
+          <h2>Dispatch Management (Placeholder)</h2>
+          <p class="muted" style="margin-top: 8px; line-height: 1.6">
+            Create an emergency dispatch request, assign driver, and track ETA.
+          </p>
+
+          <div style="margin-top: 14px">
+            <label class="muted" style="font-size: 13px">Pickup Location</label>
+            <input
+              type="text"
+              placeholder="Ward / Unit / Landmark"
+              style="width: 100%; padding: 12px; margin-top: 8px; margin-bottom: 10px; border-radius: 12px; border: 1px solid #dbe3ee; outline: none"
+            />
+
+            <label class="muted" style="font-size: 13px">Destination (Hospital)</label>
+            <input
+              type="text"
+              placeholder="e.g., AMPATH ICU"
+              style="width: 100%; padding: 12px; margin-top: 8px; margin-bottom: 10px; border-radius: 12px; border: 1px solid #dbe3ee; outline: none"
+            />
+
+            <label class="muted" style="font-size: 13px">Priority</label>
+            <select
+              style="width: 100%; padding: 12px; margin-top: 8px; margin-bottom: 10px; border-radius: 12px; border: 1px solid #dbe3ee; outline: none"
+            >
+              <option>Critical</option>
+              <option>High</option>
+              <option>Medium</option>
+              <option>Low</option>
+            </select>
+
+            <label class="muted" style="font-size: 13px">Ambulance</label>
+            <select
+              style="width: 100%; padding: 12px; margin-top: 8px; margin-bottom: 10px; border-radius: 12px; border: 1px solid #dbe3ee; outline: none"
+            >
+              <option>Select Ambulance</option>
+              <option>AMB-001</option>
+              <option>AMB-014</option>
+              <option>AMB-027</option>
+            </select>
+
+            <label class="muted" style="font-size: 13px">Driver</label>
+            <select
+              style="width: 100%; padding: 12px; margin-top: 8px; margin-bottom: 10px; border-radius: 12px; border: 1px solid #dbe3ee; outline: none"
+            >
+              <option>Select Driver</option>
+              <option>Driver A</option>
+              <option>Driver B</option>
+              <option>Driver C</option>
+            </select>
+
+            <button class="btn" style="width: 100%; background: #0b3d91; color: #fff">
+              <i class="fa fa-paper-plane"></i> Create Dispatch
+            </button>
+          </div>
+        </div>
+
+        <div class="activity-box">
+          <h2>Ambulance Activity Logs</h2>
+          <br />
+          <div class="alert alert-success">[10:25] AMB-014 status changed: En Route</div>
+          <div class="alert alert-warning">[10:12] AMB-001 pickup confirmed</div>
+          <div class="alert alert-danger">[10:05] AMB-027 maintenance requested</div>
+          <div class="alert alert-success">[09:52] AMB-014 arrived at scene</div>
+        </div>
+      </div>
+
+      <!-- TABLE -->
+      <div class="table-container">
+        <h2>Ambulance Availability Status</h2>
+        <p class="muted" style="margin-top: 8px">Live availability table (placeholder)</p>
+        <br />
+
+        <table>
+          <thead>
+            <tr>
+              <th>Ambulance</th>
+              <th>Driver</th>
+              <th>Status</th>
+              <th>ETA</th>
+              <th>Maintenance</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>AMB-001</td>
+              <td>Driver A</td>
+              <td><span class="status pending">Available</span></td>
+              <td>—</td>
+              <td>No</td>
+              <td>
+                <a href="ambulance-tracking.html" class="btn" style="padding: 8px 12px; text-decoration:none">Track</a>
+              </td>
+            </tr>
+            <tr>
+              <td>AMB-014</td>
+              <td>Driver B</td>
+              <td><span class="status active">En Route</span></td>
+              <td>12m</td>
+              <td>No</td>
+              <td>
+                <a href="ambulance-tracking.html" class="btn" style="padding: 8px 12px; text-decoration:none">Track</a>
+              </td>
+            </tr>
+            <tr>
+              <td>AMB-027</td>
+              <td>Driver C</td>
+              <td><span class="status pending">Under Maintenance</span></td>
+              <td>—</td>
+              <td>Yes</td>
+              <td>
+                <button class="btn" style="padding: 8px 12px">Details</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
+

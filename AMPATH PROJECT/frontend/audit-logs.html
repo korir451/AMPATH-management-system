@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Audit Logs - AMPATH SOC</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <h2>AMPATH SOC</h2>
+      <ul>
+        <li>
+          <a href="security-dashboard.html"
+            ><i class="fa fa-shield-halved"></i><span>Dashboard</span></a
+          >
+        </li>
+        <li>
+          <a href="roles-permissions.html"
+            ><i class="fa fa-user-lock"></i><span>Roles & Permissions</span></a
+          >
+        </li>
+        <li>
+          <a href="users-management.html"
+            ><i class="fa fa-users"></i><span>Users</span></a
+          >
+        </li>
+        <li>
+          <a href="audit-logs.html" class="active"
+            ><i class="fa fa-scroll"></i><span>Audit Logs</span></a
+          >
+        </li>
+        <li>
+          <a href="threat-monitoring.html"
+            ><i class="fa fa-bolt"></i><span>Threat Monitoring</span></a
+          >
+        </li>
+        <li>
+          <a href="infrastructure-monitoring.html"
+            ><i class="fa fa-server"></i><span>Infrastructure</span></a
+          >
+        </li>
+        <li>
+          <a href="surveillance-center.html"
+            ><i class="fa fa-video"></i><span>Surveillance</span></a
+          >
+        </li>
+        <li>
+          <a href="emergency-security.html"
+            ><i class="fa fa-bell"></i><span>Emergency Controls</span></a
+          >
+        </li>
+        <li>
+          <a href="compliance-center.html"
+            ><i class="fa fa-shield-heart"></i><span>Compliance</span></a
+          >
+        </li>
+        <li>
+          <a href="backup-recovery.html"
+            ><i class="fa fa-database"></i><span>Backup & DR</span></a
+          >
+        </li>
+        <li>
+          <a href="security-analytics.html"
+            ><i class="fa fa-chart-line"></i><span>Analytics</span></a
+          >
+        </li>
+        <li>
+          <a href="security-reports.html"
+            ><i class="fa fa-file-export"></i><span>Reports</span></a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <div class="main-content">
+      <div class="topbar">
+        <div>
+          <h2>Audit Logs</h2>
+          <p style="color: gray; font-size: 14px">
+            Searchable audit trails for logins, permissions, uploads and admin
+            actions (placeholder).
+          </p>
+        </div>
+        <div class="profile">
+          <img src="https://i.pravatar.cc/100" alt="auditor" />
+          <h4>Compliance Auditor</h4>
+        </div>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Log Events</h3>
+          <h1>128,402</h1>
+        </div>
+        <div class="card">
+          <h3>Permission Changes</h3>
+          <h1>318</h1>
+        </div>
+        <div class="card">
+          <h3>File Access Logs</h3>
+          <h1>4,921</h1>
+        </div>
+        <div class="card">
+          <h3>Export Ready</h3>
+          <h1>Yes</h1>
+        </div>
+      </div>
+
+      <div class="analytics">
+        <div class="chart-box">
+          <h2>Search & Filters (placeholder)</h2>
+          <div
+            style="
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 12px;
+              margin-top: 12px;
+            "
+          >
+            <input
+              type="text"
+              placeholder="Search term (user/IP/action)"
+              style="
+                width: 100%;
+                padding: 12px;
+                border-radius: 12px;
+                border: 1px solid #dbe3ee;
+                outline: none;
+              "
+            />
+            <select
+              style="
+                width: 100%;
+                padding: 12px;
+                border-radius: 12px;
+                border: 1px solid #dbe3ee;
+                outline: none;
+              "
+            >
+              <option>All Log Types</option>
+              <option>Login Events</option>
+              <option>Permission Changes</option>
+              <option>File Uploads</option>
+              <option>Security Alerts</option>
+              <option>System Changes</option>
+            </select>
+          </div>
+          <div
+            style="
+              margin-top: 12px;
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 12px;
+            "
+          >
+            <button class="btn" onclick="alert('Search applied (placeholder)')">
+              <i class="fa fa-search"></i> Search
+            </button>
+            <button
+              class="btn"
+              onclick="alert('Export selected logs (placeholder)')"
+            >
+              <i class="fa fa-file-export"></i> Export
+            </button>
+          </div>
+        </div>
+
+        <div class="activity-box">
+          <h2>Audit Viewer</h2>
+          <div class="table-container" style="margin-top: 12px">
+            <table>
+              <thead>
+                <tr>
+                  <th>Time</th>
+                  <th>User</th>
+                  <th>Action</th>
+                  <th>Result</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2026-05-26 10:14</td>
+                  <td>admin</td>
+                  <td>Role updated</td>
+                  <td><span class="status active">Success</span></td>
+                </tr>
+                <tr>
+                  <td>2026-05-26 09:58</td>
+                  <td>unknown</td>
+                  <td>Login attempt</td>
+                  <td><span class="status pending">Blocked</span></td>
+                </tr>
+                <tr>
+                  <td>2026-05-26 09:41</td>
+                  <td>doctor</td>
+                  <td>Record access</td>
+                  <td><span class="status active">Allowed</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

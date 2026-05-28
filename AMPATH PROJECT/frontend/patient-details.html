@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Patient Details - AMPATH</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <h2>AMPATH</h2>
+
+      <ul>
+        <li>
+          <a href="employee_dashboard.html">
+            <i class="fa fa-house"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="patients.html" class="active">
+            <i class="fa fa-user-injured"></i>
+            <span>Patients</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="appointments.html">
+            <i class="fa fa-calendar"></i>
+            <span>Appointments</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="incidents.html">
+            <i class="fa fa-triangle-exclamation"></i>
+            <span>Incidents</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="attendance.html">
+            <i class="fa fa-clock"></i>
+            <span>Attendance</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="tasks.html">
+            <i class="fa fa-list-check"></i>
+            <span>Tasks</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="department_radiology.html">
+            <i class="fa fa-building"></i>
+            <span>Departments</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="employee_login.html">
+            <i class="fa fa-right-from-bracket"></i>
+            <span>Logout</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+      <div class="topbar">
+        <div>
+          <h2>Patient Profile</h2>
+          <p style="color: gray; font-size: 14px">
+            View medical profile & status
+          </p>
+        </div>
+
+        <div class="profile">
+          <img src="https://i.pravatar.cc/100" alt="patient" />
+          <h4>John Doe</h4>
+        </div>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Patient ID</h3>
+          <h1 style="color: #1e88e5">P-1042</h1>
+        </div>
+        <div class="card">
+          <h3>Admission Status</h3>
+          <h1>
+            <span class="status active">Admitted</span>
+          </h1>
+        </div>
+        <div class="card">
+          <h3>Department</h3>
+          <h1>Radiology</h1>
+        </div>
+        <div class="card">
+          <h3>Next Appointment</h3>
+          <h1>2026-06-01</h1>
+        </div>
+      </div>
+
+      <div class="analytics">
+        <div class="chart-box">
+          <h2>Medical History (Summary)</h2>
+          <p class="muted" style="margin-top: 8px; line-height: 1.6">
+            Placeholder for allergies, chronic conditions, prior diagnoses and
+            surgical history.
+          </p>
+
+          <div style="margin-top: 16px">
+            <a
+              href="patient-history.html"
+              class="btn"
+              style="width: 100%; margin-top: 10px"
+            >
+              <i class="fa fa-history"></i> Open Full History
+            </a>
+          </div>
+        </div>
+
+        <div class="activity-box">
+          <h2>Records & Files</h2>
+          <br />
+          <div class="alert alert-success">
+            Files upload enabled (placeholder)
+          </div>
+          <div class="alert alert-warning">
+            Consent required for sensitive documents
+          </div>
+
+          <div style="margin-top: 12px">
+            <input
+              type="file"
+              style="width: 100%; margin-bottom: 10px"
+              accept="image/*,.pdf,.docx"
+            />
+            <button class="btn" style="width: 100%">
+              <i class="fa fa-upload"></i> Upload
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="table-container">
+        <h2>Clinical Sections</h2>
+        <p class="muted" style="margin-top: 8px">
+          Jump to prescriptions, labs, and treatment notes
+        </p>
+        <br />
+
+        <div
+          class="grid"
+          style="grid-template-columns: repeat(2, 1fr); gap: 12px"
+        >
+          <a
+            href="patient-treatment.html"
+            class="btn"
+            style="width: 100%; background: #0b3d91"
+          >
+            <i class="fa fa-notes-medical"></i> Treatment Notes
+          </a>
+          <a href="patient-prescriptions.html" class="btn" style="width: 100%">
+            <i class="fa fa-pills"></i> Prescriptions
+          </a>
+        </div>
+      </div>
+
+      <div class="table-container" style="margin-top: 20px">
+        <h2>Admission / Discharge Information</h2>
+        <p class="muted" style="margin-top: 8px">
+          Admission date, ward/unit, discharge notes
+        </p>
+        <br />
+        <table>
+          <thead>
+            <tr>
+              <th>Field</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Admission Date</td>
+              <td>2026-05-19</td>
+            </tr>
+            <tr>
+              <td>Ward / Unit</td>
+              <td>Radiology Imaging Ward</td>
+            </tr>
+            <tr>
+              <td>Discharge Date</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>Discharge Summary</td>
+              <td>—</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="display: flex; gap: 12px; margin-top: 16px">
+        <a
+          href="patients.html"
+          class="btn"
+          style="
+            flex: 1;
+            background: #dbe3ee;
+            color: #0b3d91;
+            text-align: center;
+          "
+          >Back to Patients</a
+        >
+      </div>
+    </div>
+  </body>
+</html>

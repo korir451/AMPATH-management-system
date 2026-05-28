@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Research Reports - AMPATH</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <h2>AMPATH RESEARCH</h2>
+      <ul>
+        <li>
+          <a href="research-dashboard.html"
+            ><i class="fa fa-chart-line"></i><span>Command Center</span></a
+          >
+        </li>
+        <li>
+          <a href="research-proposal.html"
+            ><i class="fa fa-flask"></i><span>Proposals</span></a
+          >
+        </li>
+        <li>
+          <a href="ethics-dashboard.html"
+            ><i class="fa fa-shield-halved"></i><span>Ethics</span></a
+          >
+        </li>
+        <li>
+          <a href="clinical-trials.html"
+            ><i class="fa fa-microscope"></i><span>Clinical Trials</span></a
+          >
+        </li>
+        <li>
+          <a href="publications.html"
+            ><i class="fa fa-book"></i><span>Publications</span></a
+          >
+        </li>
+        <li>
+          <a href="research-documents.html"
+            ><i class="fa fa-folder-open"></i><span>Documents</span></a
+          >
+        </li>
+        <li>
+          <a href="grants-management.html"
+            ><i class="fa fa-hand-holding-dollar"></i><span>Grants</span></a
+          >
+        </li>
+        <li>
+          <a href="research-analytics.html"
+            ><i class="fa fa-chart-pie"></i><span>Analytics</span></a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <div class="main-content">
+      <div class="topbar">
+        <div>
+          <h2>Research Reports</h2>
+          <p style="color: gray; font-size: 14px">
+            Export research trends, publication analytics, funding analytics,
+            approval rates, and trial analytics.
+          </p>
+        </div>
+        <div class="profile">
+          <img src="https://i.pravatar.cc/100" alt="report" />
+          <h4>Reports</h4>
+        </div>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Printable Dashboards</h3>
+          <h1>Ready</h1>
+        </div>
+        <div class="card">
+          <h3>Export Formats</h3>
+          <h1>PDF/Excel</h1>
+        </div>
+        <div class="card">
+          <h3>Report Coverage</h3>
+          <h1>End-to-end</h1>
+        </div>
+        <div class="card">
+          <h3>Auto Filters</h3>
+          <h1>Enabled</h1>
+        </div>
+      </div>
+
+      <div class="analytics">
+        <div class="chart-box">
+          <h2>Report Builder</h2>
+          <form style="margin-top: 12px">
+            <label style="font-size: 14px">Select Report Type</label>
+            <select
+              style="
+                width: 100%;
+                padding: 12px;
+                border-radius: 12px;
+                border: 1px solid #dbe3ee;
+                outline: none;
+                margin-bottom: 10px;
+              "
+            >
+              <option>Proposal Approval Rates</option>
+              <option>Publication Analytics</option>
+              <option>Funding Analytics</option>
+              <option>Clinical Trial Analytics</option>
+              <option>Research Participation Metrics</option>
+              <option>Department Research Performance</option>
+            </select>
+
+            <div
+              style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px"
+            >
+              <div>
+                <label style="font-size: 14px">Start Date</label>
+                <input
+                  type="date"
+                  style="
+                    width: 100%;
+                    padding: 12px;
+                    border-radius: 12px;
+                    border: 1px solid #dbe3ee;
+                    outline: none;
+                    margin-bottom: 10px;
+                  "
+                />
+              </div>
+              <div>
+                <label style="font-size: 14px">End Date</label>
+                <input
+                  type="date"
+                  style="
+                    width: 100%;
+                    padding: 12px;
+                    border-radius: 12px;
+                    border: 1px solid #dbe3ee;
+                    outline: none;
+                    margin-bottom: 10px;
+                  "
+                />
+              </div>
+            </div>
+
+            <label style="font-size: 14px"
+              >Department Filter (placeholder)</label
+            >
+            <select
+              style="
+                width: 100%;
+                padding: 12px;
+                border-radius: 12px;
+                border: 1px solid #dbe3ee;
+                outline: none;
+                margin-bottom: 10px;
+              "
+            >
+              <option>All Departments</option>
+              <option>Medicine</option>
+              <option>Laboratory</option>
+              <option>Nursing</option>
+              <option>ICT / Digital</option>
+            </select>
+
+            <div
+              style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px"
+            >
+              <button class="btn" style="width: 100%">
+                <i class="fa fa-file-pdf"></i> Export PDF (placeholder)
+              </button>
+              <button class="btn" style="width: 100%">
+                <i class="fa fa-file-excel"></i> Export Excel (placeholder)
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div class="activity-box">
+          <h2>Recent Exports</h2>
+          <p style="color: gray; font-size: 13px; line-height: 1.6">
+            Track generated reports and printable snapshots.
+          </p>
+
+          <div class="table-container" style="margin-top: 12px">
+            <table>
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Report</th>
+                  <th>Format</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2026-05-22</td>
+                  <td>Funding Analytics</td>
+                  <td>PDF</td>
+                </tr>
+                <tr>
+                  <td>2026-05-18</td>
+                  <td>Trial Analytics</td>
+                  <td>Excel</td>
+                </tr>
+                <tr>
+                  <td>2026-05-12</td>
+                  <td>Publication Analytics</td>
+                  <td>PDF</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="alert alert-warning" style="margin-top: 12px">
+            Backend integration pending — UI placeholders only.
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

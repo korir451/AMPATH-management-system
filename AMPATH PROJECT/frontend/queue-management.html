@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Queue Management - AMPATH</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <h2>QUEUE MANAGEMENT</h2>
+      <ul>
+        <li>
+          <a href="appointments-dashboard.html"
+            ><i class="fa fa-calendar-check"></i><span>Dashboard</span></a
+          >
+        </li>
+        <li>
+          <a href="queue-management.html" class="active"
+            ><i class="fa fa-list-ol"></i><span>Queue</span></a
+          >
+        </li>
+        <li>
+          <a href="patient-appointments.html"
+            ><i class="fa fa-user"></i><span>My Appointments</span></a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <div class="main-content">
+      <div class="topbar">
+        <div>
+          <h2>Live Queue Monitoring</h2>
+          <p style="color: gray; font-size: 14px">
+            Queue numbers, priority handling and estimated waiting time
+            (placeholders)
+          </p>
+        </div>
+        <div class="profile">
+          <img src="https://i.pravatar.cc/100" alt="queue" />
+          <h4>Queue Officer</h4>
+        </div>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Emergency</h3>
+          <h1 style="color: #b00020">3</h1>
+        </div>
+        <div class="card">
+          <h3>Critical</h3>
+          <h1>6</h1>
+        </div>
+        <div class="card">
+          <h3>High</h3>
+          <h1>11</h1>
+        </div>
+        <div class="card">
+          <h3>Normal</h3>
+          <h1>23</h1>
+        </div>
+        <div class="card">
+          <h3>Follow-up</h3>
+          <h1>8</h1>
+        </div>
+        <div class="card">
+          <h3>Avg Wait</h3>
+          <h1>41m</h1>
+        </div>
+      </div>
+
+      <div class="analytics">
+        <div class="chart-box">
+          <h2>Department Queues</h2>
+          <p class="muted" style="margin-top: 8px">
+            Live queue cards per department (UI placeholders)
+          </p>
+          <div
+            class="grid"
+            style="grid-template-columns: 1fr; gap: 10px; margin-top: 12px"
+          >
+            <div class="alert alert-danger">
+              Emergency • Queue #E-204 • ETA 5m
+            </div>
+            <div class="alert alert-warning">
+              Radiology • Queue #R-119 • ETA 28m
+            </div>
+            <div class="alert alert-success">
+              Laboratory • Queue #L-045 • ETA 19m
+            </div>
+            <div class="alert alert-warning">
+              Pharmacy • Queue #P-009 • ETA 33m
+            </div>
+          </div>
+          <button
+            class="btn"
+            style="
+              width: 100%;
+              background: #0b3d91;
+              color: white;
+              margin-top: 14px;
+            "
+            onclick="alert('Emergency bypass action (placeholder)')"
+          >
+            <i class="fa fa-bolt"></i> Emergency Queue Bypass
+          </button>
+        </div>
+
+        <div class="activity-box">
+          <h2>Digital Check-in</h2>
+          <br />
+          <label class="muted" style="font-size: 13px">Queue Number</label>
+          <input
+            type="text"
+            placeholder="Enter queue number"
+            style="
+              width: 100%;
+              padding: 12px;
+              border-radius: 12px;
+              border: 1px solid #dbe3ee;
+              outline: none;
+              margin-top: 8px;
+              margin-bottom: 10px;
+            "
+          />
+
+          <button
+            class="btn"
+            style="width: 100%; background: #dbe3ee; color: #0b3d91"
+            onclick="alert('Checked in (placeholder)')"
+          >
+            <i class="fa fa-sign-in-alt"></i> Check-in
+          </button>
+
+          <div style="margin-top: 14px">
+            <h2 style="margin-bottom: 8px">Priority Control</h2>
+            <select
+              style="
+                width: 100%;
+                padding: 12px;
+                border-radius: 12px;
+                border: 1px solid #dbe3ee;
+                outline: none;
+              "
+            >
+              <option>Emergency</option>
+              <option>Critical</option>
+              <option>High</option>
+              <option>Normal</option>
+              <option>Follow-up</option>
+            </select>
+            <button
+              class="btn"
+              style="
+                width: 100%;
+                background: #b00020;
+                color: white;
+                margin-top: 12px;
+              "
+              onclick="alert('Priority updated (placeholder)')"
+            >
+              <i class="fa fa-layer-group"></i> Set Priority
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="table-container">
+        <h2>Queue Analytics (Placeholder)</h2>
+        <br />
+        <table>
+          <thead>
+            <tr>
+              <th>Department</th>
+              <th>Today Inflow</th>
+              <th>Avg Waiting</th>
+              <th>Priority Mix</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Emergency</td>
+              <td>58</td>
+              <td>12m</td>
+              <td><span class="status active">High mix</span></td>
+            </tr>
+            <tr>
+              <td>Radiology</td>
+              <td>41</td>
+              <td>28m</td>
+              <td><span class="status pending">Normal mix</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Staff News - AMPATH</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <h2>AMPATH MEDIA</h2>
+      <ul>
+        <li>
+          <a href="news-home.html"
+            ><i class="fa fa-newspaper"></i><span>Home</span></a
+          >
+        </li>
+        <li>
+          <a href="breaking-news.html"
+            ><i class="fa fa-bell"></i><span>Breaking Alerts</span></a
+          >
+        </li>
+        <li>
+          <a href="news-dashboard.html"
+            ><i class="fa fa-tachometer-alt"></i><span>Dashboard</span></a
+          >
+        </li>
+        <li>
+          <a href="events.html"
+            ><i class="fa fa-calendar"></i><span>Events</span></a
+          >
+        </li>
+        <li>
+          <a href="community-impact.html"
+            ><i class="fa fa-hands-helping"></i><span>Impact</span></a
+          >
+        </li>
+        <li>
+          <a href="media-center.html"
+            ><i class="fa fa-briefcase"></i><span>Media Center</span></a
+          >
+        </li>
+        <li>
+          <a href="staff-news.html" class="active"
+            ><i class="fa fa-user-shield"></i><span>Staff News</span></a
+          >
+        </li>
+        <li>
+          <a href="news-analytics.html"
+            ><i class="fa fa-chart-line"></i><span>Analytics</span></a
+          >
+        </li>
+        <li>
+          <a href="news-categories.html"
+            ><i class="fa fa-tags"></i><span>Categories</span></a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <div class="main-content">
+      <div class="topbar">
+        <div>
+          <h2>Staff Announcements & Internal News</h2>
+          <p style="color: gray; font-size: 14px">
+            Policy updates, HR notices, trainings, shift updates, and
+            recognition programs (placeholder UI).
+          </p>
+        </div>
+        <div class="profile">
+          <img src="https://i.pravatar.cc/100" alt="staff" />
+          <h4>Staff</h4>
+        </div>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <h3>New Notices</h3>
+          <h1>8</h1>
+        </div>
+        <div class="card">
+          <h3>Training Announcements</h3>
+          <h1>3</h1>
+        </div>
+        <div class="card">
+          <h3>Policy Updates</h3>
+          <h1>2</h1>
+        </div>
+        <div class="card">
+          <h3>Recognition</h3>
+          <h1>5</h1>
+        </div>
+      </div>
+
+      <div class="analytics">
+        <div class="chart-box">
+          <h2>Internal Feed</h2>
+          <div class="table-container" style="margin-top: 12px">
+            <table>
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Title</th>
+                  <th>Department</th>
+                  <th>Visibility</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2026-05-26</td>
+                  <td>Patient Safety Training – May/June</td>
+                  <td>Operations</td>
+                  <td><span class="status active">All Staff</span></td>
+                </tr>
+                <tr>
+                  <td>2026-05-24</td>
+                  <td>Shift Rotation Update</td>
+                  <td>Nursing</td>
+                  <td><span class="status pending">Department Only</span></td>
+                </tr>
+                <tr>
+                  <td>2026-05-20</td>
+                  <td>New Policy: Incident Evidence Guidelines</td>
+                  <td>Admin</td>
+                  <td><span class="status active">All Staff</span></td>
+                </tr>
+                <tr>
+                  <td>2026-05-16</td>
+                  <td>Recognition: Excellence in Care</td>
+                  <td>HR</td>
+                  <td><span class="status active">All Staff</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="activity-box">
+          <h2>Post / Share Notice (placeholder)</h2>
+          <p style="color: gray; font-size: 13px; line-height: 1.6">
+            UI-only. Backend publishing workflow pending.
+          </p>
+
+          <div style="margin-top: 12px">
+            <label style="font-size: 14px">Title</label>
+            <input
+              type="text"
+              placeholder="Notice title"
+              style="
+                width: 100%;
+                padding: 12px;
+                border-radius: 12px;
+                border: 1px solid #dbe3ee;
+                outline: none;
+                margin-bottom: 10px;
+              "
+            />
+
+            <label style="font-size: 14px">Department Audience</label>
+            <select
+              style="
+                width: 100%;
+                padding: 12px;
+                border-radius: 12px;
+                border: 1px solid #dbe3ee;
+                outline: none;
+                margin-bottom: 10px;
+              "
+            >
+              <option>All Staff</option>
+              <option>Medicine</option>
+              <option>Nursing</option>
+              <option>Laboratory</option>
+              <option>Operations</option>
+            </select>
+
+            <label style="font-size: 14px">Message</label>
+            <textarea
+              rows="7"
+              placeholder="Write the announcement..."
+              style="
+                width: 100%;
+                padding: 12px;
+                border-radius: 12px;
+                border: 1px solid #dbe3ee;
+                outline: none;
+                margin-bottom: 10px;
+              "
+            ></textarea>
+
+            <button
+              class="btn"
+              style="width: 100%"
+              onclick="alert('Notice submitted (placeholder)')"
+            >
+              <i class="fa fa-paper-plane"></i> Publish Notice
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

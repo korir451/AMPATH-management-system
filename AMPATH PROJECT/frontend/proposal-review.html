@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proposal Review - AMPATH</title>
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <h2>AMPATH RESEARCH</h2>
+      <ul>
+        <li>
+          <a href="research-dashboard.html"
+            ><i class="fa fa-chart-line"></i><span>Command Center</span></a
+          >
+        </li>
+        <li>
+          <a href="research-proposal.html"
+            ><i class="fa fa-flask"></i><span>Proposals</span></a
+          >
+        </li>
+        <li>
+          <a href="ethics-dashboard.html"
+            ><i class="fa fa-shield-halved"></i><span>Ethics</span></a
+          >
+        </li>
+        <li>
+          <a href="clinical-trials.html"
+            ><i class="fa fa-microscope"></i><span>Clinical Trials</span></a
+          >
+        </li>
+        <li>
+          <a href="publications.html"
+            ><i class="fa fa-book"></i><span>Publications</span></a
+          >
+        </li>
+        <li>
+          <a href="research-documents.html"
+            ><i class="fa fa-folder-open"></i><span>Documents</span></a
+          >
+        </li>
+        <li>
+          <a href="grants-management.html"
+            ><i class="fa fa-hand-holding-dollar"></i><span>Grants</span></a
+          >
+        </li>
+        <li>
+          <a href="research-analytics.html"
+            ><i class="fa fa-chart-pie"></i><span>Analytics</span></a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <div class="main-content">
+      <div class="topbar">
+        <div>
+          <h2>Proposal Review</h2>
+          <p style="color: gray; font-size: 14px">
+            Department approval workflow: reviewer assignment, comments, and
+            approval/rejection.
+          </p>
+        </div>
+        <div class="profile">
+          <img src="https://i.pravatar.cc/100" alt="reviewer" />
+          <h4>Department Reviewer</h4>
+        </div>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Pending Department Reviews</h3>
+          <h1>11</h1>
+        </div>
+        <div class="card">
+          <h3>Awaiting Supervisor Actions</h3>
+          <h1>5</h1>
+        </div>
+        <div class="card">
+          <h3>Approved for Ethics</h3>
+          <h1>8</h1>
+        </div>
+        <div class="card">
+          <h3>Rejected / Revision Required</h3>
+          <h1>3</h1>
+        </div>
+      </div>
+
+      <div class="analytics">
+        <div class="chart-box">
+          <h2>Review Queue</h2>
+          <p style="color: gray; font-size: 13px; line-height: 1.6">
+            Select a proposal from the list below to review objectives,
+            methodology, ethics readiness, and required attachments.
+          </p>
+
+          <div style="margin-top: 12px" class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>Proposal ID</th>
+                  <th>Title</th>
+                  <th>Category</th>
+                  <th>Submitted</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>R-PRO-012</td>
+                  <td>Digital Triage Outcomes</td>
+                  <td>Digital Health</td>
+                  <td>2026-05-18</td>
+                  <td><span class="status pending">In Review</span></td>
+                </tr>
+                <tr>
+                  <td>R-PRO-009</td>
+                  <td>Maternal Care Follow-up</td>
+                  <td>Maternal & Child Health</td>
+                  <td>2026-05-12</td>
+                  <td><span class="status pending">Revision Required</span></td>
+                </tr>
+                <tr>
+                  <td>R-PRO-004</td>
+                  <td>Chronic Disease Adherence</td>
+                  <td>Chronic Diseases</td>
+                  <td>2026-05-06</td>
+                  <td><span class="status active">Approved</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="activity-box">
+          <h2>Reviewer Actions</h2>
+          <p style="color: gray; font-size: 13px; line-height: 1.6">
+            Submit comments and route the proposal to the next workflow stage.
+          </p>
+
+          <div style="margin-top: 12px">
+            <label style="font-size: 14px">Assign Reviewer (placeholder)</label>
+            <select
+              style="
+                width: 100%;
+                padding: 12px;
+                border-radius: 12px;
+                border: 1px solid #dbe3ee;
+                outline: none;
+                margin-bottom: 10px;
+              "
+            >
+              <option>Choose Reviewer</option>
+              <option>Dr. A. Njoroge</option>
+              <option>Dr. B. Kiptoo</option>
+              <option>Dr. C. Anyango</option>
+            </select>
+
+            <label style="font-size: 14px">Review Comments</label>
+            <textarea
+              rows="8"
+              style="
+                width: 100%;
+                padding: 12px;
+                border-radius: 12px;
+                border: 1px solid #dbe3ee;
+                outline: none;
+                margin-bottom: 10px;
+              "
+              placeholder="Write review comments, required changes, and justifications..."
+            ></textarea>
+
+            <div
+              style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px"
+            >
+              <button class="btn" style="width: 100%">
+                <i class="fa fa-check"></i> Approve
+              </button>
+              <button class="btn" style="width: 100%">
+                <i class="fa fa-xmark"></i> Request Revisions
+              </button>
+            </div>
+
+            <div class="alert alert-warning" style="margin-top: 12px">
+              Approval routes the proposal to Ethics Committee Review.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

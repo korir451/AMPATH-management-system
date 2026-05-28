@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Research Documents - AMPATH</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <h2>AMPATH RESEARCH</h2>
+      <ul>
+        <li>
+          <a href="research-dashboard.html"
+            ><i class="fa fa-chart-line"></i><span>Command Center</span></a
+          >
+        </li>
+        <li>
+          <a href="research-proposal.html"
+            ><i class="fa fa-flask"></i><span>Proposals</span></a
+          >
+        </li>
+        <li>
+          <a href="ethics-dashboard.html"
+            ><i class="fa fa-shield-halved"></i><span>Ethics</span></a
+          >
+        </li>
+        <li>
+          <a href="clinical-trials.html"
+            ><i class="fa fa-microscope"></i><span>Clinical Trials</span></a
+          >
+        </li>
+        <li>
+          <a href="publications.html"
+            ><i class="fa fa-book"></i><span>Publications</span></a
+          >
+        </li>
+        <li>
+          <a href="research-documents.html" class="active"
+            ><i class="fa fa-folder-open"></i><span>Documents</span></a
+          >
+        </li>
+        <li>
+          <a href="grants-management.html"
+            ><i class="fa fa-hand-holding-dollar"></i><span>Grants</span></a
+          >
+        </li>
+        <li>
+          <a href="research-analytics.html"
+            ><i class="fa fa-chart-pie"></i><span>Analytics</span></a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <div class="main-content">
+      <div class="topbar">
+        <div>
+          <h2>Research Data & Document Management</h2>
+          <p style="color: gray; font-size: 14px">
+            Secure storage, dataset uploads, version placeholders, and
+            role-based access.
+          </p>
+        </div>
+        <div class="profile">
+          <img src="https://i.pravatar.cc/100" alt="document manager" />
+          <h4>Research Administrator</h4>
+        </div>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Dataset Uploads</h3>
+          <h1>54</h1>
+        </div>
+        <div class="card">
+          <h3>Documents Secured</h3>
+          <h1>312</h1>
+        </div>
+        <div class="card">
+          <h3>Share Requests</h3>
+          <h1>9</h1>
+        </div>
+        <div class="card">
+          <h3>Version History (placeholder)</h3>
+          <h1>v2.1</h1>
+        </div>
+      </div>
+
+      <div class="analytics">
+        <div class="chart-box">
+          <h2>Secure Uploads</h2>
+          <p style="color: gray; font-size: 13px; line-height: 1.6">
+            Allowed uploads: PDF, DOCX, XLSX, CSV, Images, Presentations.
+          </p>
+
+          <form style="margin-top: 12px">
+            <label style="font-size: 14px"
+              >Research Project / Proposal (placeholder)</label
+            >
+            <select
+              style="
+                width: 100%;
+                padding: 12px;
+                border-radius: 12px;
+                border: 1px solid #dbe3ee;
+                outline: none;
+                margin-bottom: 10px;
+              "
+              required
+            >
+              <option value="">Select</option>
+              <option>R-PRO-012</option>
+              <option>IRB-2026-014</option>
+              <option>CT-2026-02</option>
+            </select>
+
+            <input
+              type="file"
+              style="width: 100%; margin-bottom: 10px"
+              accept=".pdf,.doc,.docx,.xlsx,.csv,image/*,.ppt,.pptx"
+              required
+            />
+
+            <textarea
+              rows="6"
+              style="
+                width: 100%;
+                padding: 12px;
+                border-radius: 12px;
+                border: 1px solid #dbe3ee;
+                outline: none;
+                margin-bottom: 10px;
+              "
+              placeholder="Document description / data notes (placeholder)"
+            ></textarea>
+
+            <button class="btn" style="width: 100%">
+              <i class="fa fa-upload"></i> Upload to Repository (placeholder)
+            </button>
+          </form>
+        </div>
+
+        <div class="activity-box">
+          <h2>Access Permissions</h2>
+          <p style="color: gray; font-size: 13px; line-height: 1.6">
+            Control who can view, download, or edit research documents.
+          </p>
+
+          <div style="margin-top: 12px">
+            <div class="alert alert-success">
+              Download logs enabled (placeholder)
+            </div>
+            <div class="alert alert-warning">Pending access requests: 2</div>
+            <div class="alert alert-danger">
+              Access revoked for collaborator (placeholder)
+            </div>
+          </div>
+
+          <div style="margin-top: 14px" class="table-container">
+            <h2 style="margin-bottom: 10px">Recent Files</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>File</th>
+                  <th>Type</th>
+                  <th>Access</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Consent_Template_v2.pdf</td>
+                  <td>PDF</td>
+                  <td><span class="status active">Committee</span></td>
+                </tr>
+                <tr>
+                  <td>Dataset_Visits.csv</td>
+                  <td>CSV</td>
+                  <td><span class="status pending">Team</span></td>
+                </tr>
+                <tr>
+                  <td>Analysis_Plan_v1.docx</td>
+                  <td>DOCX</td>
+                  <td><span class="status pending">Supervisor</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

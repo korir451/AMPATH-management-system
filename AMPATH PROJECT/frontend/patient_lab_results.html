@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lab Results - AMPATH</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="sidebar">
+    <h2>AMPATH</h2>
+    <ul>
+      <li>
+        <a href="patient_dashboard.html">
+          <i class="fa fa-house"></i>
+          <span>Dashboard</span>
+        </a>
+      </li>
+      <li>
+        <a href="patient_appointments.html">
+          <i class="fa fa-calendar"></i>
+          <span>Appointments</span>
+        </a>
+      </li>
+      <li>
+        <a href="patient_medical_records.html">
+          <i class="fa fa-file-medical"></i>
+          <span>Records</span>
+        </a>
+      </li>
+      <li>
+        <a href="patient_lab_results.html" class="active">
+          <i class="fa fa-vials"></i>
+          <span>Lab Results</span>
+        </a>
+      </li>
+      <li>
+        <a href="patient_prescriptions.html">
+          <i class="fa fa-pills"></i>
+          <span>Prescriptions</span>
+        </a>
+      </li>
+      <li>
+        <a href="patient_billing.html">
+          <i class="fa fa-credit-card"></i>
+          <span>Billing</span>
+        </a>
+      </li>
+      <li>
+        <a href="patient_login.html">
+          <i class="fa fa-right-from-bracket"></i>
+          <span>Logout</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="main-content">
+    <div class="topbar">
+      <div>
+        <h2>My Lab Results</h2>
+        <p style="color:gray;font-size:14px;">View and download laboratory reports</p>
+      </div>
+      <div class="profile">
+        <img src="https://i.pravatar.cc/100" alt="patient" />
+        <h4>Patient</h4>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Total Results</h3>
+        <h1>12</h1>
+      </div>
+      <div class="card">
+        <h3>Latest Result</h3>
+        <h1>1 New</h1>
+      </div>
+      <div class="card">
+        <h3>Normal</h3>
+        <h1>9</h1>
+      </div>
+      <div class="card">
+        <h3>Needs Review</h3>
+        <h1>3</h1>
+      </div>
+    </div>
+
+    <div class="analytics">
+      <div class="chart-box">
+        <h2>Results Summary</h2>
+        <div class="chart-placeholder"></div>
+        <p style="margin-top:15px;color:gray;">Charts will be connected to backend data later.</p>
+      </div>
+
+      <div class="activity-box">
+        <h2>Download Center</h2>
+        <br />
+        <div class="alert alert-success">PDF reports are ready (stub)</div>
+        <div class="alert alert-warning">Some reports may take 1–2 hours to finalize (stub)</div>
+        <div class="alert alert-danger">Critical flags require clinician review (stub)</div>
+      </div>
+    </div>
+
+    <div class="table-container">
+      <h2>Recent Lab Tests</h2>
+      <br />
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Test</th>
+            <th>Department</th>
+            <th>Result Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2026-05-22</td>
+            <td>Full Blood Count</td>
+            <td>Laboratory</td>
+            <td><span class="status active">Normal</span></td>
+            <td><button class="btn" type="button" style="padding:10px 16px;">Download</button></td>
+          </tr>
+          <tr>
+            <td>2026-05-15</td>
+            <td>Lipid Profile</td>
+            <td>Laboratory</td>
+            <td><span class="status pending">Review</span></td>
+            <td><button class="btn" type="button" style="padding:10px 16px;">Download</button></td>
+          </tr>
+          <tr>
+            <td>2026-05-08</td>
+            <td>Malaria RDT</td>
+            <td>Laboratory</td>
+            <td><span class="status active">Negative</span></td>
+            <td><button class="btn" type="button" style="padding:10px 16px;">Download</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
+

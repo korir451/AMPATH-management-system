@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Login - AMPATH</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="login-container">
+
+    <div class="login-box fade-in">
+
+        <h1>
+            <i class="fa fa-user-doctor"></i>
+            Employee Login
+        </h1>
+
+        <p style="text-align:center;color:gray;margin-bottom:25px;">
+            AMPATH Staff & Management System Access
+        </p>
+
+        <form>
+
+            <!-- EMAIL / STAFF ID -->
+            <div class="form-group">
+                <label>Staff ID / Email</label>
+                <input type="text" placeholder="Enter Staff ID or Email" required>
+            </div>
+
+            <!-- PASSWORD -->
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" placeholder="Enter password" required>
+            </div>
+
+            <!-- ROLE SELECT -->
+            <div class="form-group">
+                <label>Login As</label>
+                <select required>
+                    <option value="">Select Role</option>
+                    <option>Doctor</option>
+                    <option>Nurse</option>
+                    <option>Pharmacist</option>
+                    <option>ICT Officer</option>
+                    <option>HR Officer</option>
+                    <option>Finance Officer</option>
+                    <option>Researcher</option>
+                    <option>Security</option>
+                    <option>Administrator</option>
+                </select>
+            </div>
+
+            <!-- REMEMBER + FORGOT -->
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;">
+                <label style="font-size:14px;">
+                    <input type="checkbox"> Remember me
+                </label>
+
+                <a href="#" style="font-size:14px;color:#00b4d8;text-decoration:none;">
+                    Forgot Password?
+                </a>
+            </div>
+
+            <!-- LOGIN BUTTON -->
+            <button type="submit" class="btn" style="width:100%;">
+                <i class="fa fa-sign-in-alt"></i> Login
+            </button>
+
+        </form>
+
+        <!-- LINKS -->
+        <p style="text-align:center;margin-top:20px;">
+            Not a staff member?
+            <a href="patient-login.html" style="color:#00b4d8;text-decoration:none;">
+                Patient Login
+            </a>
+        </p>
+
+    </div>
+
+</div>
+
+</body>
+</html>

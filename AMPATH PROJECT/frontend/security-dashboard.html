@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Security Operations Center - AMPATH</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      body {
+        background: #050b16;
+        color: #e6f0ff;
+      }
+      .sidebar {
+        background: #06112a;
+        border-right: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .main-content {
+        background: transparent;
+      }
+      .glass {
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 16px;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+      }
+      .soc-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 18px;
+      }
+      .soc-title {
+        line-height: 1.2;
+      }
+      .soc-title h2 {
+        margin: 0;
+        font-size: 20px;
+      }
+      .soc-pill {
+        padding: 10px 14px;
+        border-radius: 999px;
+        background: rgba(30, 136, 229, 0.18);
+        border: 1px solid rgba(30, 136, 229, 0.35);
+        color: #bfe3ff;
+        font-weight: 600;
+        font-size: 13px;
+        white-space: nowrap;
+      }
+      .soc-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 14px;
+      }
+      .soc-card {
+        padding: 16px;
+      }
+      .soc-card .label {
+        color: rgba(230, 240, 255, 0.75);
+        font-size: 13px;
+      }
+      .soc-card .value {
+        font-size: 30px;
+        margin-top: 10px;
+        font-weight: 700;
+      }
+      .soc-card .trend {
+        margin-top: 10px;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        color: rgba(230, 240, 255, 0.75);
+        font-size: 13px;
+      }
+      .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #20c997;
+        box-shadow: 0 0 0 6px rgba(32, 201, 151, 0.15);
+      }
+      .dot.red {
+        background: #ff3b57;
+        box-shadow: 0 0 0 6px rgba(255, 59, 87, 0.15);
+      }
+      .dot.amber {
+        background: #ffc107;
+        box-shadow: 0 0 0 6px rgba(255, 193, 7, 0.15);
+      }
+      .soc-row {
+        display: grid;
+        grid-template-columns: 1.4fr 1fr;
+        gap: 14px;
+        margin-top: 14px;
+      }
+      @media (max-width: 900px) {
+        .soc-row {
+          grid-template-columns: 1fr;
+        }
+      }
+      table {
+        color: #e6f0ff;
+      }
+      table th {
+        background: rgba(255, 255, 255, 0.06) !important;
+        color: rgba(230, 240, 255, 0.9);
+      }
+      table td {
+        border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+      }
+      .soc-kpi {
+        margin-top: 10px;
+        display: grid;
+        gap: 10px;
+      }
+      .alert {
+        border-radius: 14px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+      }
+      .btn {
+        background: rgba(255, 202, 40, 0.18);
+        border: 1px solid rgba(255, 202, 40, 0.35);
+        color: #fff;
+      }
+      .btn:hover {
+        background: rgba(255, 202, 40, 0.28);
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <h2>AMPATH SOC</h2>
+      <ul>
+        <li>
+          <a href="security-dashboard.html" class="active"
+            ><i class="fa fa-shield-halved"></i><span>Dashboard</span></a
+          >
+        </li>
+        <li>
+          <a href="roles-permissions.html"
+            ><i class="fa fa-user-lock"></i><span>Roles & Permissions</span></a
+          >
+        </li>
+        <li>
+          <a href="users-management.html"
+            ><i class="fa fa-users"></i><span>Users</span></a
+          >
+        </li>
+        <li>
+          <a href="audit-logs.html"
+            ><i class="fa fa-scroll"></i><span>Audit Logs</span></a
+          >
+        </li>
+        <li>
+          <a href="threat-monitoring.html"
+            ><i class="fa fa-bolt"></i><span>Threat Monitoring</span></a
+          >
+        </li>
+        <li>
+          <a href="infrastructure-monitoring.html"
+            ><i class="fa fa-server"></i><span>Infrastructure</span></a
+          >
+        </li>
+        <li>
+          <a href="surveillance-center.html"
+            ><i class="fa fa-video"></i><span>Surveillance</span></a
+          >
+        </li>
+        <li>
+          <a href="emergency-security.html"
+            ><i class="fa fa-bell"></i><span>Emergency Controls</span></a
+          >
+        </li>
+        <li>
+          <a href="compliance-center.html"
+            ><i class="fa fa-shield-heart"></i><span>Compliance</span></a
+          >
+        </li>
+        <li>
+          <a href="backup-recovery.html"
+            ><i class="fa fa-database"></i><span>Backup & DR</span></a
+          >
+        </li>
+        <li>
+          <a href="security-analytics.html"
+            ><i class="fa fa-chart-line"></i><span>Analytics</span></a
+          >
+        </li>
+        <li>
+          <a href="security-reports.html"
+            ><i class="fa fa-file-export"></i><span>Reports</span></a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <div class="main-content">
+      <div class="soc-top glass">
+        <div class="soc-title">
+          <h2>Security Operations Center (SOC)</h2>
+          <div
+            style="
+              color: rgba(230, 240, 255, 0.75);
+              font-size: 13px;
+              margin-top: 6px;
+            "
+          >
+            Real-time monitoring placeholders for access, threats, audit trails,
+            and infrastructure health.
+          </div>
+        </div>
+        <div
+          style="
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+          "
+        >
+          <div class="soc-pill">
+            <i class="fa fa-lock"></i> Compliance Mode: Enabled
+          </div>
+          <div
+            class="soc-pill"
+            style="
+              background: rgba(255, 59, 87, 0.16);
+              border-color: rgba(255, 59, 87, 0.35);
+            "
+          >
+            <i class="fa fa-triangle-exclamation"></i> 2 Critical Alerts
+          </div>
+        </div>
+      </div>
+
+      <div class="soc-grid" style="margin-top: 14px">
+        <div class="soc-card glass">
+          <div class="label">Active Users</div>
+          <div class="value">1,284</div>
+          <div class="trend"><span class="dot"></span> Sessions steady</div>
+        </div>
+        <div class="soc-card glass">
+          <div class="label">Failed Logins</div>
+          <div class="value">43</div>
+          <div class="trend">
+            <span class="dot amber"></span> Spike detected
+          </div>
+        </div>
+        <div class="soc-card glass">
+          <div class="label">Security Alerts</div>
+          <div class="value">12</div>
+          <div class="trend"><span class="dot red"></span> Action required</div>
+        </div>
+        <div class="soc-card glass">
+          <div class="label">Open Incidents</div>
+          <div class="value">6</div>
+          <div class="trend"><span class="dot amber"></span> In triage</div>
+        </div>
+        <div class="soc-card glass">
+          <div class="label">Suspicious Activities</div>
+          <div class="value">18</div>
+          <div class="trend"><span class="dot"></span> Under investigation</div>
+        </div>
+        <div class="soc-card glass">
+          <div class="label">System Uptime</div>
+          <div class="value">99.97%</div>
+          <div class="trend"><span class="dot"></span> Healthy</div>
+        </div>
+        <div class="soc-card glass">
+          <div class="label">Emergency Alerts</div>
+          <div class="value">1</div>
+          <div class="trend">
+            <span class="dot red"></span> Pending escalation
+          </div>
+        </div>
+        <div class="soc-card glass">
+          <div class="label">Active Sessions</div>
+          <div class="value">2,941</div>
+          <div class="trend"><span class="dot"></span> Stable load</div>
+        </div>
+      </div>
+
+      <div class="soc-row">
+        <div class="glass" style="padding: 16px">
+          <h2 style="font-size: 16px; margin: 0 0 8px 0">
+            Security Alerts Feed
+          </h2>
+          <div
+            class="alert alert-danger"
+            style="display: flex; gap: 10px; align-items: center"
+          >
+            <i class="fa fa-bug"></i> Malware-like activity (placeholder) - 3m
+            ago
+          </div>
+          <div
+            class="alert alert-warning"
+            style="display: flex; gap: 10px; align-items: center"
+          >
+            <i class="fa fa-user-secret"></i> Unusual admin access pattern
+            (placeholder) - 17m ago
+          </div>
+          <div
+            class="alert alert-success"
+            style="display: flex; gap: 10px; align-items: center"
+          >
+            <i class="fa fa-shield-halved"></i> Patch compliance OK - 2h ago
+          </div>
+
+          <div
+            style="margin-top: 14px; display: flex; gap: 12px; flex-wrap: wrap"
+          >
+            <button
+              class="btn"
+              style="flex: 1"
+              onclick="alert('Open incident viewer (placeholder)')"
+            >
+              <i class="fa fa-scroll"></i> Open Audit Viewer
+            </button>
+            <button
+              class="btn"
+              style="
+                flex: 1;
+                background: rgba(30, 136, 229, 0.22);
+                border-color: rgba(30, 136, 229, 0.4);
+              "
+              onclick="alert('Escalate incidents (placeholder)')"
+            >
+              <i class="fa fa-bell"></i> Escalate
+            </button>
+          </div>
+        </div>
+
+        <div class="glass" style="padding: 16px">
+          <h2 style="font-size: 16px; margin: 0 0 8px 0">
+            Access Control Analytics
+          </h2>
+          <div class="soc-kpi">
+            <div class="alert alert-success">
+              RBAC evaluation: Passing (placeholder)
+            </div>
+            <div class="alert alert-warning">
+              Privilege escalation attempts: 5 (placeholder)
+            </div>
+            <div class="alert alert-danger">
+              Policy violations: 2 (placeholder)
+            </div>
+          </div>
+
+          <div
+            class="table-container"
+            style="
+              margin: 14px 0 0 0;
+              padding: 0;
+              background: transparent;
+              box-shadow: none;
+            "
+          >
+            <table>
+              <thead>
+                <tr>
+                  <th>Department</th>
+                  <th>Risk</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>ICT</td>
+                  <td><span class="status pending">Medium</span></td>
+                  <td><span class="status pending">Monitoring</span></td>
+                </tr>
+                <tr>
+                  <td>Pharmacy</td>
+                  <td><span class="status active">Low</span></td>
+                  <td><span class="status active">OK</span></td>
+                </tr>
+                <tr>
+                  <td>Emergency</td>
+                  <td><span class="status pending">High</span></td>
+                  <td><span class="status pending">Review</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="glass" style="padding: 16px; margin-top: 14px">
+        <h2 style="font-size: 16px; margin: 0 0 8px 0">
+          Active Sessions Monitoring (placeholder)
+        </h2>
+        <div
+          class="table-container"
+          style="
+            margin: 0;
+            padding: 0;
+            background: transparent;
+            box-shadow: none;
+          "
+        >
+          <table>
+            <thead>
+              <tr>
+                <th>User</th>
+                <th>Role</th>
+                <th>Session</th>
+                <th>Device</th>
+                <th>Location</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>admin@ampath.org</td>
+                <td>System Admin</td>
+                <td>Active</td>
+                <td>Workstation</td>
+                <td>Campus</td>
+              </tr>
+              <tr>
+                <td>ict@ampath.org</td>
+                <td>ICT Officer</td>
+                <td>Active</td>
+                <td>Server console</td>
+                <td>Data Center</td>
+              </tr>
+              <tr>
+                <td>dr@ampath.org</td>
+                <td>Doctor</td>
+                <td>Active</td>
+                <td>Mobile</td>
+                <td>Clinic</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Staff Portal - AMPATH</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <h2>AMPATH</h2>
+
+      <ul>
+        <li>
+          <a href="staff_portal.html" class="active">
+            <i class="fa fa-house"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="staff_incidents.html">
+            <i class="fa fa-triangle-exclamation"></i>
+            <span>Incident Reports</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="department_radiology.html">
+            <i class="fa fa-building"></i>
+            <span>Departments</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="research_proposal.html">
+            <i class="fa fa-flask"></i>
+            <span>Research</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="admin_security_controls.html">
+            <i class="fa fa-shield-halved"></i>
+            <span>Security</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="employee_login.html">
+            <i class="fa fa-right-from-bracket"></i>
+            <span>Logout</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+      <!-- TOPBAR -->
+      <div class="topbar">
+        <div>
+          <h2>Staff Portal</h2>
+          <p style="color: gray; font-size: 14px">
+            Welcome back — access your staff modules from one dashboard.
+          </p>
+        </div>
+
+        <div class="profile">
+          <img src="https://i.pravatar.cc/100" alt="staff" />
+          <h4>Staff Member</h4>
+        </div>
+      </div>
+
+      <!-- KPI CARDS -->
+      <div class="cards">
+        <div class="card">
+          <h3>Today's Patients</h3>
+          <h1>18</h1>
+        </div>
+
+        <div class="card">
+          <h3>Pending Appointments</h3>
+          <h1>6</h1>
+        </div>
+
+        <div class="card">
+          <h3>Open Incidents</h3>
+          <h1>3</h1>
+        </div>
+
+        <div class="card">
+          <h3>Completed Tasks</h3>
+          <h1>12</h1>
+        </div>
+      </div>
+
+      <!-- INCIDENT HIGHLIGHT -->
+      <div class="analytics">
+        <div class="chart-box">
+          <h2>Staff Incident Center</h2>
+          <p style="margin-top: 15px; color: gray; line-height: 1.6">
+            Submit and manage incidents from the Incident Reports module. This
+            Staff Portal stays focused on staff navigation.
+          </p>
+          <div style="margin-top: 16px">
+            <a
+              href="staff_incidents.html"
+              class="btn"
+              style="display: inline-block; text-decoration: none"
+            >
+              <i class="fa fa-triangle-exclamation"></i> Open Incident Reports
+            </a>
+          </div>
+        </div>
+
+        <div class="activity-box">
+          <h2>Notifications</h2>
+          <br />
+          <div class="alert alert-danger">
+            Critical incident awaiting review
+          </div>
+          <div class="alert alert-warning">
+            Some evidence is missing for 2 cases
+          </div>
+          <div class="alert alert-success">New task assignments added</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

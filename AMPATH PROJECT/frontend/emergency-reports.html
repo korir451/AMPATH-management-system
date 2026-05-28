@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emergency Reports - AMPATH</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <h2>AMPATH EMERGENCY</h2>
+      <ul>
+        <li>
+          <a href="emergency-dashboard.html">
+            <i class="fa fa-house"></i>
+            <span>Emergency Command</span>
+          </a>
+        </li>
+        <li>
+          <a href="emergency-reports.html" class="active">
+            <i class="fa fa-file-export"></i>
+            <span>Emergency Reports</span>
+          </a>
+        </li>
+        <li>
+          <a href="emergency-analytics.html">
+            <i class="fa fa-chart-line"></i>
+            <span>Analytics</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="main-content">
+      <div class="topbar">
+        <div>
+          <h2>Emergency Reports</h2>
+          <p style="color: gray; font-size: 14px">
+            Printable and exportable emergency response reports (placeholders)
+          </p>
+        </div>
+        <div class="profile">
+          <img src="https://i.pravatar.cc/100" alt="reports" />
+          <h4>Reports Officer</h4>
+        </div>
+      </div>
+
+      <div class="analytics">
+        <div class="chart-box">
+          <h2>Report Filters</h2>
+          <p class="muted" style="margin-top: 8px; line-height: 1.6">
+            UI placeholders for department, date range, and export format.
+          </p>
+
+          <div style="margin-top: 14px">
+            <label class="muted" style="font-size: 13px">Department</label>
+            <select
+              style="
+                width: 100%;
+                padding: 12px;
+                margin-top: 8px;
+                margin-bottom: 10px;
+                border-radius: 12px;
+                border: 1px solid #dbe3ee;
+                outline: none;
+              "
+            >
+              <option>All Departments</option>
+              <option>Emergency</option>
+              <option>ICU</option>
+              <option>Radiology</option>
+              <option>Security</option>
+              <option>Ambulance Ops</option>
+            </select>
+
+            <label class="muted" style="font-size: 13px">Date From</label>
+            <input
+              type="date"
+              style="
+                width: 100%;
+                padding: 12px;
+                margin-top: 8px;
+                margin-bottom: 10px;
+                border-radius: 12px;
+                border: 1px solid #dbe3ee;
+                outline: none;
+              "
+            />
+
+            <label class="muted" style="font-size: 13px">Date To</label>
+            <input
+              type="date"
+              style="
+                width: 100%;
+                padding: 12px;
+                margin-top: 8px;
+                margin-bottom: 10px;
+                border-radius: 12px;
+                border: 1px solid #dbe3ee;
+                outline: none;
+              "
+            />
+
+            <button
+              class="btn"
+              style="width: 100%; background: #0b3d91; color: white"
+            >
+              <i class="fa fa-magnifying-glass"></i> Generate Report
+            </button>
+          </div>
+        </div>
+
+        <div class="activity-box">
+          <h2>Export Actions</h2>
+          <br />
+          <div class="alert alert-warning">
+            Export endpoints will be added during backend integration.
+          </div>
+
+          <div
+            style="
+              display: grid;
+              grid-template-columns: 1fr;
+              gap: 10px;
+              margin-top: 14px;
+            "
+          >
+            <button class="btn" style="background: #0b3d91; color: white">
+              <i class="fa fa-file-pdf"></i> Export PDF
+            </button>
+            <button class="btn" style="background: #dbe3ee; color: #0b3d91">
+              <i class="fa fa-file-excel"></i> Export Excel
+            </button>
+            <button class="btn" style="background: #dbe3ee; color: #0b3d91">
+              <i class="fa fa-print"></i> Print
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="table-container">
+        <h2>Emergency Response Report List</h2>
+        <p class="muted" style="margin-top: 8px">
+          Placeholder table for report history.
+        </p>
+        <br />
+
+        <table>
+          <thead>
+            <tr>
+              <th>Period</th>
+              <th>Report Type</th>
+              <th>Prepared By</th>
+              <th>Generated At</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2026-05 (Monthly)</td>
+              <td>Emergency Trends</td>
+              <td>Ops Analyst</td>
+              <td>2026-05-30</td>
+              <td>
+                <button
+                  class="btn"
+                  style="padding: 8px 12px; background: #0b3d91; color: #fff"
+                >
+                  View
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>2026-W21 (Weekly)</td>
+              <td>Ambulance Performance</td>
+              <td>Dispatch Officer</td>
+              <td>2026-05-25</td>
+              <td>
+                <button
+                  class="btn"
+                  style="padding: 8px 12px; background: #dbe3ee; color: #0b3d91"
+                >
+                  View
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>2026-W20 (Weekly)</td>
+              <td>ICU Utilization</td>
+              <td>ICU Coordinator</td>
+              <td>2026-05-18</td>
+              <td>
+                <button
+                  class="btn"
+                  style="padding: 8px 12px; background: #dbe3ee; color: #0b3d91"
+                >
+                  View
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

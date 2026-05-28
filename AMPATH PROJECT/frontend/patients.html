@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Patients - AMPATH</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <h2>AMPATH</h2>
+
+      <ul>
+        <li>
+          <a href="employee_dashboard.html" class="active">
+            <i class="fa fa-house"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="patients.html" class="active">
+            <i class="fa fa-user-injured"></i>
+            <span>Patients</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="appointments.html">
+            <i class="fa fa-calendar"></i>
+            <span>Appointments</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="incidents.html">
+            <i class="fa fa-triangle-exclamation"></i>
+            <span>Incidents</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="attendance.html">
+            <i class="fa fa-clock"></i>
+            <span>Attendance</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="tasks.html">
+            <i class="fa fa-list-check"></i>
+            <span>Tasks</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="department_radiology.html">
+            <i class="fa fa-building"></i>
+            <span>Departments</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="employee_login.html">
+            <i class="fa fa-right-from-bracket"></i>
+            <span>Logout</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+      <div class="topbar">
+        <div>
+          <h2>Patient Management</h2>
+          <p style="color: gray; font-size: 14px">
+            Search, filter, and manage patient records
+          </p>
+        </div>
+
+        <div class="profile">
+          <img src="https://i.pravatar.cc/100" alt="staff" />
+          <h4>Staff Member</h4>
+        </div>
+      </div>
+
+      <!-- Filters -->
+      <div class="analytics">
+        <div class="chart-box">
+          <h2>Search & Filter</h2>
+
+          <div
+            class="grid"
+            style="grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 15px"
+          >
+            <input
+              type="text"
+              placeholder="Search by name, ID, or phone"
+              style="
+                width: 100%;
+                padding: 10px;
+                border-radius: 10px;
+                border: 1px solid #dbe3ee;
+              "
+            />
+
+            <select
+              style="
+                width: 100%;
+                padding: 10px;
+                border-radius: 10px;
+                border: 1px solid #dbe3ee;
+              "
+            >
+              <option value="">Filter by status</option>
+              <option>Active</option>
+              <option>Admitted</option>
+              <option>Discharged</option>
+            </select>
+          </div>
+
+          <div
+            class="grid"
+            style="grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px"
+          >
+            <input
+              type="text"
+              placeholder="Filter by department (e.g., Radiology)"
+              style="
+                width: 100%;
+                padding: 10px;
+                border-radius: 10px;
+                border: 1px solid #dbe3ee;
+              "
+            />
+
+            <select
+              style="
+                width: 100%;
+                padding: 10px;
+                border-radius: 10px;
+                border: 1px solid #dbe3ee;
+              "
+            >
+              <option value="">Sort</option>
+              <option>Newest</option>
+              <option>Oldest</option>
+              <option>A-Z</option>
+            </select>
+          </div>
+
+          <button class="btn" style="width: 100%">
+            <i class="fa fa-search"></i> Apply Filters
+          </button>
+        </div>
+
+        <div class="activity-box">
+          <h2>Quick Actions</h2>
+          <br />
+          <a
+            href="patient-details.html"
+            class="btn"
+            style="width: 100%; margin-bottom: 10px"
+          >
+            <i class="fa fa-user"></i> View Patient Profile
+          </a>
+          <a
+            href="patient-treatment.html"
+            class="btn"
+            style="width: 100%; margin-bottom: 10px; background: #0b3d91"
+          >
+            <i class="fa fa-notes-medical"></i> Treatment Notes
+          </a>
+          <a href="patient-history.html" class="btn" style="width: 100%">
+            <i class="fa fa-history"></i> Patient History
+          </a>
+        </div>
+      </div>
+
+      <!-- Patients table -->
+      <div class="table-container">
+        <h2>Patient Records</h2>
+        <p class="muted" style="margin-top: 8px">
+          Pagination & backend integration placeholders
+        </p>
+        <br />
+
+        <table>
+          <thead>
+            <tr>
+              <th>Patient</th>
+              <th>Admission</th>
+              <th>Status</th>
+              <th>Department</th>
+              <th>Next Appointment</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>John Doe (P-1042)</td>
+              <td>2026-05-19</td>
+              <td><span class="status active">Admitted</span></td>
+              <td>Radiology</td>
+              <td>2026-06-01</td>
+              <td>
+                <a
+                  href="patient-details.html"
+                  class="btn"
+                  style="padding: 8px 12px"
+                >
+                  Open
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>Mary Njeri (P-1103)</td>
+              <td>—</td>
+              <td><span class="status pending">Active</span></td>
+              <td>Laboratory</td>
+              <td>2026-05-29</td>
+              <td>
+                <a
+                  href="patient-details.html"
+                  class="btn"
+                  style="padding: 8px 12px"
+                >
+                  Open
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>Samuel Otieno (P-1188)</td>
+              <td>2026-05-10</td>
+              <td><span class="status active">Discharged</span></td>
+              <td>Pharmacy</td>
+              <td>—</td>
+              <td>
+                <a
+                  href="patient-details.html"
+                  class="btn"
+                  style="padding: 8px 12px"
+                >
+                  Open
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            margin-top: 14px;
+            gap: 12px;
+          "
+        >
+          <button
+            class="btn"
+            style="flex: 1; background: #dbe3ee; color: #0b3d91"
+          >
+            Previous
+          </button>
+          <button class="btn" style="flex: 1">Next</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

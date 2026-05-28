@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Directory - AMPATH</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <h2>CONTACT AMPATH</h2>
+      <ul>
+        <li>
+          <a href="contact-home.html"
+            ><i class="fa fa-headset"></i><span>Home</span></a
+          >
+        </li>
+        <li>
+          <a href="contact-directory.html" class="active"
+            ><i class="fa fa-address-book"></i><span>Directory</span></a
+          >
+        </li>
+        <li>
+          <a href="support-center.html"
+            ><i class="fa fa-life-ring"></i><span>Support Center</span></a
+          >
+        </li>
+        <li>
+          <a href="help-center.html"
+            ><i class="fa fa-circle-question"></i><span>Help / FAQ</span></a
+          >
+        </li>
+        <li>
+          <a href="inquiry-form.html"
+            ><i class="fa fa-file-signature"></i><span>Inquiry Form</span></a
+          >
+        </li>
+        <li>
+          <a href="emergency-contacts.html"
+            ><i class="fa fa-truck-medical"></i><span>Emergency</span></a
+          >
+        </li>
+        <li>
+          <a href="locations.html"
+            ><i class="fa fa-location-dot"></i><span>Locations</span></a
+          >
+        </li>
+        <li>
+          <a href="patient-support.html"
+            ><i class="fa fa-user-injured"></i><span>Patient Support</span></a
+          >
+        </li>
+        <li>
+          <a href="staff-contact-center.html"
+            ><i class="fa fa-user-shield"></i><span>Staff Support</span></a
+          >
+        </li>
+        <li>
+          <a href="outreach-contacts.html"
+            ><i class="fa fa-people-arrows"></i><span>Outreach</span></a
+          >
+        </li>
+        <li>
+          <a href="contact-analytics.html"
+            ><i class="fa fa-chart-line"></i><span>Analytics</span></a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <div class="main-content">
+      <div class="topbar">
+        <div>
+          <h2>Central Contact Directory</h2>
+          <p style="color: gray; font-size: 14px">
+            Search and filter department contacts. (UI placeholder)
+          </p>
+        </div>
+        <div class="profile">
+          <img src="https://i.pravatar.cc/100" alt="directory" />
+          <h4>Directory Team</h4>
+        </div>
+      </div>
+
+      <div class="analytics">
+        <div class="chart-box">
+          <h2>Find Contacts</h2>
+          <p style="color: gray; font-size: 13px; line-height: 1.6">
+            Use search + department filter.
+          </p>
+
+          <div
+            style="
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 12px;
+              margin-top: 12px;
+            "
+          >
+            <input
+              type="text"
+              placeholder="Search by department / office / name"
+              style="
+                width: 100%;
+                padding: 12px;
+                border-radius: 12px;
+                border: 1px solid #dbe3ee;
+                outline: none;
+              "
+            />
+            <select
+              style="
+                width: 100%;
+                padding: 12px;
+                border-radius: 12px;
+                border: 1px solid #dbe3ee;
+                outline: none;
+              "
+            >
+              <option>All Departments</option>
+              <option>Emergency</option>
+              <option>Radiology</option>
+              <option>Laboratory</option>
+              <option>Pharmacy</option>
+              <option>Nursing</option>
+              <option>Research</option>
+              <option>Finance</option>
+              <option>ICT Support</option>
+              <option>Security</option>
+              <option>Human Resources</option>
+              <option>Community Outreach</option>
+              <option>Administration</option>
+              <option>Ambulance Services</option>
+              <option>Patient Services</option>
+            </select>
+          </div>
+
+          <div style="margin-top: 12px">
+            <button
+              class="btn"
+              style="width: 100%"
+              onclick="alert('Search applied (placeholder)')"
+            >
+              <i class="fa fa-search"></i> Search Directory
+            </button>
+          </div>
+        </div>
+
+        <div class="activity-box">
+          <h2>Directory Quick Actions</h2>
+          <p style="color: gray; font-size: 13px; line-height: 1.6">
+            Call, email, or download (placeholders).
+          </p>
+          <div
+            style="
+              margin-top: 12px;
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 12px;
+            "
+          >
+            <button
+              class="btn"
+              onclick="alert('Quick-call (placeholder)')"
+              style="padding: 12px"
+            >
+              <i class="fa fa-phone"></i> Quick Call
+            </button>
+            <button
+              class="btn"
+              onclick="alert('Email (placeholder)')"
+              style="padding: 12px"
+            >
+              <i class="fa fa-envelope"></i> Email
+            </button>
+            <button
+              class="btn"
+              onclick="alert('Download (placeholder)')"
+              style="padding: 12px"
+            >
+              <i class="fa fa-download"></i> Download
+            </button>
+            <button
+              class="btn"
+              onclick="location.href = 'inquiry-form.html'"
+              style="padding: 12px"
+            >
+              <i class="fa fa-file-signature"></i> Submit Inquiry
+            </button>
+          </div>
+          <div class="alert alert-warning" style="margin-top: 12px">
+            Backend directory integration pending.
+          </div>
+        </div>
+      </div>
+
+      <div class="analytics">
+        <div class="chart-box">
+          <h2>Department Contacts (placeholder list)</h2>
+          <div class="table-container" style="margin-top: 12px">
+            <table>
+              <thead>
+                <tr>
+                  <th>Department</th>
+                  <th>Office</th>
+                  <th>Email</th>
+                  <th>Phone</th>
+                  <th>Hours</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Emergency</td>
+                  <td>Emergency Desk</td>
+                  <td>emergency@ampath.org</td>
+                  <td>+254 XXX</td>
+                  <td>24/7</td>
+                </tr>
+                <tr>
+                  <td>Radiology</td>
+                  <td>Imaging</td>
+                  <td>radiology@ampath.org</td>
+                  <td>+254 XXX</td>
+                  <td>08:00-17:00</td>
+                </tr>
+                <tr>
+                  <td>Laboratory</td>
+                  <td>Lab Services</td>
+                  <td>lab@ampath.org</td>
+                  <td>+254 XXX</td>
+                  <td>08:00-17:00</td>
+                </tr>
+                <tr>
+                  <td>Pharmacy</td>
+                  <td>Dispensing</td>
+                  <td>pharmacy@ampath.org</td>
+                  <td>+254 XXX</td>
+                  <td>08:00-17:00</td>
+                </tr>
+                <tr>
+                  <td>ICT Support</td>
+                  <td>Helpdesk</td>
+                  <td>ict@ampath.org</td>
+                  <td>+254 XXX</td>
+                  <td>24/7</td>
+                </tr>
+                <tr>
+                  <td>Security</td>
+                  <td>Security Office</td>
+                  <td>security@ampath.org</td>
+                  <td>+254 XXX</td>
+                  <td>24/7</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="activity-box">
+          <h2>Staff Directory (placeholder)</h2>
+          <p style="color: gray; font-size: 13px; line-height: 1.6">
+            Team contacts for routing and escalation.
+          </p>
+          <div class="table-container" style="margin-top: 12px">
+            <table>
+              <thead>
+                <tr>
+                  <th>Role</th>
+                  <th>Name</th>
+                  <th>Contact</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Customer Support</td>
+                  <td>Ms. A. Njoroge</td>
+                  <td>support@ampath.org</td>
+                </tr>
+                <tr>
+                  <td>IT Support</td>
+                  <td>Mr. B. Kiptoo</td>
+                  <td>ict@ampath.org</td>
+                </tr>
+                <tr>
+                  <td>Security</td>
+                  <td>Mr. C. Anyango</td>
+                  <td>security@ampath.org</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

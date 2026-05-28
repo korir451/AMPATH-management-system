@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News Dashboard - AMPATH</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <h2>AMPATH MEDIA</h2>
+      <ul>
+        <li>
+          <a href="news-home.html"
+            ><i class="fa fa-newspaper"></i><span>Home</span></a
+          >
+        </li>
+        <li>
+          <a href="breaking-news.html"
+            ><i class="fa fa-bell"></i><span>Breaking Alerts</span></a
+          >
+        </li>
+        <li>
+          <a href="news-dashboard.html" class="active"
+            ><i class="fa fa-tachometer-alt"></i><span>Dashboard</span></a
+          >
+        </li>
+        <li>
+          <a href="events.html"
+            ><i class="fa fa-calendar"></i><span>Events</span></a
+          >
+        </li>
+        <li>
+          <a href="community-impact.html"
+            ><i class="fa fa-hands-helping"></i><span>Impact</span></a
+          >
+        </li>
+        <li>
+          <a href="media-center.html"
+            ><i class="fa fa-briefcase"></i><span>Media Center</span></a
+          >
+        </li>
+        <li>
+          <a href="staff-news.html"
+            ><i class="fa fa-user-shield"></i><span>Staff News</span></a
+          >
+        </li>
+        <li>
+          <a href="news-analytics.html"
+            ><i class="fa fa-chart-line"></i><span>Analytics</span></a
+          >
+        </li>
+        <li>
+          <a href="news-categories.html"
+            ><i class="fa fa-tags"></i><span>Categories</span></a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <div class="main-content">
+      <div class="topbar">
+        <div>
+          <h2>Media Operations Dashboard</h2>
+          <p style="color: gray; font-size: 14px">
+            Manage articles, publications, alerts, events, and staff notices
+            (placeholder UI).
+          </p>
+        </div>
+        <div class="profile">
+          <img src="https://i.pravatar.cc/100" alt="editor" />
+          <h4>Editor Console</h4>
+        </div>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Draft Articles</h3>
+          <h1>14</h1>
+        </div>
+        <div class="card">
+          <h3>Scheduled</h3>
+          <h1>7</h1>
+        </div>
+        <div class="card">
+          <h3>Published</h3>
+          <h1>42</h1>
+        </div>
+        <div class="card">
+          <h3>Breaking Alerts</h3>
+          <h1>3</h1>
+        </div>
+      </div>
+
+      <div class="analytics">
+        <div class="chart-box">
+          <h2>Article Management</h2>
+          <p style="color: gray; font-size: 13px; line-height: 1.6">
+            Draft/publish workflow, tagging, author profiles, and media uploads.
+          </p>
+
+          <div class="table-container" style="margin-top: 12px">
+            <table>
+              <thead>
+                <tr>
+                  <th>Title</th>
+                  <th>Category</th>
+                  <th>Author</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>New ICU Expansion</td>
+                  <td>Hospital Updates</td>
+                  <td>Media Office</td>
+                  <td><span class="status active">Published</span></td>
+                  <td>
+                    <button
+                      class="btn"
+                      style="padding: 8px 12px; width: 100%"
+                      onclick="alert('Open article (placeholder)')"
+                    >
+                      Open
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Vaccination Campaign Launch</td>
+                  <td>Health Campaigns</td>
+                  <td>Community Outreach</td>
+                  <td><span class="status pending">Scheduled</span></td>
+                  <td>
+                    <button
+                      class="btn"
+                      style="padding: 8px 12px; width: 100%"
+                      onclick="alert('Open article (placeholder)')"
+                    >
+                      Open
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Emergency Hotline Update</td>
+                  <td>Emergency Alerts</td>
+                  <td>Emergency Ops</td>
+                  <td><span class="status pending">Draft</span></td>
+                  <td>
+                    <button
+                      class="btn"
+                      style="padding: 8px 12px; width: 100%"
+                      onclick="alert('Open article (placeholder)')"
+                    >
+                      Open
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="activity-box">
+          <h2>Quick Actions</h2>
+          <p style="color: gray; font-size: 13px; line-height: 1.6">
+            Placeholder controls for scheduling, publishing, and alert creation.
+          </p>
+
+          <div style="margin-top: 12px" class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>Action</th>
+                  <th>Ready</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Create Draft</td>
+                  <td><span class="status active">Yes</span></td>
+                </tr>
+                <tr>
+                  <td>Schedule Article</td>
+                  <td><span class="status pending">Pending</span></td>
+                </tr>
+                <tr>
+                  <td>Publish</td>
+                  <td><span class="status active">Yes</span></td>
+                </tr>
+                <tr>
+                  <td>Create Breaking Alert</td>
+                  <td><span class="status pending">Pending</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div style="margin-top: 14px">
+            <button
+              class="btn"
+              style="width: 100%"
+              onclick="alert('New draft (placeholder)')"
+            >
+              <i class="fa fa-plus"></i> New Draft (placeholder)
+            </button>
+          </div>
+
+          <div class="alert alert-warning" style="margin-top: 12px">
+            CMS backend integration is pending.
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Staff Schedules - AMPATH</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <h2>STAFF PORTAL</h2>
+      <ul>
+        <li><a href="appointments-dashboard.html"><i class="fa fa-calendar-check"></i><span>Dashboard</span></a></li>
+        <li><a href="doctor-schedule.html"><i class="fa fa-user-doctor"></i><span>Doctor Schedule</span></a></li>
+        <li><a href="staff-schedules.html" class="active"><i class="fa fa-people-group"></i><span>Staff Schedules</span></a></li>
+      </ul>
+    </div>
+
+    <div class="main-content">
+      <div class="topbar">
+        <div>
+          <h2>Department Staff Schedules</h2>
+          <p style="color: gray; font-size: 14px">Shift integration + appointment queue placeholders</p>
+        </div>
+        <div class="profile">
+          <img src="https://i.pravatar.cc/100" alt="staff" />
+          <h4>Department Coordinator</h4>
+        </div>
+      </div>
+
+      <div class="cards">
+        <div class="card"><h3>Shifts Today</h3><h1>9</h1></div>
+        <div class="card"><h3>Staff Available</h3><h1>41</h1></div>
+        <div class="card"><h3>Leave Requests</h3><h1>2</h1></div>
+        <div class="card"><h3>Open Appointments</h3><h1>18</h1></div>
+      </div>
+
+      <div class="analytics">
+        <div class="chart-box">
+          <h2>Shift Overview (Placeholder)</h2>
+          <div class="grid" style="grid-template-columns: 1fr; gap: 10px; margin-top: 12px">
+            <div class="alert alert-success">08:00 - 16:00 • Nurses • Active</div>
+            <div class="alert alert-warning">12:00 - 20:00 • Lab Tech • Partially booked</div>
+            <div class="alert alert-danger">16:00 - 22:00 • Emergency • Coverage required</div>
+          </div>
+          <button class="btn" style="width:100%; background:#0b3d91; color:white; margin-top:14px">
+            <i class="fa fa-user-plus"></i> Assign Staff (placeholder)
+          </button>
+        </div>
+
+        <div class="activity-box">
+          <h2>Daily Appointment Queue</h2>
+          <br />
+          <div class="alert alert-warning">Queue #5 • Pending Approval</div>
+          <div class="alert alert-success">Queue #6 • Approved</div>
+          <div class="alert alert-danger">Queue #7 • Emergency bypass enabled</div>
+          <button class="btn" style="width:100%; background:#dbe3ee; color:#0b3d91; margin-top:14px">
+            <i class="fa fa-clipboard-list"></i> Update Status (placeholder)
+          </button>
+        </div>
+      </div>
+
+      <div class="table-container">
+        <h2>Internal Notes (Placeholder)</h2>
+        <p class="muted" style="margin-top: 8px">Notes and department coordination actions</p>
+        <br />
+        <textarea rows="6" style="width:100%; padding:12px; border-radius:12px; border:1px solid #dbe3ee; outline:none" placeholder="Add internal scheduling notes..."></textarea>
+        <button class="btn" style="width:100%; background:#b00020; color:white; margin-top:12px" onclick="alert('Saved internal notes (placeholder)')">
+          <i class="fa fa-floppy-disk"></i> Save Notes
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
+

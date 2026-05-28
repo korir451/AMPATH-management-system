@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prescriptions - AMPATH</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <h2>AMPATH</h2>
+      <ul>
+        <li>
+          <a href="patient_dashboard.html">
+            <i class="fa fa-house"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="patient_appointments.html">
+            <i class="fa fa-calendar"></i>
+            <span>Appointments</span>
+          </a>
+        </li>
+        <li>
+          <a href="patient_medical_records.html">
+            <i class="fa fa-file-medical"></i>
+            <span>Records</span>
+          </a>
+        </li>
+        <li>
+          <a href="patient_lab_results.html">
+            <i class="fa fa-vials"></i>
+            <span>Lab Results</span>
+          </a>
+        </li>
+        <li>
+          <a href="patient_prescriptions.html" class="active">
+            <i class="fa fa-pills"></i>
+            <span>Prescriptions</span>
+          </a>
+        </li>
+        <li>
+          <a href="patient_billing.html">
+            <i class="fa fa-credit-card"></i>
+            <span>Billing</span>
+          </a>
+        </li>
+        <li>
+          <a href="patient_login.html">
+            <i class="fa fa-right-from-bracket"></i>
+            <span>Logout</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="main-content">
+      <div class="topbar">
+        <div>
+          <h2>My Prescriptions</h2>
+          <p style="color: gray; font-size: 14px">
+            Medication instructions and history
+          </p>
+        </div>
+        <div class="profile">
+          <img src="https://i.pravatar.cc/100" alt="patient" />
+          <h4>Patient</h4>
+        </div>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Total Prescriptions</h3>
+          <h1>7</h1>
+        </div>
+        <div class="card">
+          <h3>Active</h3>
+          <h1>3</h1>
+        </div>
+        <div class="card">
+          <h3>Completed</h3>
+          <h1>4</h1>
+        </div>
+        <div class="card">
+          <h3>Refill Requests</h3>
+          <h1>1</h1>
+        </div>
+      </div>
+
+      <div class="analytics">
+        <div class="chart-box">
+          <h2>Medication Adherence (Stub)</h2>
+          <div class="chart-placeholder"></div>
+          <p style="margin-top: 15px; color: gray">
+            Connect with backend later.
+          </p>
+        </div>
+
+        <div class="activity-box">
+          <h2>Refill</h2>
+          <br />
+          <div class="alert alert-warning">
+            Refill requests require approval (stub)
+          </div>
+          <div class="alert alert-success">
+            Your refill may be processed today (stub)
+          </div>
+          <div class="alert alert-danger">
+            Missing dosage info may delay refill (stub)
+          </div>
+
+          <div class="form-container" style="padding: 20px; margin-top: 14px">
+            <div class="form-group" style="margin-bottom: 12px">
+              <label>Prescription ID</label>
+              <input type="text" placeholder="e.g., RX-2026-009" />
+            </div>
+            <button class="btn" type="button" style="width: 100%">
+              <i class="fa fa-paper-plane"></i> Request Refill
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="table-container">
+        <h2>Prescription History</h2>
+        <br />
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Medicine</th>
+              <th>Dosage</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2026-05-22</td>
+              <td>Amoxicillin</td>
+              <td>500mg • 3x daily</td>
+              <td><span class="status active">Active</span></td>
+            </tr>
+            <tr>
+              <td>2026-05-15</td>
+              <td>Paracetamol</td>
+              <td>1g • 2x daily</td>
+              <td><span class="status pending">Completed</span></td>
+            </tr>
+            <tr>
+              <td>2026-05-08</td>
+              <td>Omeprazole</td>
+              <td>20mg • Once daily</td>
+              <td><span class="status active">Completed</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News & Updates - AMPATH</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <h2>AMPATH MEDIA</h2>
+      <ul>
+        <li>
+          <a href="news-home.html" class="active">
+            <i class="fa fa-newspaper"></i><span>Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="breaking-news.html">
+            <i class="fa fa-bell"></i><span>Breaking Alerts</span>
+          </a>
+        </li>
+        <li>
+          <a href="news-dashboard.html">
+            <i class="fa fa-tachometer-alt"></i><span>Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="events.html">
+            <i class="fa fa-calendar"></i><span>Events</span>
+          </a>
+        </li>
+        <li>
+          <a href="community-impact.html">
+            <i class="fa fa-hands-helping"></i><span>Impact</span>
+          </a>
+        </li>
+        <li>
+          <a href="media-center.html">
+            <i class="fa fa-briefcase"></i><span>Media Center</span>
+          </a>
+        </li>
+        <li>
+          <a href="staff-news.html">
+            <i class="fa fa-user-shield"></i><span>Staff News</span>
+          </a>
+        </li>
+        <li>
+          <a href="news-analytics.html">
+            <i class="fa fa-chart-line"></i><span>Analytics</span>
+          </a>
+        </li>
+        <li>
+          <a href="news-categories.html">
+            <i class="fa fa-tags"></i><span>Categories</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="main-content">
+      <div class="topbar">
+        <div>
+          <h2>News & Updates</h2>
+          <p style="color: gray; font-size: 14px">
+            Hospital announcements, health campaigns, research breakthroughs,
+            events, and public notices—enterprise-grade, real-time ready.
+          </p>
+        </div>
+        <div class="profile">
+          <img src="https://i.pravatar.cc/100" alt="media" />
+          <h4>Media Center</h4>
+        </div>
+      </div>
+
+      <div class="hero">
+        <div class="hero-text">
+          <h1>Stay Informed. Stay Safe.</h1>
+          <p>
+            Breaking alerts, verified hospital updates, community impact
+            stories, and research highlights from AMPATH.
+          </p>
+
+          <div
+            style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 16px"
+          >
+            <button class="btn" onclick="alert('Subscribe (placeholder)')">
+              <i class="fa fa-envelope"></i> Subscribe
+            </button>
+            <button
+              class="btn"
+              style="background: #0b3d91; color: white"
+              onclick="location.href = 'breaking-news.html'"
+            >
+              <i class="fa fa-bell"></i> View Breaking Alerts
+            </button>
+          </div>
+        </div>
+
+        <div class="hero-image">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/2965/2965879.png"
+            alt="news"
+          />
+        </div>
+      </div>
+
+      <div class="analytics">
+        <div class="chart-box">
+          <h2>Breaking News Ticker</h2>
+          <div style="margin-top: 10px">
+            <div class="alert alert-danger">
+              Emergency hotline upgrade completed • 24/7 active
+            </div>
+            <div class="alert alert-warning">
+              Outpatient clinics may experience delays today
+            </div>
+            <div class="alert alert-success">
+              New vaccination campaign starts next week
+            </div>
+          </div>
+
+          <h2 style="margin-top: 22px">Search & Filters (placeholder)</h2>
+          <div
+            style="
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 12px;
+              margin-top: 12px;
+            "
+          >
+            <input
+              type="text"
+              placeholder="Search news by title, category, author"
+              style="
+                width: 100%;
+                padding: 12px;
+                border-radius: 12px;
+                border: 1px solid #dbe3ee;
+                outline: none;
+              "
+            />
+            <select
+              style="
+                width: 100%;
+                padding: 12px;
+                border-radius: 12px;
+                border: 1px solid #dbe3ee;
+                outline: none;
+              "
+            >
+              <option>All Categories</option>
+              <option>Hospital Updates</option>
+              <option>Research Breakthroughs</option>
+              <option>Emergency Alerts</option>
+              <option>Community Outreach</option>
+              <option>Staff Announcements</option>
+            </select>
+          </div>
+
+          <div style="margin-top: 12px">
+            <button
+              class="btn"
+              style="width: 100%"
+              onclick="alert('Filter applied (placeholder)')"
+            >
+              <i class="fa fa-filter"></i> Apply Filters
+            </button>
+          </div>
+        </div>
+
+        <div class="activity-box">
+          <h2>Featured Stories</h2>
+          <p style="color: gray; font-size: 13px; line-height: 1.6">
+            Highlights across clinical updates, research milestones, community
+            outreach, and training.
+          </p>
+
+          <div style="margin-top: 12px" class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>Story</th>
+                  <th>Category</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>New ICU expansion</td>
+                  <td>Hospital Updates</td>
+                  <td><span class="status active">Featured</span></td>
+                </tr>
+                <tr>
+                  <td>Clinical trial enrollment begins</td>
+                  <td>Research Breakthroughs</td>
+                  <td><span class="status pending">Trending</span></td>
+                </tr>
+                <tr>
+                  <td>Community vaccination drive</td>
+                  <td>Community Outreach</td>
+                  <td><span class="status active">Live</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div style="margin-top: 14px">
+            <a
+              href="news-dashboard.html"
+              class="btn"
+              style="display: inline-block; text-decoration: none; width: 100%"
+            >
+              <i class="fa fa-tachometer-alt"></i> Explore Media Dashboard
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Hospital Updates</h3>
+          <h1>120+</h1>
+        </div>
+        <div class="card">
+          <h3>Research Highlights</h3>
+          <h1>38</h1>
+        </div>
+        <div class="card">
+          <h3>Emergency Alerts</h3>
+          <h1>17</h1>
+        </div>
+        <div class="card">
+          <h3>Events This Month</h3>
+          <h1>9</h1>
+        </div>
+      </div>
+
+      <div class="analytics">
+        <div class="chart-box">
+          <h2>Upcoming Events</h2>
+          <div class="table-container" style="margin-top: 12px">
+            <table>
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Event</th>
+                  <th>Type</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2026-06-02</td>
+                  <td>Public Health Seminar</td>
+                  <td>Workshop</td>
+                  <td>
+                    <button
+                      class="btn"
+                      onclick="alert('Register (placeholder)')"
+                    >
+                      Register
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2026-06-07</td>
+                  <td>Research Symposium</td>
+                  <td>Conference</td>
+                  <td>
+                    <button
+                      class="btn"
+                      onclick="alert('Register (placeholder)')"
+                    >
+                      Register
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2026-06-14</td>
+                  <td>Staff Training: Patient Safety</td>
+                  <td>Training</td>
+                  <td>
+                    <button
+                      class="btn"
+                      onclick="alert('Register (placeholder)')"
+                    >
+                      Register
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="activity-box">
+          <h2>Newsletter Subscription</h2>
+          <p style="color: gray; font-size: 13px; line-height: 1.6">
+            Get verified updates for your role (public, staff, researcher).
+          </p>
+
+          <div style="margin-top: 12px">
+            <input
+              type="email"
+              placeholder="Email address"
+              style="
+                width: 100%;
+                padding: 12px;
+                border-radius: 12px;
+                border: 1px solid #dbe3ee;
+                outline: none;
+                margin-bottom: 10px;
+              "
+            />
+            <select
+              style="
+                width: 100%;
+                padding: 12px;
+                border-radius: 12px;
+                border: 1px solid #dbe3ee;
+                outline: none;
+                margin-bottom: 10px;
+              "
+            >
+              <option>Select audience</option>
+              <option>Public Notices</option>
+              <option>Staff Announcements</option>
+              <option>Research Updates</option>
+              <option>Community Outreach</option>
+            </select>
+            <button
+              class="btn"
+              style="width: 100%"
+              onclick="alert('Subscribed (placeholder)')"
+            >
+              <i class="fa fa-paper-plane"></i> Subscribe
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

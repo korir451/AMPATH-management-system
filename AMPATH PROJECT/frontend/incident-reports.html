@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Incident Reports - AMPATH</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <h2>AMPATH INCIDENTS</h2>
+
+      <ul>
+        <li>
+          <a href="employee-dashboard.html">
+            <i class="fa fa-house"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="incident-dashboard.html" class="active">
+            <i class="fa fa-triangle-exclamation"></i>
+            <span>Incident Command</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="incident-analytics.html">
+            <i class="fa fa-chart-line"></i>
+            <span>Analytics</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="incident-reports.html" class="active">
+            <i class="fa fa-file-lines"></i>
+            <span>Reports</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="employee_login.html">
+            <i class="fa fa-right-from-bracket"></i>
+            <span>Logout</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+      <div class="topbar">
+        <div>
+          <h2>Incident Reports</h2>
+          <p style="color: gray; font-size: 14px">
+            Search, filter, and export incident reports (UI placeholder)
+          </p>
+        </div>
+
+        <div class="profile">
+          <img src="https://i.pravatar.cc/100" alt="staff" />
+          <h4>Incidents Officer</h4>
+        </div>
+      </div>
+
+      <!-- FILTERS -->
+      <div class="analytics">
+        <div class="chart-box">
+          <h2>Report Filters</h2>
+          <p class="muted" style="margin-top: 8px; line-height: 1.6">
+            Connect to backend for dynamic filters and table pagination.
+          </p>
+
+          <div style="margin-top: 14px">
+            <label class="muted" style="font-size: 13px">Search</label>
+            <input
+              type="text"
+              placeholder="Reference / Title / Department"
+              style="
+                width: 100%;
+                padding: 10px;
+                margin-top: 8px;
+                margin-bottom: 10px;
+              "
+            />
+
+            <label class="muted" style="font-size: 13px">Department</label>
+            <select
+              style="
+                width: 100%;
+                padding: 10px;
+                margin-top: 8px;
+                margin-bottom: 10px;
+              "
+            >
+              <option value="">All Departments</option>
+              <option>Radiology</option>
+              <option>Laboratory</option>
+              <option>Pharmacy</option>
+              <option>Emergency</option>
+              <option>Nursing</option>
+              <option>ICT</option>
+              <option>Finance</option>
+              <option>Security</option>
+              <option>Research</option>
+              <option>Administration</option>
+              <option>Patient Services</option>
+              <option>Ambulance Operations</option>
+            </select>
+
+            <div
+              style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px"
+            >
+              <div>
+                <label class="muted" style="font-size: 13px">Severity</label>
+                <select
+                  style="
+                    width: 100%;
+                    padding: 10px;
+                    margin-top: 8px;
+                    margin-bottom: 10px;
+                  "
+                >
+                  <option value="">All Severities</option>
+                  <option>Low</option>
+                  <option>Medium</option>
+                  <option>High</option>
+                  <option>Critical</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="muted" style="font-size: 13px">Status</label>
+                <select
+                  style="
+                    width: 100%;
+                    padding: 10px;
+                    margin-top: 8px;
+                    margin-bottom: 10px;
+                  "
+                >
+                  <option value="">All Statuses</option>
+                  <option>NEW</option>
+                  <option>OPEN</option>
+                  <option>UNDER INVESTIGATION</option>
+                  <option>ESCALATED</option>
+                  <option>ACTION TAKEN</option>
+                  <option>RESOLVED</option>
+                  <option>CLOSED</option>
+                </select>
+              </div>
+            </div>
+
+            <label class="muted" style="font-size: 13px">Date Range</label>
+            <div
+              style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px"
+            >
+              <input
+                type="date"
+                style="
+                  width: 100%;
+                  padding: 10px;
+                  margin-top: 8px;
+                  margin-bottom: 10px;
+                "
+              />
+              <input
+                type="date"
+                style="
+                  width: 100%;
+                  padding: 10px;
+                  margin-top: 8px;
+                  margin-bottom: 10px;
+                "
+              />
+            </div>
+
+            <button class="btn" style="width: 100%">
+              <i class="fa fa-magnifying-glass"></i> Apply Filters
+            </button>
+          </div>
+        </div>
+
+        <!-- EXPORT -->
+        <div class="activity-box">
+          <h2>Export & Print</h2>
+          <p class="muted" style="margin-top: 8px; line-height: 1.6">
+            Export endpoints will be added during backend integration.
+          </p>
+
+          <div class="alert alert-warning">
+            Printable report template (placeholder)
+          </div>
+
+          <div
+            style="
+              display: grid;
+              grid-template-columns: 1fr;
+              gap: 10px;
+              margin-top: 14px;
+            "
+          >
+            <button class="btn" style="width: 100%; background: #0b3d91">
+              <i class="fa fa-file-pdf"></i> Export to PDF
+            </button>
+            <button
+              class="btn"
+              style="width: 100%; background: #dbe3ee; color: #0b3d91"
+            >
+              <i class="fa fa-file-excel"></i> Export to Excel
+            </button>
+            <button
+              class="btn"
+              style="width: 100%; background: #dbe3ee; color: #0b3d91"
+            >
+              <i class="fa fa-print"></i> Print
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- TABLE -->
+      <div class="table-container">
+        <h2>Incident Reports Table</h2>
+        <p class="muted" style="margin-top: 8px">
+          Pagination/sort/search UI placeholder
+        </p>
+        <br />
+
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Reference</th>
+              <th>Department</th>
+              <th>Category</th>
+              <th>Severity</th>
+              <th>Status</th>
+              <th>View</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>2026-05-20</td>
+              <td>INC-2026-00041</td>
+              <td>Radiology</td>
+              <td>Equipment Failure</td>
+              <td><span class="status pending">High</span></td>
+              <td><span class="status active">RESOLVED</span></td>
+              <td>
+                <a
+                  href="incident-details.html"
+                  class="btn"
+                  style="padding: 8px 12px; text-decoration: none"
+                  >View</a
+                >
+              </td>
+            </tr>
+
+            <tr>
+              <td>2026-05-19</td>
+              <td>INC-2026-00040</td>
+              <td>ICT</td>
+              <td>ICT/System Failure</td>
+              <td><span class="status pending">Critical</span></td>
+              <td><span class="status pending">UNDER INVESTIGATION</span></td>
+              <td>
+                <a
+                  href="incident-details.html"
+                  class="btn"
+                  style="padding: 8px 12px; text-decoration: none"
+                  >View</a
+                >
+              </td>
+            </tr>
+
+            <tr>
+              <td>2026-05-18</td>
+              <td>INC-2026-00039</td>
+              <td>Security</td>
+              <td>Security Threat</td>
+              <td><span class="status pending">High</span></td>
+              <td><span class="status pending">ESCALATED</span></td>
+              <td>
+                <a
+                  href="incident-details.html"
+                  class="btn"
+                  style="padding: 8px 12px; text-decoration: none"
+                  >View</a
+                >
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

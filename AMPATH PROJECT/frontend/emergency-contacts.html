@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emergency Contacts - AMPATH</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <h2>CONTACT AMPATH</h2>
+      <ul>
+        <li><a href="contact-home.html"><i class="fa fa-headset"></i><span>Home</span></a></li>
+        <li><a href="contact-directory.html"><i class="fa fa-address-book"></i><span>Directory</span></a></li>
+        <li><a href="support-center.html"><i class="fa fa-life-ring"></i><span>Support Center</span></a></li>
+        <li><a href="help-center.html"><i class="fa fa-circle-question"></i><span>Help / FAQ</span></a></li>
+        <li><a href="inquiry-form.html"><i class="fa fa-file-signature"></i><span>Inquiry Form</span></a></li>
+        <li><a href="emergency-contacts.html" class="active"><i class="fa fa-truck-medical"></i><span>Emergency</span></a></li>
+        <li><a href="locations.html"><i class="fa fa-location-dot"></i><span>Locations</span></a></li>
+        <li><a href="patient-support.html"><i class="fa fa-user-injured"></i><span>Patient Support</span></a></li>
+        <li><a href="staff-contact-center.html"><i class="fa fa-user-shield"></i><span>Staff Support</span></a></li>
+        <li><a href="outreach-contacts.html"><i class="fa fa-people-arrows"></i><span>Outreach</span></a></li>
+        <li><a href="contact-analytics.html"><i class="fa fa-chart-line"></i><span>Analytics</span></a></li>
+      </ul>
+    </div>
+
+    <div class="main-content">
+      <div class="topbar">
+        <div>
+          <h2>Emergency Contact & Response</h2>
+          <p style="color: gray; font-size: 14px">
+            Hotline shortcuts, escalation placeholders, ambulance contact buttons, and alert levels UI.
+          </p>
+        </div>
+        <div class="profile">
+          <img src="https://i.pravatar.cc/100" alt="emergency" />
+          <h4>Emergency Ops</h4>
+        </div>
+
+      <div class="cards">
+        <div class="card"><h3>Information</h3><h1>✓</h1></div>
+        <div class="card"><h3>Advisory</h3><h1>!</h1></div>
+        <div class="card"><h3>Warning</h3><h1>⚠</h1></div>
+        <div class="card"><h3>Critical</h3><h1>⛔</h1></div>
+
+      <div class="analytics">
+        <div class="chart-box">
+          <h2>Quick Emergency Actions</h2>
+          <p style="color: gray; font-size: 13px; line-height: 1.6">
+            Use the appropriate channel for fastest response.
+          </p>
+
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:12px">
+            <button class="btn" style="width:100%; padding:12px" onclick="alert('Calling hotline (placeholder)')">
+              <i class="fa fa-phone"></i> Call Emergency Hotline
+            </button>
+            <button class="btn" style="width:100%; padding:12px" onclick="alert('Requesting ambulance (placeholder)')">
+              <i class="fa fa-ambulance"></i> Request Ambulance
+            </button>
+            <button class="btn" style="width:100%; padding:12px" onclick="alert('Panic alert sent (placeholder)')">
+              <i class="fa fa-bolt"></i> Panic Alert (placeholder)
+            </button>
+            <button class="btn" style="width:100%; padding:12px" onclick="alert('Security notification (placeholder)')">
+              <i class="fa fa-shield-halved"></i> Notify Security
+            </button>
+          </div>
+
+          <div style="margin-top:14px" class="alert alert-danger">
+            Emergency requests may not be processed through email/web form.
+          </div>
+
+          <div style="margin-top: 14px" class="table-container">
+            <h2>Emergency Contact Panel (placeholder)</h2>
+            <table>
+              <thead>
+                <tr><th>Service</th><th>Contact</th><th>Hours</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Emergency Hotline</td><td>+254 XXX XXX XXX</td><td>24/7</td></tr>
+                <tr><td>Ambulance Dispatch</td><td>+254 XXX XXX XXX</td><td>24/7</td></tr>
+                <tr><td>ICU / Critical Care</td><td>+254 XXX XXX XXX</td><td>24/7</td></tr>
+                <tr><td>Fire & Safety</td><td>+254 XXX XXX XXX</td><td>24/7</td></tr>
+                <tr><td>Security Desk</td><td>+254 XXX XXX XXX</td><td>24/7</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+        <div class="activity-box">
+          <h2>Escalation Workflow (placeholder)</h2>
+          <p style="color: gray; font-size: 13px; line-height: 1.6">
+            How emergency requests get escalated.
+          </p>
+
+          <div class="table-container" style="margin-top: 12px">
+            <table>
+              <thead><tr><th>Stage</th><th>Action</th><th>Status</th></tr></thead>
+              <tbody>
+                <tr><td>Alert Received</td><td>Emergency Ops triage</td><td><span class="status pending">Pending</span></td></tr>
+                <tr><td>Routing</td><td>Department/ICU assigned</td><td><span class="status pending">Pending</span></td></tr>
+                <tr><td>Escalation</td><td>Security/Incident Manager notified</td><td><span class="status active">Ready</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2 style="margin-top:18px">SMS / Notifications (placeholder)</h2>
+          <div class="alert alert-warning">
+            SMS delivery is a placeholder. Integrate with notification APIs later.
+          </div>
+      </div>
+  </body>
+</html>

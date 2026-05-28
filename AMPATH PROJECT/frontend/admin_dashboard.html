@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AMPATH - Admin Dashboard</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #f6f8fb;
+      }
+      header {
+        background: #0b3d91;
+        color: #fff;
+        padding: 16px;
+      }
+      main {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 24px;
+      }
+      .card {
+        background: white;
+        border-radius: 12px;
+        padding: 18px;
+        box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
+      }
+      .btn {
+        padding: 10px 14px;
+        border-radius: 10px;
+        border: 0;
+        background: #0b3d91;
+        color: #fff;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+      }
+      .muted {
+        color: #5a6b7c;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+      @media (min-width: 900px) {
+        .grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      .kpi {
+        font-size: 22px;
+        font-weight: 700;
+        margin-top: 6px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 style="margin: 0; font-size: 18px">AMPATH Management System</h1>
+    </header>
+    <main>
+      <div class="card">
+        <h2 style="margin-top: 0">Admin Dashboard (Stub)</h2>
+        <p class="muted">
+          KPI widgets and monitoring indicators for ICT Officer / Admin users.
+        </p>
+        <div style="height: 16px"></div>
+
+        <div class="grid">
+          <div class="card">
+            <h3 style="margin-top: 0">Total Patients</h3>
+            <div id="kpiPatients" class="kpi">—</div>
+          </div>
+          <div class="card">
+            <h3 style="margin-top: 0">Active Incidents</h3>
+            <div id="kpiIncidents" class="kpi">—</div>
+          </div>
+          <div class="card">
+            <h3 style="margin-top: 0">Drug Stock Alerts</h3>
+            <div id="kpiDrugAlerts" class="kpi">—</div>
+          </div>
+          <div class="card">
+            <h3 style="margin-top: 0">Daily Revenue</h3>
+            <div id="kpiRevenue" class="kpi">—</div>
+          </div>
+          <div class="card">
+            <h3 style="margin-top: 0">Active Researchers</h3>
+            <div id="kpiResearchers" class="kpi">—</div>
+          </div>
+          <div class="card">
+            <h3 style="margin-top: 0">Pending Applications</h3>
+            <div id="kpiPending" class="kpi">—</div>
+          </div>
+        </div>
+
+        <div style="height: 16px"></div>
+        <a class="btn" href="index.html">Back Home</a>
+      </div>
+    </main>
+
+    <script>
+      // Stub values for now; backend widgets can be added later.
+      document.getElementById("kpiPatients").textContent = "1,024";
+      document.getElementById("kpiIncidents").textContent = "12";
+      document.getElementById("kpiDrugAlerts").textContent = "3";
+      document.getElementById("kpiRevenue").textContent = "KES 4.6M";
+      document.getElementById("kpiResearchers").textContent = "18";
+      document.getElementById("kpiPending").textContent = "7";
+    </script>
+  </body>
+</html>
+
+const current = root.getAttribute('data-theme') || 'light';

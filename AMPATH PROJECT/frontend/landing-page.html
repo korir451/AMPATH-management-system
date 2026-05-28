@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AMPATH | Enterprise Healthcare Platform</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- HERO -->
+    <div class="hero" style="min-height: 70vh; align-items: center">
+      <div class="hero-text">
+        <h1>
+          <i class="fa fa-hospital" style="margin-right: 10px"></i> AMPATH
+          Enterprise Healthcare Platform
+        </h1>
+        <p>
+          Secure patient care, staff operations, incident response, research
+          management, analytics, and emergency services—built for
+          enterprise-grade healthcare delivery.
+        </p>
+
+        <div
+          style="
+            margin-top: 18px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+          "
+        >
+          <a
+            class="btn"
+            href="patient_login.html"
+            style="text-decoration: none; display: block"
+          >
+            <i class="fa fa-user"></i> Patient Login
+          </a>
+
+          <a
+            class="btn"
+            href="staff_portal.html"
+            style="
+              text-decoration: none;
+              display: block;
+              background: #0b3d91;
+              color: white;
+            "
+          >
+            <i class="fa fa-user-doctor"></i> Staff Login
+          </a>
+          <a
+            class="btn"
+            href="patient_portal_dashboard.html"
+            style="
+              text-decoration: none;
+              display: block;
+              background: #0b3d91;
+              color: white;
+            "
+          >
+            <i class="fa fa-user-doctor"></i> Explore Staff Portal
+          </a>
+        </div>
+
+        <div class="analytics" style="margin-top: 18px">
+          <div class="chart-box">
+            <h2>Trust Indicators (placeholder)</h2>
+            <ul
+              style="
+                margin-top: 10px;
+                padding-left: 18px;
+                color: #2d3748;
+                line-height: 1.9;
+              "
+            >
+              <li><b>Security Posture:</b> Healthy (placeholder)</li>
+              <li><b>Audit Logging:</b> Enabled (placeholder)</li>
+              <li><b>Backup & DR:</b> Ready (placeholder)</li>
+              <li><b>Compliance:</b> On track (placeholder)</li>
+            </ul>
+
+            <button
+              class="btn"
+              style="width: 100%; margin-top: 12px"
+              onclick="
+                alert(
+                  'Security scan placeholder (JWT/CAPTCHA/MFA/Audit integration pending)',
+                )
+              "
+            >
+              <i class="fa fa-shield-halved"></i> Scan code for security risks
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/4320/4320337.png"
+          alt="hospital"
+        />
+      </div>
+    </div>
+
+    <!-- PUBLIC SERVICES -->
+    <div class="services">
+      <h2 style="text-align: center">Public Access</h2>
+      <div class="services-grid">
+        <a
+          href="news-home.html"
+          class="service-card"
+          style="text-decoration: none; color: inherit"
+        >
+          <i class="fa fa-newspaper"></i>
+          <h3>News & Updates</h3>
+          <p>Hospital announcements and media center</p>
+        </a>
+
+        <a
+          href="careers.html"
+          class="service-card"
+          style="text-decoration: none; color: inherit"
+        >
+          <i class="fa fa-briefcase"></i>
+          <h3>Careers</h3>
+          <p>Jobs, internships, and attachments</p>
+        </a>
+
+        <a
+          href="contact-home.html"
+          class="service-card"
+          style="text-decoration: none; color: inherit"
+        >
+          <i class="fa fa-phone"></i>
+          <h3>Contact</h3>
+          <p>Support, inquiries and departments</p>
+        </a>
+
+        <a
+          href="emergency-hotline.html"
+          class="service-card"
+          style="text-decoration: none; color: inherit"
+        >
+          <i class="fa fa-ambulance"></i>
+          <h3>Emergency Hotline</h3>
+          <p>24/7 emergency response</p>
+        </a>
+      </div>
+    </div>
+
+    <!-- STATISTICS -->
+    <div class="analytics">
+      <div class="chart-box">
+        <h2>Platform Statistics (placeholder)</h2>
+        <div class="cards" style="margin-top: 12px">
+          <div class="card">
+            <h3>Patients Served</h3>
+            <h1>120,482</h1>
+          </div>
+          <div class="card">
+            <h3>Incidents Managed</h3>
+            <h1>3,218</h1>
+          </div>
+          <div class="card">
+            <h3>Research Proposals</h3>
+            <h1>412</h1>
+          </div>
+          <div class="card">
+            <h3>Staff Active</h3>
+            <h1>5,403</h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="activity-box">
+        <h2>Next Step</h2>
+        <p
+          style="
+            color: gray;
+            font-size: 13px;
+            line-height: 1.6;
+            margin-top: 8px;
+          "
+        >
+          For secure access to personalized portals, users must register or
+          login. After verification, you’ll be redirected to your role-based
+          dashboard.
+        </p>
+
+        <div
+          style="
+            margin-top: 14px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+          "
+        >
+          <a
+            class="btn"
+            href="login.html"
+            style="text-decoration: none; display: block"
+          >
+            <i class="fa fa-right-to-bracket"></i> Login
+          </a>
+          <a
+            class="btn"
+            href="register.html"
+            style="
+              text-decoration: none;
+              display: block;
+              background: #0b3d91;
+              color: white;
+            "
+          >
+            <i class="fa fa-user-plus"></i> Register
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-grid">
+        <div>
+          <h3>AMPATH</h3>
+          <p>
+            Enterprise healthcare preview for demos, showcases and
+            presentations.
+          </p>
+        </div>
+
+        <div>
+          <h3>Navigation</h3>
+          <a href="landing-page.html">Home</a>
+          <a href="public_about.html">About</a>
+          <a href="public_services.html">Services</a>
+          <a href="public_departments.html">Departments</a>
+          <a href="public_research.html">Research</a>
+          <a href="careers.html">Careers</a>
+          <a href="news-home.html">News</a>
+          <a href="contact-home.html">Contact</a>
+          <a href="emergency-hotline.html">Emergency</a>
+        </div>
+
+        <div>
+          <h3>Need Help?</h3>
+          <a href="support-center.html">Support Center</a>
+          <a href="contact-home.html">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Presentation mode: simple smooth scroll + mobile menu placeholder
+      document.addEventListener("click", function (e) {
+        const link = e.target.closest("a");
+        if (!link) return;
+        const href = link.getAttribute("href") || "";
+        if (href.startsWith("#")) {
+          e.preventDefault();
+          document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
+        }
+      });
+    </script>
+  </body>
+</html>

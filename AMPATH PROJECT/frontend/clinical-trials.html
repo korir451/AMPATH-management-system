@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clinical Trials - AMPATH</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <h2>AMPATH RESEARCH</h2>
+      <ul>
+        <li>
+          <a href="research-dashboard.html"
+            ><i class="fa fa-chart-line"></i><span>Command Center</span></a
+          >
+        </li>
+        <li>
+          <a href="research-proposal.html"
+            ><i class="fa fa-flask"></i><span>Proposals</span></a
+          >
+        </li>
+        <li>
+          <a href="ethics-dashboard.html"
+            ><i class="fa fa-shield-halved"></i><span>Ethics</span></a
+          >
+        </li>
+        <li>
+          <a href="clinical-trials.html" class="active"
+            ><i class="fa fa-microscope"></i><span>Clinical Trials</span></a
+          >
+        </li>
+        <li>
+          <a href="publications.html"
+            ><i class="fa fa-book"></i><span>Publications</span></a
+          >
+        </li>
+        <li>
+          <a href="research-documents.html"
+            ><i class="fa fa-folder-open"></i><span>Documents</span></a
+          >
+        </li>
+        <li>
+          <a href="grants-management.html"
+            ><i class="fa fa-hand-holding-dollar"></i><span>Grants</span></a
+          >
+        </li>
+        <li>
+          <a href="research-analytics.html"
+            ><i class="fa fa-chart-pie"></i><span>Analytics</span></a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <div class="main-content">
+      <div class="topbar">
+        <div>
+          <h2>Clinical Trial Management</h2>
+          <p style="color: gray; font-size: 14px">
+            Register trials, manage participants, consent, schedules,
+            milestones, and adverse events.
+          </p>
+        </div>
+        <div class="profile">
+          <img src="https://i.pravatar.cc/100" alt="trial coordinator" />
+          <h4>Trial Coordinator</h4>
+        </div>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Active Trials</h3>
+          <h1>9</h1>
+        </div>
+        <div class="card">
+          <h3>Participants Enrolled</h3>
+          <h1>214</h1>
+        </div>
+        <div class="card">
+          <h3>Pending Consents</h3>
+          <h1>16</h1>
+        </div>
+        <div class="card">
+          <h3>Adverse Events</h3>
+          <h1>4</h1>
+        </div>
+      </div>
+
+      <div class="analytics">
+        <div class="chart-box">
+          <h2>Trial Registry</h2>
+          <div class="table-container" style="margin-top: 12px">
+            <table>
+              <thead>
+                <tr>
+                  <th>Trial ID</th>
+                  <th>Title</th>
+                  <th>Phase</th>
+                  <th>Milestone</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>CT-2026-01</td>
+                  <td>Drug A Safety Monitoring</td>
+                  <td>Phase II</td>
+                  <td>2026-06-08</td>
+                  <td><span class="status active">Active</span></td>
+                </tr>
+                <tr>
+                  <td>CT-2026-02</td>
+                  <td>Telehealth Follow-up Study</td>
+                  <td>Phase I/II</td>
+                  <td>2026-06-12</td>
+                  <td><span class="status pending">Recruiting</span></td>
+                </tr>
+                <tr>
+                  <td>CT-2026-03</td>
+                  <td>Maternal Outcomes Trial</td>
+                  <td>Phase III</td>
+                  <td>2026-06-20</td>
+                  <td><span class="status pending">Follow-up</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="activity-box">
+          <h2>Participant & Consent Actions</h2>
+          <p style="color: gray; font-size: 13px; line-height: 1.6">
+            Schedule study visits and manage consent documents.
+          </p>
+
+          <div style="margin-top: 12px">
+            <label style="font-size: 14px"
+              >Participant Search (placeholder)</label
+            >
+            <input
+              type="text"
+              placeholder="Participant ID / Name"
+              style="
+                width: 100%;
+                padding: 12px;
+                border-radius: 12px;
+                border: 1px solid #dbe3ee;
+                outline: none;
+                margin-bottom: 10px;
+              "
+            />
+
+            <div
+              style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px"
+            >
+              <button class="btn" style="width: 100%">
+                <i class="fa fa-calendar"></i> Schedule Visits
+              </button>
+              <button class="btn" style="width: 100%">
+                <i class="fa fa-file-signature"></i> Consent Management
+              </button>
+            </div>
+
+            <div class="alert alert-warning" style="margin-top: 12px">
+              Connect with Appointment Management System (placeholder).
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="analytics">
+        <div class="chart-box">
+          <h2>Adverse Events</h2>
+          <div class="table-container" style="margin-top: 12px">
+            <table>
+              <thead>
+                <tr>
+                  <th>Event ID</th>
+                  <th>Trial</th>
+                  <th>Severity</th>
+                  <th>Reported</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>AE-77</td>
+                  <td>CT-2026-01</td>
+                  <td>High</td>
+                  <td>2026-05-23</td>
+                  <td><span class="status pending">Investigating</span></td>
+                </tr>
+                <tr>
+                  <td>AE-79</td>
+                  <td>CT-2026-02</td>
+                  <td>Medium</td>
+                  <td>2026-05-18</td>
+                  <td><span class="status active">Resolved</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div style="margin-top: 14px">
+            <button class="btn" style="width: 100%">
+              <i class="fa fa-bug"></i> Report Adverse Event (placeholder)
+            </button>
+          </div>
+        </div>
+
+        <div class="activity-box">
+          <h2>Trial Analytics</h2>
+          <p style="color: gray; font-size: 13px; line-height: 1.6">
+            View progress tracking, milestones, drug trial tracking, and
+            participant monitoring.
+          </p>
+          <div style="margin-top: 12px">
+            <div class="alert alert-success">
+              Enrollment target: 85% reached
+            </div>
+            <div class="alert alert-warning">
+              Visit schedule compliance: 74%
+            </div>
+            <div class="alert alert-danger">
+              Safety signal monitoring: active review
+            </div>
+          </div>
+          <div style="margin-top: 14px">
+            <a
+              href="research-analytics.html"
+              class="btn"
+              style="display: inline-block; text-decoration: none"
+            >
+              <i class="fa fa-chart-pie"></i> Analytics & Reports
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

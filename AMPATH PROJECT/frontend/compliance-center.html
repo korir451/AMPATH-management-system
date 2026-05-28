@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Compliance Center - AMPATH SOC</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <h2>AMPATH SOC</h2>
+      <ul>
+        <li>
+          <a href="security-dashboard.html"
+            ><i class="fa fa-shield-halved"></i><span>Dashboard</span></a
+          >
+        </li>
+        <li>
+          <a href="roles-permissions.html"
+            ><i class="fa fa-user-lock"></i><span>Roles & Permissions</span></a
+          >
+        </li>
+        <li>
+          <a href="users-management.html"
+            ><i class="fa fa-users"></i><span>Users</span></a
+          >
+        </li>
+        <li>
+          <a href="audit-logs.html"
+            ><i class="fa fa-scroll"></i><span>Audit Logs</span></a
+          >
+        </li>
+        <li>
+          <a href="threat-monitoring.html"
+            ><i class="fa fa-bolt"></i><span>Threat Monitoring</span></a
+          >
+        </li>
+        <li>
+          <a href="infrastructure-monitoring.html"
+            ><i class="fa fa-server"></i><span>Infrastructure</span></a
+          >
+        </li>
+        <li>
+          <a href="surveillance-center.html"
+            ><i class="fa fa-video"></i><span>Surveillance</span></a
+          >
+        </li>
+        <li>
+          <a href="emergency-security.html"
+            ><i class="fa fa-bell"></i><span>Emergency Controls</span></a
+          >
+        </li>
+        <li>
+          <a href="compliance-center.html" class="active"
+            ><i class="fa fa-shield-heart"></i><span>Compliance</span></a
+          >
+        </li>
+        <li>
+          <a href="backup-recovery.html"
+            ><i class="fa fa-database"></i><span>Backup & DR</span></a
+          >
+        </li>
+        <li>
+          <a href="security-analytics.html"
+            ><i class="fa fa-chart-line"></i><span>Analytics</span></a
+          >
+        </li>
+        <li>
+          <a href="security-reports.html"
+            ><i class="fa fa-file-export"></i><span>Reports</span></a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <div class="main-content">
+      <div class="topbar">
+        <div>
+          <h2>Data Privacy & Compliance Center</h2>
+          <p style="color: gray; font-size: 14px">
+            HIPAA-like retention controls and patient access review
+            placeholders.
+          </p>
+        </div>
+        <div class="profile">
+          <img src="https://i.pravatar.cc/100" alt="compliance" />
+          <h4>Compliance Officer</h4>
+        </div>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Privacy Audits</h3>
+          <h1>14</h1>
+        </div>
+        <div class="card">
+          <h3>Consent Records</h3>
+          <h1>8,204</h1>
+        </div>
+        <div class="card">
+          <h3>Retention Policies</h3>
+          <h1>12</h1>
+        </div>
+        <div class="card">
+          <h3>Compliance Status</h3>
+          <h1>Good</h1>
+        </div>
+      </div>
+
+      <div class="analytics">
+        <div class="chart-box">
+          <h2>Compliance Checklist (placeholder)</h2>
+          <div style="margin-top: 12px">
+            <div class="alert alert-success">Access reviews scheduled</div>
+            <div class="alert alert-warning">
+              Consent template migration pending
+            </div>
+            <div class="alert alert-danger">
+              Data retention mismatch flagged (placeholder)
+            </div>
+          </div>
+          <button
+            class="btn"
+            style="width: 100%; margin-top: 14px"
+            onclick="alert('Run compliance scan (placeholder)')"
+          >
+            <i class="fa fa-shield-heart"></i> Run Compliance Scan
+          </button>
+        </div>
+        <div class="activity-box">
+          <h2>Patient Data Access Reviews</h2>
+          <div class="table-container" style="margin-top: 12px">
+            <table>
+              <thead>
+                <tr>
+                  <th>Reviewer</th>
+                  <th>Area</th>
+                  <th>Last Review</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>ICT</td>
+                  <td>Research Data</td>
+                  <td>2026-05-20</td>
+                  <td><span class="status active">OK</span></td>
+                </tr>
+                <tr>
+                  <td>Compliance</td>
+                  <td>Patient Records</td>
+                  <td>2026-05-12</td>
+                  <td><span class="status pending">Review</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

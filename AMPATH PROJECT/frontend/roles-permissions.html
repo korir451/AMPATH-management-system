@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roles & Permissions - AMPATH SOC</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body { background:#050b16; color:#e6f0ff; }
+      .sidebar { background:#06112a; border-right:1px solid rgba(255,255,255,0.08); }
+      .glass { background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:16px; backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); box-shadow:0 12px 40px rgba(0,0,0,0.4); }
+      .btn { background:rgba(255,202,40,0.18); border:1px solid rgba(255,202,40,0.35); color:#fff; }
+      table { color:#e6f0ff; }
+      table th { background:rgba(255,255,255,0.06); color:rgba(230,240,255,0.9); }
+      table td { border-bottom-color:rgba(255,255,255,0.08); }
+    </style>
+  </head>
+  <body>
+    <div class="sidebar">
+      <h2>AMPATH SOC</h2>
+      <ul>
+        <li><a href="security-dashboard.html"><i class="fa fa-shield-halved"></i><span>Dashboard</span></a></li>
+        <li><a href="roles-permissions.html" class="active"><i class="fa fa-user-lock"></i><span>Roles & Permissions</span></a></li>
+        <li><a href="users-management.html"><i class="fa fa-users"></i><span>Users</span></a></li>
+        <li><a href="audit-logs.html"><i class="fa fa-scroll"></i><span>Audit Logs</span></a></li>
+        <li><a href="threat-monitoring.html"><i class="fa fa-bolt"></i><span>Threat Monitoring</span></a></li>
+        <li><a href="infrastructure-monitoring.html"><i class="fa fa-server"></i><span>Infrastructure</span></a></li>
+        <li><a href="surveillance-center.html"><i class="fa fa-video"></i><span>Surveillance</span></a></li>
+        <li><a href="emergency-security.html"><i class="fa fa-bell"></i><span>Emergency Controls</span></a></li>
+        <li><a href="compliance-center.html"><i class="fa fa-shield-heart"></i><span>Compliance</span></a></li>
+        <li><a href="backup-recovery.html"><i class="fa fa-database"></i><span>Backup & DR</span></a></li>
+        <li><a href="security-analytics.html"><i class="fa fa-chart-line"></i><span>Analytics</span></a></li>
+        <li><a href="security-reports.html"><i class="fa fa-file-export"></i><span>Reports</span></a></li>
+      </ul>
+    </div>
+
+    <div class="main-content">
+      <div class="glass" style="padding:16px; margin-bottom:14px;">
+        <div style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; align-items:flex-start;">
+          <div>
+            <h2 style="margin:0 0 6px 0;">RBAC Console</h2>
+            <div style="color:rgba(230,240,255,0.75); font-size:13px;">
+              Role hierarchy, department access, temporary permissions and approval flows (placeholders).
+            </div>
+          <div style="display:flex; gap:10px; flex-wrap:wrap;">
+            <div class="soc-pill" style="background:rgba(30,136,229,0.18); border:1px solid rgba(30,136,229,0.35); padding:10px 14px; border-radius:999px; font-weight:600; font-size:13px;">
+              <i class="fa fa-lock"></i> Change Control
+            </div>
+            <div class="soc-pill" style="background:rgba(255,193,7,0.16); border:1px solid rgba(255,193,7,0.35); padding:10px 14px; border-radius:999px; font-weight:600; font-size:13px; color:#ffe9a0;">
+              <i class="fa fa-user-clock"></i> 3 Access Requests
+            </div>
+        </div>
+
+      <div style="display:grid; grid-template-columns:1.1fr 0.9fr; gap:14px;">
+        <div class="glass" style="padding:16px;">
+          <h3 style="margin:0 0 10px 0; font-size:16px;">Roles</h3>
+          <div class="table-container" style="margin:0; background:transparent; box-shadow:none; padding:0;">
+            <table>
+              <thead>
+                <tr>
+                  <th>Role</th>
+                  <th>Level</th>
+                  <th>Departments</th>
+                  <th>Risk</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Super Admin</td><td><span class="status active">Top</span></td><td>All</td><td><span class="status pending">Critical</span></td></tr>
+                <tr><td>System Admin</td><td><span class="status active">High</span></td><td>ICT</td><td><span class="status pending">High</span></td></tr>
+                <tr><td>ICT Officer</td><td><span class="status active">Med</span></td><td>Infrastructure</td><td><span class="status pending">Medium</span></td></tr>
+                <tr><td>Security Officer</td><td><span class="status pending">Med</span></td><td>Security</td><td><span class="status pending">Medium</span></td></tr>
+                <tr><td>HR / Finance Officer</td><td><span class="status pending">Low</span></td><td>Admin</td><td><span class="status active">Low</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div style="margin-top:14px; display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+            <button class="btn" style="width:100%;" onclick="alert('Add role (placeholder)')">
+              <i class="fa fa-plus"></i> Add Role
+            </button>
+            <button class="btn" style="width:100%;" onclick="alert('Export RBAC (placeholder)')">
+              <i class="fa fa-file-export"></i> Export
+            </button>
+          </div>
+
+        <div class="glass" style="padding:16px;">
+          <h3 style="margin:0 0 10px 0; font-size:16px;">Permissions Editor</h3>
+
+          <label style="display:block; font-size:14px; margin:10px 0 6px 0; color:rgba(230,240,255,0.85);">Select Role</label>
+          <select style="width:100%; padding:12px; border-radius:12px; border:1px solid rgba(255,255,255,0.16); background:rgba(255,255,255,0.06); color:#e6f0ff; outline:none;">
+            <option>Super Admin</option>
+            <option>System Admin</option>
+            <option>ICT Officer</option>
+            <option>Security Officer</option>
+            <option>HR Officer</option>
+          </select>
+
+          <label style="display:block; font-size:14px; margin:10px 0 6px 0; color:rgba(230,240,255,0.85);">Manage Permissions</label>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+            <label style="display:flex; gap:10px; align-items:center; padding:10px; border-radius:12px; border:1px solid rgba(255,255,255,0.12); background:rgba(255,255,255,0.04);">
+              <input type="checkbox" checked /> Read
+            </label>
+            <label style="display:flex; gap:10px; align-items:center; padding:10px; border-radius:12px; border:1px solid rgba(255,255,255,0.12); background:rgba(255,255,255,0.04);">
+              <input type="checkbox" checked /> Write
+            </label>
+            <label style="display:flex; gap:10px; align-items:center; padding:10px; border-radius:12px; border:1px solid rgba(255,255,255,0.12); background:rgba(255,255,255,0.04);">
+              <input type="checkbox" /> Edit
+            </label>
+            <label style="display:flex; gap:10px; align-items:center; padding:10px; border-radius:12px; border:1px solid rgba(255,255,255,0.12); background:rgba(255,255,255,0.04);">
+              <input type="checkbox" /> Delete
+            </label>
+            <label style="display:flex; gap:10px; align-items:center; padding:10px; border-radius:12px; border:1px solid rgba(255,255,255,0.12); background:rgba(255,255,255,0.04);">
+              <input type="checkbox" /> Approve
+            </label>
+            <label style="display:flex; gap:10px; align-items:center; padding:10px; border-radius:12px; border:1px solid rgba(255,255,255,0.12); background:rgba(255,255,255,0.04);">
+              <input type="checkbox" /> Export
+            </label>
+            <label style="display:flex; gap:10px; align-items:center; padding:10px; border-radius:12px; border:1px solid rgba(255,255,255,0.12); background:rgba(255,255,255,0.04);">
+              <input type="checkbox" /> Audit
+            </label>
+            <label style="display:flex; gap:10px; align-items:center; padding:10px; border-radius:12px; border:1px solid rgba(255,255,255,0.12); background:rgba(255,255,255,0.04);">
+              <input type="checkbox" /> Manage Users
+            </label>
+          </div>
+
+          <div style="margin-top:14px; display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+            <button class="btn" style="width:100%;" onclick="alert('Request temporary access (placeholder)')">
+              <i class="fa fa-user-clock"></i> Temp Access
+            </button>
+            <button class="btn" style="width:100%;" onclick="alert('Save RBAC changes (placeholder)')">
+              <i class="fa fa-save"></i> Save
+            </button>
+          </div>
+
+          <div style="margin-top:12px;" class="alert alert-warning">
+            Multi-level approval workflow is a placeholder in this UI.
+          </div>
+      </div>
+  </body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incident Report Form - AMPATH</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+
+    <div class="hero-text">
+
+        <h1>Incident Reporting Form</h1>
+
+        <p>
+            Report hospital incidents quickly and accurately. All reports are logged, tracked,
+            and reviewed by the administration team.
+        </p>
+
+        <button class="btn">
+            <i class="fa fa-shield-halved"></i> Reporting Guidelines
+        </button>
+
+    </div>
+
+    <div class="hero-image">
+        <img src="https://cdn-icons-png.flaticon.com/512/564/564619.png" alt="incident">
+    </div>
+
+</div>
+
+<!-- FORM SECTION -->
+<div class="analytics">
+
+    <!-- FORM -->
+    <div class="chart-box">
+
+        <h2>Submit Incident Report</h2>
+
+        <form style="margin-top:15px;">
+
+            <input type="text" placeholder="Reporter Full Name"
+                style="width:100%;padding:10px;margin-bottom:10px;" required>
+
+            <input type="text" placeholder="Staff ID / Patient ID"
+                style="width:100%;padding:10px;margin-bottom:10px;" required>
+
+            <select style="width:100%;padding:10px;margin-bottom:10px;" required>
+                <option value="">Select Department</option>
+                <option>Emergency</option>
+                <option>Radiology</option>
+                <option>Laboratory</option>
+                <option>Nursing</option>
+                <option>Pharmacy</option>
+                <option>Administration</option>
+            </select>
+
+            <select style="width:100%;padding:10px;margin-bottom:10px;" required>
+                <option value="">Incident Type</option>
+                <option>Medical Error</option>
+                <option>Equipment Failure</option>
+                <option>Patient Safety Issue</option>
+                <option>Security Issue</option>
+                <option>System Failure</option>
+                <option>Other</option>
+            </select>
+
+            <select style="width:100%;padding:10px;margin-bottom:10px;" required>
+                <option value="">Severity Level</option>
+                <option>Low</option>
+                <option>Medium</option>
+                <option>High</option>
+                <option>Critical</option>
+            </select>
+
+            <textarea placeholder="Detailed description of the incident"
+                rows="5" style="width:100%;padding:10px;margin-bottom:10px;" required></textarea>
+
+            <input type="file" style="width:100%;margin-bottom:10px;" accept="image/*,.pdf,.doc,.docx">
+
+            <input type="text" placeholder="Location (Ward / Room / Unit)"
+                style="width:100%;padding:10px;margin-bottom:10px;" required>
+
+            <label style="font-size:14px;">
+                <input type="checkbox" required>
+                I confirm that this report is accurate and submitted in good faith
+            </label>
+
+            <br><br>
+
+            <button class="btn" style="width:100%;">
+                <i class="fa fa-paper-plane"></i> Submit Incident
+            </button>
+
+        </form>
+
+    </div>
+
+    <!-- INFO -->
+    <div class="activity-box">
+
+        <h2>Reporting Rules</h2>
+        <br>
+
+        <div class="alert alert-success">
+            All incidents are confidential and logged securely
+        </div>
+
+        <div class="alert alert-warning">
+            False reporting may lead to disciplinary action
+        </div>
+
+        <div class="alert alert-danger">
+            Critical incidents must be reported immediately
+        </div>
+
+    </div>
+
+</div>
+
+<!-- QUICK STATS -->
+<div class="cards">
+
+    <div class="card">
+        <h3>Reports Today</h3>
+        <h1>12</h1>
+    </div>
+
+    <div class="card">
+        <h3>Pending Review</h3>
+        <h1>5</h1>
+    </div>
+
+    <div class="card">
+        <h3>Resolved</h3>
+        <h1>30</h1>
+    </div>
+
+    <div class="card">
+        <h3>Critical Cases</h3>
+        <h1>2</h1>
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+
+    <div class="footer-grid">
+
+        <div>
+            <h3>AMPATH Incident System</h3>
+            <p>Ensuring safety, accountability, and rapid response to all hospital incidents.</p>
+        </div>
+
+        <div>
+            <h3>Quick Links</h3>
+            <a href="staff-incidents.html">Incident Dashboard</a>
+            <a href="employee-dashboard.html">Staff Portal</a>
+            <a href="contact.html">Support</a>
+            <a href="index.html">Home</a>
+        </div>
+
+        <div>
+            <h3>Emergency Contacts</h3>
+            <a href="#">Emergency: 911</a>
+            <a href="#">Security Office</a>
+            <a href="#">Hospital Admin</a>
+        </div>
+
+    </div>
+
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Incident Command Center - AMPATH</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <h2>AMPATH incidents</h2>
+
+      <ul>
+        <li>
+          <a href="employee-dashboard.html">
+            <i class="fa fa-house"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="incident-dashboard.html" class="active">
+            <i class="fa fa-triangle-exclamation"></i>
+            <span>Incident Command</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="appointments.html">
+            <i class="fa fa-calendar"></i>
+            <span>Appointments</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="patients.html">
+            <i class="fa fa-user-injured"></i>
+            <span>Patients</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="attendance.html">
+            <i class="fa fa-clock"></i>
+            <span>Attendance</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="tasks.html">
+            <i class="fa fa-list-check"></i>
+            <span>Tasks</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="department_radiology.html">
+            <i class="fa fa-building"></i>
+            <span>Departments</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="employee_login.html">
+            <i class="fa fa-right-from-bracket"></i>
+            <span>Logout</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+      <div class="topbar">
+        <div>
+          <h2>Incident Command Center</h2>
+          <p style="color: gray; font-size: 14px">
+            Centralized, hospital-grade monitoring & response
+          </p>
+        </div>
+        <div class="profile">
+          <img src="https://i.pravatar.cc/100" alt="staff" />
+          <h4>Incident Commander</h4>
+        </div>
+      </div>
+
+      <!-- KPI CARDS -->
+      <div class="cards">
+        <div class="card">
+          <h3>Critical Incidents</h3>
+          <h1>2</h1>
+        </div>
+        <div class="card">
+          <h3>Open Cases</h3>
+          <h1>6</h1>
+        </div>
+        <div class="card">
+          <h3>Under Investigation</h3>
+          <h1>3</h1>
+        </div>
+        <div class="card">
+          <h3>Resolved Cases</h3>
+          <h1>10</h1>
+        </div>
+        <div class="card">
+          <h3>Incidents Today</h3>
+          <h1>4</h1>
+        </div>
+        <div class="card">
+          <h3>Emergency Alerts</h3>
+          <h1>1</h1>
+        </div>
+      </div>
+
+      <!-- SEARCH + FILTER + QUICK ACTIONS -->
+      <div class="analytics">
+        <div class="chart-box">
+          <h2>Live Monitoring</h2>
+          <p class="muted" style="margin-top: 8px; line-height: 1.6">
+            Search, filter, and review incoming incidents from all departments.
+            (UI placeholder for backend integration)
+          </p>
+
+          <div style="margin-top: 14px">
+            <div
+              style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 12px"
+            >
+              <div>
+                <label class="muted" style="font-size: 13px">Search</label>
+                <input
+                  type="text"
+                  placeholder="Reference / Title / Department"
+                  style="
+                    width: 100%;
+                    padding: 12px;
+                    margin-top: 8px;
+                    margin-bottom: 0;
+                    border-radius: 12px;
+                    border: 1px solid #dbe3ee;
+                    outline: none;
+                  "
+                />
+              </div>
+
+              <div>
+                <label class="muted" style="font-size: 13px">Status</label>
+                <select
+                  style="
+                    width: 100%;
+                    padding: 12px;
+                    margin-top: 8px;
+                    margin-bottom: 0;
+                    border-radius: 12px;
+                    border: 1px solid #dbe3ee;
+                    outline: none;
+                  "
+                >
+                  <option value="">All</option>
+                  <option>NEW</option>
+                  <option>OPEN</option>
+                  <option>UNDER INVESTIGATION</option>
+                  <option>ESCALATED</option>
+                  <option>ACTION TAKEN</option>
+                  <option>RESOLVED</option>
+                  <option>CLOSED</option>
+                </select>
+              </div>
+            </div>
+
+            <div style="height: 10px"></div>
+
+            <div>
+              <label class="muted" style="font-size: 13px">Department</label>
+              <select
+                style="
+                  width: 100%;
+                  padding: 12px;
+                  margin-top: 8px;
+                  margin-bottom: 10px;
+                  border-radius: 12px;
+                  border: 1px solid #dbe3ee;
+                  outline: none;
+                "
+              >
+                <option value="">All Departments</option>
+                <option>Radiology</option>
+                <option>Laboratory</option>
+                <option>Pharmacy</option>
+                <option>Emergency</option>
+                <option>Nursing</option>
+                <option>ICT</option>
+                <option>Finance</option>
+                <option>Security</option>
+                <option>Research</option>
+                <option>Administration</option>
+                <option>Patient Services</option>
+                <option>Ambulance Operations</option>
+              </select>
+
+              <button class="btn" style="width: 100%; margin-top: 8px">
+                <i class="fa fa-magnifying-glass"></i> Apply Filters
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="activity-box">
+          <h2>Emergency Alerts Panel</h2>
+          <br />
+          <div class="alert alert-danger">
+            Critical alert: ICU security breach placeholder
+          </div>
+          <div class="alert alert-warning">
+            Warning: ICT system instability detected
+          </div>
+          <div class="alert alert-success">
+            Resolved: Radiology equipment calibrated
+          </div>
+
+          <div style="margin-top: 16px">
+            <h2 style="margin-bottom: 8px">Quick Response Actions</h2>
+            <div style="display: grid; grid-template-columns: 1fr; gap: 10px">
+              <a
+                href="emergency-alerts.html"
+                class="btn"
+                style="text-align: center; text-decoration: none; width: 100%"
+              >
+                <i class="fa fa-bell"></i> Open Emergency Broadcast
+              </a>
+              <a
+                href="incident-reports.html"
+                class="btn"
+                style="
+                  text-align: center;
+                  text-decoration: none;
+                  width: 100%;
+                  background: #dbe3ee;
+                  color: #0b3d91;
+                "
+              >
+                <i class="fa fa-file-lines"></i> View Incident Reports
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- HEATMAP + ACTIVITY -->
+      <div class="analytics">
+        <div class="chart-box">
+          <h2>Incident Heatmaps (Placeholder)</h2>
+          <p class="muted" style="margin-top: 8px; line-height: 1.6">
+            Department risk heatmap will be visualized here once backend
+            incident stats are connected.
+          </p>
+          <div class="alert alert-warning" style="margin-top: 14px">
+            Heatmap chart placeholder
+          </div>
+        </div>
+
+        <div class="activity-box">
+          <h2>Live Activity Feed</h2>
+          <br />
+          <div class="alert alert-success">
+            [10:12] Incident RESOLVED in Laboratory
+          </div>
+          <div class="alert alert-warning">
+            [10:05] INCIDENT ESCALATED in ICT
+          </div>
+          <div class="alert alert-danger">
+            [09:58] NEW emergency incident reported in Security
+          </div>
+          <div class="alert alert-success">
+            [09:40] ACTION TAKEN logged for Radiology
+          </div>
+        </div>
+      </div>
+
+      <!-- INCIDENT TABLE -->
+      <div class="table-container">
+        <h2>Recent Reports</h2>
+        <p class="muted" style="margin-top: 8px">
+          Click a row to open incident details (modal placeholder)
+        </p>
+        <br />
+
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Reference</th>
+              <th>Department</th>
+              <th>Type</th>
+              <th>Severity</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2026-05-20</td>
+              <td>INC-2026-00041</td>
+              <td>Radiology</td>
+              <td>Equipment Failure</td>
+              <td><span class="status pending">High</span></td>
+              <td><span class="status active">RESOLVED</span></td>
+              <td>
+                <a
+                  href="incident-details.html"
+                  class="btn"
+                  style="padding: 8px 12px; background: #0b3d91"
+                >
+                  View
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>2026-05-19</td>
+              <td>INC-2026-00040</td>
+              <td>ICT</td>
+              <td>ICT/System Failure</td>
+              <td><span class="status pending">Critical</span></td>
+              <td><span class="status pending">UNDER INVESTIGATION</span></td>
+              <td>
+                <a
+                  href="incident-details.html"
+                  class="btn"
+                  style="padding: 8px 12px"
+                  >View</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>2026-05-18</td>
+              <td>INC-2026-00039</td>
+              <td>Security</td>
+              <td>Security Threat</td>
+              <td><span class="status pending">High</span></td>
+              <td><span class="status pending">ESCALATED</span></td>
+              <td>
+                <a
+                  href="incident-details.html"
+                  class="btn"
+                  style="padding: 8px 12px"
+                  >View</a
+                >
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

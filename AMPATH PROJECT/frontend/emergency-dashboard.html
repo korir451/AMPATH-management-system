@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emergency Command Center - AMPATH</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <h2>AMPATH EMERGENCY</h2>
+
+      <ul>
+        <li>
+          <a href="employee-dashboard.html">
+            <i class="fa fa-house"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="emergency-dashboard.html" class="active">
+            <i class="fa fa-truck-medical"></i>
+            <span>Emergency Command</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="emergency-alerts.html">
+            <i class="fa fa-bell"></i>
+            <span>Emergency Alerts</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="ambulance-tracking.html">
+            <i class="fa fa-location-dot"></i>
+            <span>Ambulance Tracking</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="icu-monitoring.html">
+            <i class="fa fa-heart-pulse"></i>
+            <span>ICU Monitoring</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="disaster-response.html">
+            <i class="fa fa-people-arrows"></i>
+            <span>Disaster Response</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="emergency-patients.html">
+            <i class="fa fa-user-injured"></i>
+            <span>Emergency Patients</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="emergency-hotline.html">
+            <i class="fa fa-phone"></i>
+            <span>Hotline</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="employee_login.html">
+            <i class="fa fa-right-from-bracket"></i>
+            <span>Logout</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+      <div class="topbar">
+        <div>
+          <h2>Emergency Command Center</h2>
+          <p style="color: gray; font-size: 14px">
+            Real-time crisis operations: alerts, ICU monitoring, ambulance
+            coordination.
+          </p>
+        </div>
+
+        <div class="profile">
+          <img src="https://i.pravatar.cc/100" alt="emergency" />
+          <h4>Emergency Ops</h4>
+        </div>
+      </div>
+
+      <!-- KPI CARDS -->
+      <div class="cards">
+        <div class="card">
+          <h3>Active Emergencies</h3>
+          <h1>3</h1>
+        </div>
+
+        <div class="card">
+          <h3>Ambulances Active</h3>
+          <h1>7</h1>
+        </div>
+
+        <div class="card">
+          <h3>ICU Occupancy</h3>
+          <h1>78%</h1>
+        </div>
+
+        <div class="card">
+          <h3>Emergency Cases Today</h3>
+          <h1>24</h1>
+        </div>
+
+        <div class="card">
+          <h3>Critical Alerts</h3>
+          <h1>2</h1>
+        </div>
+
+        <div class="card">
+          <h3>Pending Emergency Responses</h3>
+          <h1>5</h1>
+        </div>
+
+        <div class="card">
+          <h3>Emergency Staff On Duty</h3>
+          <h1>18</h1>
+        </div>
+
+        <div class="card">
+          <h3>High Risk Incidents</h3>
+          <h1>4</h1>
+        </div>
+      </div>
+
+      <!-- LIVE PANELS -->
+      <div class="analytics">
+        <div class="chart-box">
+          <h2>Live Emergency Monitoring</h2>
+          <p class="muted" style="margin-top: 8px; line-height: 1.6">
+            UI placeholder for incident escalation + emergency workflow
+            integration.
+          </p>
+
+          <div style="margin-top: 14px">
+            <label class="muted" style="font-size: 13px">Emergency Feed</label>
+            <div style="margin-top: 10px">
+              <div class="alert alert-danger">
+                [CRITICAL] Mass casualty response started
+              </div>
+              <div class="alert alert-warning">
+                [HIGH] ICU queue rising - triage required
+              </div>
+              <div class="alert alert-success">
+                [RESOLVED] Ambulance pickup completed
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top: 16px">
+            <h2 style="margin-bottom: 10px">Quick Emergency Actions</h2>
+            <div
+              style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px"
+            >
+              <a
+                href="emergency-alerts.html"
+                class="btn"
+                style="
+                  text-align: center;
+                  text-decoration: none;
+                  background: #b00020;
+                "
+              >
+                <i class="fa fa-volume-high"></i> Broadcast Alert
+              </a>
+              <a
+                href="ambulance-dashboard.html"
+                class="btn"
+                style="
+                  text-align: center;
+                  text-decoration: none;
+                  background: #dbe3ee;
+                  color: #0b3d91;
+                "
+              >
+                <i class="fa fa-clipboard-check"></i> Dispatch Ambulance
+              </a>
+              <a
+                href="icu-monitoring.html"
+                class="btn"
+                style="
+                  text-align: center;
+                  text-decoration: none;
+                  background: #dbe3ee;
+                  color: #0b3d91;
+                "
+              >
+                <i class="fa fa-bed"></i> Request ICU Support
+              </a>
+              <a
+                href="disaster-response.html"
+                class="btn"
+                style="
+                  text-align: center;
+                  text-decoration: none;
+                  background: #dbe3ee;
+                  color: #0b3d91;
+                "
+              >
+                <i class="fa fa-fire-extinguisher"></i> Activate Disaster Plan
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="activity-box">
+          <h2>High Priority Alerts</h2>
+          <br />
+
+          <div class="alert alert-danger">
+            Critical alert: ICU bed overflow risk
+          </div>
+          <div class="alert alert-warning">
+            Emergency response pending: Ambulance arrival confirmation
+          </div>
+          <div class="alert alert-warning">
+            Security integration required: restricted area incident
+          </div>
+          <div class="alert alert-success">
+            Department coordination: Radiology stabilization underway
+          </div>
+
+          <div style="margin-top: 16px">
+            <h2 style="margin-bottom: 8px">Emergency Response Team Status</h2>
+            <div class="cards" style="padding: 0; margin-top: 12px">
+              <div class="card">
+                <h3>Medical Team</h3>
+                <h1>On Duty</h1>
+              </div>
+              <div class="card">
+                <h3>Ambulance Team</h3>
+                <h1>Active</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="analytics">
+        <div class="chart-box">
+          <h2>Ambulance + ICU Overview</h2>
+          <p class="muted" style="margin-top: 8px; line-height: 1.6">
+            Placeholder widgets for GPS routing + ICU bed/ventilator monitoring.
+          </p>
+          <div style="margin-top: 14px">
+            <div class="alert alert-danger">Ambulance ETA: 12m (critical)</div>
+            <div class="alert alert-warning">ICU beds available: 3</div>
+            <div class="alert alert-success">Ventilators available: 5</div>
+          </div>
+        </div>
+
+        <div class="activity-box">
+          <h2>Emergency Notifications Feed</h2>
+          <br />
+          <div class="alert alert-success">
+            [10:20] Team assigned to Stabilization Zone
+          </div>
+          <div class="alert alert-warning">
+            [10:12] ICU triage queue updated
+          </div>
+          <div class="alert alert-danger">
+            [10:05] Incident escalated to Emergency Officer
+          </div>
+          <div class="alert alert-success">
+            [09:58] Ambulance status changed: En Route
+          </div>
+        </div>
+      </div>
+
+      <div class="table-container">
+        <h2>Department Emergency Coordination</h2>
+        <p class="muted" style="margin-top: 8px">
+          Placeholder table for department readiness and escalation links.
+        </p>
+        <br />
+
+        <table>
+          <thead>
+            <tr>
+              <th>Department</th>
+              <th>Emergency Lead</th>
+              <th>Status</th>
+              <th>Coordination</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Radiology</td>
+              <td>Dr. Njeri</td>
+              <td><span class="status active">Ready</span></td>
+              <td>
+                <a
+                  href="department_radiology.html"
+                  class="btn"
+                  style="padding: 8px 12px"
+                  >Open</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>Laboratory</td>
+              <td>Lab Unit</td>
+              <td><span class="status pending">Queue Active</span></td>
+              <td>
+                <a
+                  href="department_radiology.html"
+                  class="btn"
+                  style="padding: 8px 12px"
+                  >Open</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>Pharmacy</td>
+              <td>Pharm Lead</td>
+              <td><span class="status pending">Supplying</span></td>
+              <td>
+                <a
+                  href="department_radiology.html"
+                  class="btn"
+                  style="padding: 8px 12px"
+                  >Open</a
+                >
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

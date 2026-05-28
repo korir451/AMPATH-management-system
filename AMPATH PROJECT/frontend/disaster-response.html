@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Disaster Response - AMPATH</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <h2>AMPATH EMERGENCY</h2>
+      <ul>
+        <li>
+          <a href="emergency-dashboard.html">
+            <i class="fa fa-house"></i>
+            <span>Emergency Command</span>
+          </a>
+        </li>
+        <li>
+          <a href="disaster-response.html" class="active">
+            <i class="fa fa-people-arrows"></i>
+            <span>Disaster Response</span>
+          </a>
+        </li>
+        <li>
+          <a href="emergency-patients.html">
+            <i class="fa fa-user-injured"></i>
+            <span>Emergency Patients</span>
+          </a>
+        </li>
+        <li>
+          <a href="emergency-alerts.html">
+            <i class="fa fa-bell"></i>
+            <span>Emergency Alerts</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+      <div class="topbar">
+        <div>
+          <h2>Disaster Management System</h2>
+          <p style="color: gray; font-size: 14px">
+            Plans, drills, communications, and resource allocation (placeholders)
+          </p>
+        </div>
+        <div class="profile">
+          <img src="https://i.pravatar.cc/100" alt="disaster" />
+          <h4>Disaster Coordinator</h4>
+        </div>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Active Disaster Plans</h3>
+          <h1>1</h1>
+        </div>
+        <div class="card">
+          <h3>Mass Casualty Incidents</h3>
+          <h1>2</h1>
+        </div>
+        <div class="card">
+          <h3>Evacuation Status</h3>
+          <h1>Ready</h1>
+        </div>
+        <div class="card">
+          <h3>Emergency Shelters</h3>
+          <h1>3</h1>
+        </div>
+      </div>
+
+      <div class="analytics">
+        <div class="chart-box">
+          <h2>Response Plans</h2>
+          <p class="muted" style="margin-top: 8px; line-height: 1.6">
+            Choose a scenario and review department actions.
+          </p>
+
+          <div style="margin-top: 14px">
+            <label class="muted" style="font-size: 13px">Disaster Scenario</label>
+            <select
+              style="width: 100%; padding: 12px; margin-top: 8px; margin-bottom: 10px; border-radius: 12px; border: 1px solid #dbe3ee; outline: none"
+            >
+              <option>Fire Emergency</option>
+              <option>Mass Casualty (MCI)</option>
+              <option>Epidemic Response</option>
+              <option>Hazmat / Chemical Spill</option>
+              <option>Other</option>
+            </select>
+
+            <button class="btn" style="width: 100%; background: #0b3d91; color: #fff">
+              <i class="fa fa-list-check"></i> Open Response Checklist
+            </button>
+          </div>
+
+          <div style="margin-top: 16px">
+            <div class="alert alert-danger">Fire Response: Shutoff + evacuation coordination</div>
+            <div class="alert alert-warning">Mass Casualty: Triage zones + overflow routing</div>
+            <div class="alert alert-success">Epidemic: Isolation + communication triggers</div>
+          </div>
+        </div>
+
+        <div class="activity-box">
+          <h2>Disaster Communications</h2>
+          <br />
+          <div class="alert alert-success">Broadcast center: Online (placeholder)</div>
+          <div class="alert alert-warning">Department-wide messages: Ready to send</div>
+          <div class="alert alert-danger">Crisis hotline: Active</div>
+
+          <div style="margin-top: 16px">
+            <h2 style="margin-bottom: 8px">Communication Actions</h2>
+            <div style="display: grid; grid-template-columns: 1fr; gap: 10px">
+              <button class="btn" style="background:#b00020; color:#fff">
+                <i class="fa fa-bullhorn"></i> Send Emergency Broadcast
+              </button>
+              <button class="btn" style="background:#dbe3ee; color:#0b3d91">
+                <i class="fa fa-envelope"></i> Notify Stakeholders (placeholder)
+              </button>
+              <button class="btn" style="background:#dbe3ee; color:#0b3d91">
+                <i class="fa fa-video"></i> Video Briefing Placeholder
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="table-container">
+        <h2>Resource Allocation Tracking</h2>
+        <p class="muted" style="margin-top: 8px">Inventory + equipment allocation placeholders</p>
+        <br />
+        <table>
+          <thead>
+            <tr>
+              <th>Resource</th>
+              <th>Status</th>
+              <th>Allocated To</th>
+              <th>Reorder</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Oxygen Supplies</td>
+              <td><span class="status pending">Low</span></td>
+              <td>ICU + Triage</td>
+              <td>
+                <button class="btn" style="padding: 8px 12px">Request</button>
+              </td>
+            </tr>
+            <tr>
+              <td>ICU Beds</td>
+              <td><span class="status active">Sufficient</span></td>
+              <td>Critical Care Wing</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>Ambulance Teams</td>
+              <td><span class="status active">Ready</span></td>
+              <td>Pre-hospital + Pickup</td>
+              <td>—</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
+

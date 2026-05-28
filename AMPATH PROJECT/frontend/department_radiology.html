@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radiology Department - AMPATH</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+    <h2>AMPATH</h2>
+
+    <ul>
+        <li>
+            <a href="employee-dashboard.html">
+                <i class="fa fa-house"></i>
+                <span>Dashboard</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="departments.html" class="active">
+                <i class="fa fa-hospital"></i>
+                <span>Departments</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="radiology.html" class="active">
+                <i class="fa fa-x-ray"></i>
+                <span>Radiology</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="patients.html">
+                <i class="fa fa-user-injured"></i>
+                <span>Patients</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="appointments.html">
+                <i class="fa fa-calendar"></i>
+                <span>Appointments</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="employee-login.html">
+                <i class="fa fa-right-from-bracket"></i>
+                <span>Logout</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main-content">
+
+    <!-- TOPBAR -->
+    <div class="topbar">
+
+        <div>
+            <h2>Radiology Department</h2>
+            <p style="color:gray;font-size:14px;">
+                Imaging, X-rays, CT scans & diagnostic reports
+            </p>
+        </div>
+
+        <div class="profile">
+            <img src="https://i.pravatar.cc/100" alt="radiology">
+            <h4>Radiology Unit</h4>
+        </div>
+
+    </div>
+
+    <!-- KPI CARDS -->
+    <div class="cards">
+
+        <div class="card">
+            <h3>Today’s Scans</h3>
+            <h1>24</h1>
+        </div>
+
+        <div class="card">
+            <h3>X-Ray Requests</h3>
+            <h1>10</h1>
+        </div>
+
+        <div class="card">
+            <h3>CT Scans</h3>
+            <h1>6</h1>
+        </div>
+
+        <div class="card">
+            <h3>MRI Pending</h3>
+            <h1>3</h1>
+        </div>
+
+    </div>
+
+    <!-- ANALYTICS -->
+    <div class="analytics">
+
+        <!-- IMAGING OVERVIEW -->
+        <div class="chart-box">
+
+            <h2>Imaging Activity</h2>
+
+            <div class="chart-placeholder"></div>
+
+            <p style="margin-top:15px;color:gray;">
+                Weekly radiology workload and scan distribution.
+            </p>
+
+        </div>
+
+        <!-- ALERTS -->
+        <div class="activity-box">
+
+            <h2>Radiology Alerts</h2>
+            <br>
+
+            <div class="alert alert-warning">
+                CT scanner maintenance due
+            </div>
+
+            <div class="alert alert-danger">
+                Critical scan required for ICU patient
+            </div>
+
+            <div class="alert alert-success">
+                MRI results successfully uploaded
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- PATIENT IMAGING TABLE -->
+    <div class="table-container">
+
+        <h2>Recent Imaging Requests</h2>
+
+        <br>
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Patient Name</th>
+                    <th>Scan Type</th>
+                    <th>Requested By</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>John Doe</td>
+                    <td>X-Ray Chest</td>
+                    <td>Dr. Smith</td>
+                    <td><span class="status active">Completed</span></td>
+                </tr>
+
+                <tr>
+                    <td>Jane Smith</td>
+                    <td>CT Scan</td>
+                    <td>Dr. Kelvin</td>
+                    <td><span class="status pending">Processing</span></td>
+                </tr>
+
+                <tr>
+                    <td>Mark Lee</td>
+                    <td>MRI Brain</td>
+                    <td>Dr. Anita</td>
+                    <td><span class="status pending">Pending</span></td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+</body>
+</html>

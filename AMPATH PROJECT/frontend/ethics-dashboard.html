@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ethics Dashboard - AMPATH</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <h2>AMPATH RESEARCH</h2>
+      <ul>
+        <li>
+          <a href="research-dashboard.html"
+            ><i class="fa fa-chart-line"></i><span>Command Center</span></a
+          >
+        </li>
+        <li>
+          <a href="research-proposal.html"
+            ><i class="fa fa-flask"></i><span>Proposals</span></a
+          >
+        </li>
+        <li>
+          <a href="ethics-dashboard.html" class="active"
+            ><i class="fa fa-shield-halved"></i><span>Ethics</span></a
+          >
+        </li>
+        <li>
+          <a href="clinical-trials.html"
+            ><i class="fa fa-microscope"></i><span>Clinical Trials</span></a
+          >
+        </li>
+        <li>
+          <a href="publications.html"
+            ><i class="fa fa-book"></i><span>Publications</span></a
+          >
+        </li>
+        <li>
+          <a href="research-documents.html"
+            ><i class="fa fa-folder-open"></i><span>Documents</span></a
+          >
+        </li>
+        <li>
+          <a href="grants-management.html"
+            ><i class="fa fa-hand-holding-dollar"></i><span>Grants</span></a
+          >
+        </li>
+        <li>
+          <a href="research-analytics.html"
+            ><i class="fa fa-chart-pie"></i><span>Analytics</span></a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <div class="main-content">
+      <div class="topbar">
+        <div>
+          <h2>Ethics Committee Dashboard</h2>
+          <p style="color: gray; font-size: 14px">
+            Reviewer assignment, approvals/rejections, revision tracking,
+            compliance monitoring.
+          </p>
+        </div>
+        <div class="profile">
+          <img src="https://i.pravatar.cc/100" alt="ethics reviewer" />
+          <h4>Ethics Committee</h4>
+        </div>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Proposals Submitted</h3>
+          <h1>23</h1>
+        </div>
+        <div class="card">
+          <h3>Awaiting Reviewer Assignment</h3>
+          <h1>6</h1>
+        </div>
+        <div class="card">
+          <h3>Approved Studies</h3>
+          <h1>14</h1>
+        </div>
+        <div class="card">
+          <h3>Revision Required</h3>
+          <h1>4</h1>
+        </div>
+      </div>
+
+      <div class="analytics">
+        <div class="chart-box">
+          <h2>Ethics Review Queue</h2>
+          <div class="table-container" style="margin-top: 12px">
+            <table>
+              <thead>
+                <tr>
+                  <th>IRB Ref</th>
+                  <th>Proposal</th>
+                  <th>Stage</th>
+                  <th>Meeting</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>IRB-2026-014</td>
+                  <td>R-PRO-012</td>
+                  <td>Reviewer Assigned</td>
+                  <td>2026-05-28</td>
+                  <td><span class="status pending">Pending</span></td>
+                </tr>
+                <tr>
+                  <td>IRB-2026-010</td>
+                  <td>R-PRO-009</td>
+                  <td>Revision Requested</td>
+                  <td>2026-05-30</td>
+                  <td><span class="status pending">Revision</span></td>
+                </tr>
+                <tr>
+                  <td>IRB-2026-008</td>
+                  <td>R-PRO-004</td>
+                  <td>Approved</td>
+                  <td>2026-05-20</td>
+                  <td><span class="status active">Approved</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div style="margin-top: 14px">
+            <a
+              href="ethics-review.html"
+              class="btn"
+              style="display: inline-block; text-decoration: none"
+            >
+              <i class="fa fa-gavel"></i> Open Ethics Review Workflow
+            </a>
+          </div>
+        </div>
+
+        <div class="activity-box">
+          <h2>Compliance & Signatures</h2>
+          <p style="color: gray; font-size: 13px; line-height: 1.6">
+            Track compliance verification and digital approval signatures.
+          </p>
+
+          <div style="margin-top: 12px">
+            <div class="alert alert-success">
+              Digital signatures enabled (placeholder)
+            </div>
+            <div class="alert alert-warning">
+              Revision compliance checks pending
+            </div>
+            <div class="alert alert-danger">
+              Non-compliance flagged for consent template v1
+            </div>
+          </div>
+
+          <div style="margin-top: 14px">
+            <h2>Ethics Meeting Schedules</h2>
+            <ul style="margin-top: 10px; padding-left: 18px; color: #2d3748">
+              <li>2026-05-28: Main Ethics Committee</li>
+              <li>2026-06-03: Clinical Trial Review Session</li>
+              <li>2026-06-10: Monitoring & Compliance Workshop</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

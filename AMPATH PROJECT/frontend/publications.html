@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Publications - AMPATH</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <h2>AMPATH RESEARCH</h2>
+      <ul>
+        <li>
+          <a href="research-dashboard.html"
+            ><i class="fa fa-chart-line"></i><span>Command Center</span></a
+          >
+        </li>
+        <li>
+          <a href="research-proposal.html"
+            ><i class="fa fa-flask"></i><span>Proposals</span></a
+          >
+        </li>
+        <li>
+          <a href="ethics-dashboard.html"
+            ><i class="fa fa-shield-halved"></i><span>Ethics</span></a
+          >
+        </li>
+        <li>
+          <a href="clinical-trials.html"
+            ><i class="fa fa-microscope"></i><span>Clinical Trials</span></a
+          >
+        </li>
+        <li>
+          <a href="publications.html" class="active"
+            ><i class="fa fa-book"></i><span>Publications</span></a
+          >
+        </li>
+        <li>
+          <a href="research-documents.html"
+            ><i class="fa fa-folder-open"></i><span>Documents</span></a
+          >
+        </li>
+        <li>
+          <a href="grants-management.html"
+            ><i class="fa fa-hand-holding-dollar"></i><span>Grants</span></a
+          >
+        </li>
+        <li>
+          <a href="research-analytics.html"
+            ><i class="fa fa-chart-pie"></i><span>Analytics</span></a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <div class="main-content">
+      <div class="topbar">
+        <div>
+          <h2>Publication Management</h2>
+          <p style="color: gray; font-size: 14px">
+            Upload publications, track status, manage journals/conferences, and
+            provide a download center.
+          </p>
+        </div>
+        <div class="profile">
+          <img src="https://i.pravatar.cc/100" alt="author" />
+          <h4>Research Author</h4>
+        </div>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Journal Articles</h3>
+          <h1>12</h1>
+        </div>
+        <div class="card">
+          <h3>Conference Submissions</h3>
+          <h1>5</h1>
+        </div>
+        <div class="card">
+          <h3>Citations (placeholder)</h3>
+          <h1>140</h1>
+        </div>
+        <div class="card">
+          <h3>Repository Downloads (placeholder)</h3>
+          <h1>320</h1>
+        </div>
+      </div>
+
+      <div class="analytics">
+        <div class="chart-box">
+          <h2>Publication Repository</h2>
+          <div class="table-container" style="margin-top: 12px">
+            <table>
+              <thead>
+                <tr>
+                  <th>Type</th>
+                  <th>Title</th>
+                  <th>Journal / Venue</th>
+                  <th>Status</th>
+                  <th>DOI</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Journal Article</td>
+                  <td>Outcomes of Community Screening</td>
+                  <td>AMPATH Journal of Health</td>
+                  <td><span class="status active">Published</span></td>
+                  <td>doi: TBD</td>
+                </tr>
+                <tr>
+                  <td>Case Study</td>
+                  <td>Hypertension Management Program</td>
+                  <td>Clinical Reports</td>
+                  <td><span class="status pending">Under Review</span></td>
+                  <td>doi: TBD</td>
+                </tr>
+                <tr>
+                  <td>Conference Paper</td>
+                  <td>Digital Health Adoption in Clinics</td>
+                  <td>HealthTech Summit</td>
+                  <td><span class="status pending">Submitted</span></td>
+                  <td>doi: TBD</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div style="margin-top: 14px">
+            <button class="btn" style="width: 100%">
+              <i class="fa fa-upload"></i> Upload Publication (placeholder)
+            </button>
+          </div>
+        </div>
+
+        <div class="activity-box">
+          <h2>Download Center</h2>
+          <p style="color: gray; font-size: 13px; line-height: 1.6">
+            Provide role-based access downloads and track download logs.
+          </p>
+
+          <div style="margin-top: 12px">
+            <label style="font-size: 14px">Publication Category</label>
+            <select
+              style="
+                width: 100%;
+                padding: 12px;
+                border-radius: 12px;
+                border: 1px solid #dbe3ee;
+                outline: none;
+                margin-bottom: 10px;
+              "
+            >
+              <option>All Categories</option>
+              <option>Journal Articles</option>
+              <option>Conference Papers</option>
+              <option>Case Studies</option>
+              <option>Clinical Reports</option>
+              <option>Research Summaries</option>
+              <option>Thesis & Dissertations</option>
+            </select>
+
+            <label style="font-size: 14px"
+              >Repository Search (placeholder)</label
+            >
+            <input
+              type="text"
+              placeholder="Search by title / author / year"
+              style="
+                width: 100%;
+                padding: 12px;
+                border-radius: 12px;
+                border: 1px solid #dbe3ee;
+                outline: none;
+                margin-bottom: 10px;
+              "
+            />
+
+            <button class="btn" style="width: 100%">
+              <i class="fa fa-download"></i> Download Selected (placeholder)
+            </button>
+
+            <div class="alert alert-warning" style="margin-top: 12px">
+              Citation & analytics view available in Research Analytics.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

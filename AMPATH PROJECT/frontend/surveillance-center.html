@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Surveillance Center - AMPATH SOC</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <h2>AMPATH SOC</h2>
+      <ul>
+        <li>
+          <a href="security-dashboard.html"
+            ><i class="fa fa-shield-halved"></i><span>Dashboard</span></a
+          >
+        </li>
+        <li>
+          <a href="roles-permissions.html"
+            ><i class="fa fa-user-lock"></i><span>Roles & Permissions</span></a
+          >
+        </li>
+        <li>
+          <a href="users-management.html"
+            ><i class="fa fa-users"></i><span>Users</span></a
+          >
+        </li>
+        <li>
+          <a href="audit-logs.html"
+            ><i class="fa fa-scroll"></i><span>Audit Logs</span></a
+          >
+        </li>
+        <li>
+          <a href="threat-monitoring.html"
+            ><i class="fa fa-bolt"></i><span>Threat Monitoring</span></a
+          >
+        </li>
+        <li>
+          <a href="infrastructure-monitoring.html"
+            ><i class="fa fa-server"></i><span>Infrastructure</span></a
+          >
+        </li>
+        <li>
+          <a href="surveillance-center.html" class="active"
+            ><i class="fa fa-video"></i><span>Surveillance</span></a
+          >
+        </li>
+        <li>
+          <a href="emergency-security.html"
+            ><i class="fa fa-bell"></i><span>Emergency Controls</span></a
+          >
+        </li>
+        <li>
+          <a href="compliance-center.html"
+            ><i class="fa fa-shield-heart"></i><span>Compliance</span></a
+          >
+        </li>
+        <li>
+          <a href="backup-recovery.html"
+            ><i class="fa fa-database"></i><span>Backup & DR</span></a
+          >
+        </li>
+        <li>
+          <a href="security-analytics.html"
+            ><i class="fa fa-chart-line"></i><span>Analytics</span></a
+          >
+        </li>
+        <li>
+          <a href="security-reports.html"
+            ><i class="fa fa-file-export"></i><span>Reports</span></a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <div class="main-content">
+      <div class="topbar">
+        <div>
+          <h2>CCTV & Surveillance Center</h2>
+          <p style="color: gray; font-size: 14px">
+            Camera feed placeholders, restricted zones and motion alerts.
+          </p>
+        </div>
+        <div class="profile">
+          <img src="https://i.pravatar.cc/100" alt="cctv" />
+          <h4>Security Ops</h4>
+        </div>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Cameras Online</h3>
+          <h1>38</h1>
+        </div>
+        <div class="card">
+          <h3>Restricted Zones</h3>
+          <h1>6</h1>
+        </div>
+        <div class="card">
+          <h3>Motion Alerts</h3>
+          <h1>3</h1>
+        </div>
+        <div class="card">
+          <h3>Visitor Tracking</h3>
+          <h1>Enabled</h1>
+        </div>
+      </div>
+
+      <div class="analytics">
+        <div class="chart-box">
+          <h2>Live Camera Tiles (placeholder)</h2>
+          <div
+            style="
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 12px;
+              margin-top: 12px;
+            "
+          >
+            <div class="glass" style="padding: 14px">
+              <i class="fa fa-video" style="font-size: 26px"></i>
+              <div style="margin-top: 8px">Ward Entry Gate</div>
+              <div class="alert alert-warning" style="margin-top: 10px">
+                Motion detected
+              </div>
+            </div>
+            <div class="glass" style="padding: 14px">
+              <i class="fa fa-video" style="font-size: 26px"></i>
+              <div style="margin-top: 8px">Radiology Corridor</div>
+              <div class="alert alert-success" style="margin-top: 10px">
+                No incidents
+              </div>
+            </div>
+            <div class="glass" style="padding: 14px">
+              <i class="fa fa-video" style="font-size: 26px"></i>
+              <div style="margin-top: 8px">Data Center Door</div>
+              <div class="alert alert-danger" style="margin-top: 10px">
+                Access anomaly
+              </div>
+            </div>
+            <div class="glass" style="padding: 14px">
+              <i class="fa fa-video" style="font-size: 26px"></i>
+              <div style="margin-top: 8px">Emergency Pickup</div>
+              <div class="alert alert-warning" style="margin-top: 10px">
+                Queue forming
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="activity-box">
+          <h2>Incident Footage (placeholder)</h2>
+          <p style="color: gray; font-size: 13px; line-height: 1.6">
+            Link security events to camera evidence and export snapshots.
+          </p>
+          <div style="margin-top: 12px">
+            <div class="alert alert-success">Snapshot export ready</div>
+            <div class="alert alert-warning">
+              Evidence retention schedule pending
+            </div>
+          </div>
+          <button
+            class="btn"
+            style="width: 100%; margin-top: 14px"
+            onclick="alert('Open footage timeline (placeholder)')"
+          >
+            <i class="fa fa-scroll"></i> Open Timeline
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ambulance Tracking - AMPATH</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <h2>AMPATH EMERGENCY</h2>
+
+      <ul>
+        <li>
+          <a href="emergency-dashboard.html">
+            <i class="fa fa-house"></i>
+            <span>Emergency Command</span>
+          </a>
+        </li>
+        <li>
+          <a href="ambulance-dashboard.html">
+            <i class="fa fa-ambulance"></i>
+            <span>Ambulance Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="ambulance-tracking.html" class="active">
+            <i class="fa fa-location-dot"></i>
+            <span>Ambulance Tracking</span>
+          </a>
+        </li>
+        <li>
+          <a href="icu-monitoring.html">
+            <i class="fa fa-heart-pulse"></i>
+            <span>ICU Monitoring</span>
+          </a>
+        </li>
+        <li>
+          <a href="emergency-hotline.html">
+            <i class="fa fa-phone"></i>
+            <span>Hotline</span>
+          </a>
+        </li>
+        <li>
+          <a href="employee_login.html">
+            <i class="fa fa-right-from-bracket"></i>
+            <span>Logout</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+      <div class="topbar">
+        <div>
+          <h2>Ambulance Tracking</h2>
+          <p style="color: gray; font-size: 14px">
+            Live tracking placeholders (GPS integration) + dispatch state.
+          </p>
+        </div>
+        <div class="profile">
+          <img src="https://i.pravatar.cc/100" alt="tracking" />
+          <h4>GPS Operations</h4>
+        </div>
+      </div>
+
+      <div class="analytics">
+        <div class="chart-box">
+          <h2>Live Vehicle Map</h2>
+          <p class="muted" style="margin-top: 8px; line-height: 1.6">
+            Placeholder map. Connect backend to stream ambulance GPS updates.
+          </p>
+
+          <div class="alert alert-warning" style="margin-top: 14px">
+            Map placeholder (GPS markers for AMB-001 / AMB-014 / AMB-027)
+          </div>
+
+          <div style="margin-top: 16px">
+            <label class="muted" style="font-size: 13px">Select Ambulance</label>
+            <select
+              style="width: 100%; padding: 12px; margin-top: 8px; margin-bottom: 10px; border-radius: 12px; border: 1px solid #dbe3ee; outline: none"
+            >
+              <option value="">All</option>
+              <option>AMB-001</option>
+              <option>AMB-014</option>
+              <option>AMB-027</option>
+            </select>
+
+            <button class="btn" style="width: 100%; background: #0b3d91; color: white">
+              <i class="fa fa-location-arrow"></i> Refresh Live Positions
+            </button>
+          </div>
+        </div>
+
+        <div class="activity-box">
+          <h2>Dispatch Queue</h2>
+          <br />
+          <div class="alert alert-danger">AMB-027 • Critical pickup • ETA 9m</div>
+          <div class="alert alert-warning">AMB-014 • En Route • ETA 12m</div>
+          <div class="alert alert-success">AMB-001 • Returning • ETA 6m</div>
+
+          <div style="margin-top: 16px">
+            <h2 style="margin-bottom: 8px">Emergency Pickup Request</h2>
+            <input
+              type="text"
+              placeholder="Pickup Location"
+              style="width: 100%; padding: 12px; border-radius: 12px; border: 1px solid #dbe3ee; outline: none; margin-bottom: 10px"
+            />
+            <input
+              type="text"
+              placeholder="Destination (AMPATH ICU / OPD / Ward)"
+              style="width: 100%; padding: 12px; border-radius: 12px; border: 1px solid #dbe3ee; outline: none; margin-bottom: 10px"
+            />
+            <select
+              style="width: 100%; padding: 12px; border-radius: 12px; border: 1px solid #dbe3ee; outline: none; margin-bottom: 10px"
+            >
+              <option>Priority Level</option>
+              <option>Critical</option>
+              <option>High</option>
+              <option>Medium</option>
+              <option>Low</option>
+            </select>
+
+            <button class="btn" style="width: 100%; background: #b00020; color: white">
+              <i class="fa fa-ambulance"></i> Request Ambulance Pickup
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="table-container">
+        <h2>Ambulance Activity Logs</h2>
+        <p class="muted" style="margin-top: 8px">Recent GPS and dispatch events (placeholder)</p>
+        <br />
+
+        <table>
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Ambulance</th>
+              <th>Status</th>
+              <th>Location</th>
+              <th>ETA</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>10:25</td>
+              <td>AMB-014</td>
+              <td><span class="status active">En Route</span></td>
+              <td>Ward 3 • Reception Gate</td>
+              <td>12m</td>
+            </tr>
+            <tr>
+              <td>10:12</td>
+              <td>AMB-001</td>
+              <td><span class="status pending">At Scene</span></td>
+              <td>Outpatient • Main Entrance</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>10:05</td>
+              <td>AMB-027</td>
+              <td><span class="status pending">Under Maintenance</span></td>
+              <td>Garage Bay 2</td>
+              <td>—</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
+

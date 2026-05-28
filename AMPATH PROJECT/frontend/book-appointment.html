@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Appointment - AMPATH</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <h2>BOOK APPOINTMENT</h2>
+      <ul>
+        <li><a href="appointments-dashboard.html"><i class="fa fa-calendar-check"></i><span>Dashboard</span></a></li>
+        <li><a href="book-appointment.html" class="active"><i class="fa fa-plus"></i><span>Book</span></a></li>
+        <li><a href="patient-appointments.html"><i class="fa fa-user"></i><span>My Appointments</span></a></li>
+        <li><a href="queue-management.html"><i class="fa fa-list-ol"></i><span>Queue</span></a></li>
+        <li><a href="telemedicine.html"><i class="fa fa-video"></i><span>Telemedicine</span></a></li>
+      </ul>
+    </div>
+
+    <div class="main-content">
+      <div class="topbar">
+        <div>
+          <h2>Appointment Booking</h2>
+          <p style="color: gray; font-size: 14px">Backend-ready booking form (UI placeholders)</p>
+        </div>
+        <div class="profile">
+          <img src="https://i.pravatar.cc/100" alt="patient" />
+          <h4>Patient</h4>
+        </div>
+      </div>
+
+      <div class="grid" style="grid-template-columns: 1.1fr 0.9fr; gap: 18px">
+        <div class="card">
+          <h3>Booking Details</h3>
+          <p class="muted">Department, doctor, time, type, insurance and referral notes.</p>
+
+          <label class="muted" style="font-size: 13px">Department</label>
+          <select style="width:100%; padding:12px; border-radius:12px; border:1px solid #dbe3ee; outline:none; margin-top:8px; margin-bottom:10px">
+            <option>Radiology</option>
+            <option>Laboratory</option>
+            <option>Pharmacy</option>
+            <option>Emergency</option>
+            <option>Cardiology</option>
+            <option>Oncology</option>
+            <option>Pediatrics</option>
+            <option>Orthopedics</option>
+            <option>Dental</option>
+            <option>Physiotherapy</option>
+            <option>Surgery</option>
+            <option>Dermatology</option>
+            <option>ICT</option>
+            <option>Finance</option>
+            <option>Research</option>
+            <option>Counseling</option>
+            <option>HIV Services</option>
+            <option>Community Outreach</option>
+            <option>Administration</option>
+          </select>
+
+          <label class="muted" style="font-size: 13px">Doctor / Staff</label>
+          <select style="width:100%; padding:12px; border-radius:12px; border:1px solid #dbe3ee; outline:none; margin-top:8px; margin-bottom:10px">
+            <option>Select doctor</option>
+            <option>Dr. Achieng</option>
+            <option>Dr. Otieno</option>
+            <option>Dr. Njeri</option>
+            <option>Clinic Team</option>
+          </select>
+
+          <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 10px">
+            <div>
+              <label class="muted" style="font-size: 13px">Date</label>
+              <input type="date" style="width:100%; padding:12px; border-radius:12px; border:1px solid #dbe3ee; outline:none; margin-top:8px; margin-bottom:10px" />
+            </div>
+            <div>
+              <label class="muted" style="font-size: 13px">Time</label>
+              <input type="time" style="width:100%; padding:12px; border-radius:12px; border:1px solid #dbe3ee; outline:none; margin-top:8px; margin-bottom:10px" />
+            </div>
+          </div>
+
+          <label class="muted" style="font-size: 13px">Appointment Type</label>
+          <select style="width:100%; padding:12px; border-radius:12px; border:1px solid #dbe3ee; outline:none; margin-top:8px; margin-bottom:10px">
+            <option>Consultation</option>
+            <option>Follow-up</option>
+            <option>Emergency</option>
+            <option>Lab Test</option>
+            <option>Radiology Scan</option>
+            <option>Surgery</option>
+            <option>Therapy Session</option>
+            <option>Counseling</option>
+            <option>Vaccination</option>
+            <option>Research Appointment</option>
+            <option>Telemedicine</option>
+          </select>
+
+          <label class="muted" style="font-size: 13px">Insurance Information</label>
+          <input type="text" placeholder="Insurance Provider / Policy #" style="width:100%; padding:12px; border-radius:12px; border:1px solid #dbe3ee; outline:none; margin-top:8px; margin-bottom:10px" />
+
+          <label class="muted" style="font-size: 13px">Notes / Comments</label>
+          <textarea rows="4" placeholder="Symptoms, referral details, special requests" style="width:100%; padding:12px; border-radius:12px; border:1px solid #dbe3ee; outline:none; margin-top:8px; margin-bottom:10px"></textarea>
+
+          <label class="muted" style="font-size: 13px">Upload Referral Documents</label>
+          <input type="file" style="width:100%; padding:12px; border-radius:12px; border:1px solid #dbe3ee; outline:none; margin-top:8px; margin-bottom:10px" />
+
+          <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 12px">
+            <button class="btn" style="background:#0b3d91; color:white" onclick="alert('Booking request submitted (placeholder)')"><i class="fa fa-save"></i> Confirm Booking</button>
+            <button class="btn" style="background:#dbe3ee; color:#0b3d91" onclick="alert('Telemedicine booking toggled (placeholder)')"><i class="fa fa-video"></i> Telemedicine Option</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Booking Summary</h3>
+          <p class="muted">Preview the workflow status and notifications.</p>
+
+          <div class="alert alert-warning">Workflow: Requested → Pending Approval</div>
+          <div class="alert alert-success">Notifications: email/SMS placeholders</div>
+          <div class="alert alert-danger">Emergency booking: routed to Emergency Ops placeholders</div>
+
+          <h4 style="margin-top:16px">What happens next</h4>
+          <ol>
+            <li>Department checks availability</li>
+            <li>Approval recorded</li>
+            <li>Patient notified with confirmation</li>
+            <li>Check-in and consultation status updated</li>
+            <li>Follow-up booking enabled</li>
+          </ol>
+
+          <button class="btn" style="width:100%; background:#b00020; color:white" onclick="alert('Emergency option selected (placeholder)')">
+            <i class="fa fa-truck-medical"></i> Mark as Emergency
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

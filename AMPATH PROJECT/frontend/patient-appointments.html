@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Patient Appointments - AMPATH</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <h2>PATIENT PORTAL</h2>
+      <ul>
+        <li><a href="appointments-dashboard.html"><i class="fa fa-calendar-check"></i><span>Dashboard</span></a></li>
+        <li><a href="book-appointment.html"><i class="fa fa-plus"></i><span>Book</span></a></li>
+        <li><a href="patient-appointments.html" class="active"><i class="fa fa-user"></i><span>My Appointments</span></a></li>
+        <li><a href="queue-management.html"><i class="fa fa-list-ol"></i><span>Queue</span></a></li>
+      </ul>
+    </div>
+
+    <div class="main-content">
+      <div class="topbar">
+        <div>
+          <h2>My Appointments</h2>
+          <p style="color: gray; font-size: 14px">Reschedule, cancel, reminders and history (placeholders)</p>
+        </div>
+        <div class="profile">
+          <img src="https://i.pravatar.cc/100" alt="patient" />
+          <h4>Patient</h4>
+        </div>
+      </div>
+
+      <div class="table-container">
+        <h2>Upcoming Appointments</h2>
+        <p class="muted" style="margin-top: 8px">Placeholder list with actions.</p>
+        <br />
+
+        <table>
+          <thead>
+            <tr>
+              <th>Appointment ID</th>
+              <th>Date/Time</th>
+              <th>Department</th>
+              <th>Doctor</th>
+              <th>Type</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>APT-10293</td>
+              <td>2026-06-02 09:30</td>
+              <td>Radiology</td>
+              <td>Dr. Achieng</td>
+              <td>Radiology Scan</td>
+              <td><span class="status active">Approved</span></td>
+              <td>
+                <button class="btn" style="padding:8px 12px; background:#0b3d91; color:#fff">Reschedule</button>
+                <button class="btn" style="padding:8px 12px; background:#dbe3ee; color:#0b3d91">Cancel</button>
+              </td>
+            </tr>
+            <tr>
+              <td>APT-10310</td>
+              <td>2026-06-02 13:10</td>
+              <td>Laboratory</td>
+              <td>Lab Team</td>
+              <td>Lab Test</td>
+              <td><span class="status pending">Pending Approval</span></td>
+              <td>
+                <button class="btn" style="padding:8px 12px; background:#dbe3ee; color:#0b3d91">View</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="table-container">
+        <h2>Appointment History</h2>
+        <p class="muted" style="margin-top: 8px">Placeholder historical record.</p>
+        <br />
+        <table>
+          <thead>
+            <tr>
+              <th>Appointment ID</th>
+              <th>Completed At</th>
+              <th>Department</th>
+              <th>Payment</th>
+              <th>Slip</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>APT-09901</td>
+              <td>2026-05-15</td>
+              <td>Emergency</td>
+              <td><span class="status active">Paid</span></td>
+              <td><button class="btn" style="padding:8px 12px; background:#0b3d91; color:#fff">Download</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
+

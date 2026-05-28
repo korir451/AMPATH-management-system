@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ICU Monitoring - AMPATH</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <h2>AMPATH EMERGENCY</h2>
+
+      <ul>
+        <li>
+          <a href="emergency-dashboard.html">
+            <i class="fa fa-house"></i>
+            <span>Emergency Command</span>
+          </a>
+        </li>
+        <li>
+          <a href="ambulance-dashboard.html">
+            <i class="fa fa-ambulance"></i>
+            <span>Ambulance Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="ambulance-tracking.html">
+            <i class="fa fa-location-dot"></i>
+            <span>Ambulance Tracking</span>
+          </a>
+        </li>
+        <li>
+          <a href="icu-monitoring.html" class="active">
+            <i class="fa fa-heart-pulse"></i>
+            <span>ICU Monitoring</span>
+          </a>
+        </li>
+        <li>
+          <a href="emergency-hotline.html">
+            <i class="fa fa-phone"></i>
+            <span>Hotline</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+      <div class="topbar">
+        <div>
+          <h2>ICU & Critical Care Monitoring</h2>
+          <p style="color: gray; font-size: 14px">
+            Occupancy status, bed availability, and critical patient queue (placeholders)
+          </p>
+        </div>
+        <div class="profile">
+          <img src="https://i.pravatar.cc/100" alt="icu" />
+          <h4>ICU Coordinator</h4>
+        </div>
+      </div>
+
+      <!-- ICU OCCUPANCY CARDS -->
+      <div class="cards">
+        <div class="card">
+          <h3>ICU Occupancy</h3>
+          <h1>78%</h1>
+        </div>
+        <div class="card">
+          <h3>Beds Available</h3>
+          <h1>3</h1>
+        </div>
+        <div class="card">
+          <h3>Ventilators</h3>
+          <h1>5</h1>
+        </div>
+        <div class="card">
+          <h3>Oxygen Units</h3>
+          <h1>12</h1>
+        </div>
+      </div>
+
+      <div class="analytics">
+        <div class="chart-box">
+          <h2>Critical Patient Queue</h2>
+          <p class="muted" style="margin-top: 8px; line-height: 1.6">
+            Placeholder table for triage patients waiting for ICU stabilization.
+          </p>
+
+          <div style="margin-top: 14px">
+            <div class="alert alert-danger">Critical: 2 patients waiting</div>
+            <div class="alert alert-warning">High: 4 patients waiting</div>
+            <div class="alert alert-success">Medium/Low: 6 patients queued</div>
+          </div>
+
+          <div style="margin-top: 16px">
+            <h2 style="margin-bottom: 10px">Bed Assignment Actions</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px">
+              <button class="btn" style="background: #0b3d91; color: white">
+                <i class="fa fa-bed"></i> Assign Bed
+              </button>
+              <button class="btn" style="background: #dbe3ee; color: #0b3d91">
+                <i class="fa fa-notes-medical"></i> Review Triage
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="activity-box">
+          <h2>Ventilator & Oxygen Monitoring</h2>
+          <br />
+          <div class="alert alert-warning">Ventilator #3 calibration due</div>
+          <div class="alert alert-success">Oxygen monitoring stable</div>
+          <div class="alert alert-danger">Oxygen supply low warning (placeholder)</div>
+
+          <div style="margin-top: 16px">
+            <h2 style="margin-bottom: 8px">Staff Assignment Monitoring</h2>
+            <div class="alert alert-success">ICU Nurse Shift: Active</div>
+            <div class="alert alert-warning">Respiratory Therapist: On-call</div>
+            <div class="alert alert-success">ICU Doctor: On duty</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="table-container">
+        <h2>ICU Analytics (Placeholder)</h2>
+        <p class="muted" style="margin-top: 8px">
+          Charts for occupancy, ventilator utilization, and response metrics will be added during backend integration.
+        </p>
+
+        <div class="alert alert-warning" style="margin-top: 14px">
+          ICU analytics widget placeholder
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
