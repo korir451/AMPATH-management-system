@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Contact Brian Kipkorir - frontend & web developer."
+    />
+    <title>Contact | Brian Kipkorir</title>
+    <style>
+      :root {
+        --bg: #0b1220;
+        --panel: rgba(30, 41, 59, 0.72);
+        --panelSolid: #1e293b;
+        --text: rgba(255, 255, 255, 0.92);
+        --muted: rgba(255, 255, 255, 0.7);
+        --accent: #22d3ee; /* cyan-400 */
+        --accent2: #60a5fa; /* blue-400 */
+        --ring: rgba(34, 211, 238, 0.35);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      html,
+      body {
+        height: 100%;
+      }
+
+      body {
+        background:
+          radial-gradient(
+            1200px 600px at 10% -10%,
+            rgba(34, 211, 238, 0.18),
+            transparent 60%
+          ),
+          radial-gradient(
+            900px 500px at 90% 0%,
+            rgba(96, 165, 250, 0.14),
+            transparent 55%
+          ),
+          var(--bg);
+        color: var(--text);
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .wrap {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      nav {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        backdrop-filter: blur(10px);
+        background: rgba(17, 24, 39, 0.72);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        padding: 16px 10%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+      }
+
+      .logo {
+        font-size: 22px;
+        font-weight: 800;
+        letter-spacing: 0.2px;
+        color: var(--accent);
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 18px;
+        flex-wrap: wrap;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: var(--text);
+        padding: 8px 10px;
+        border-radius: 10px;
+        transition:
+          background 0.2s ease,
+          color 0.2s ease,
+          transform 0.2s ease;
+      }
+
+      nav a:hover {
+        background: rgba(34, 211, 238, 0.12);
+        color: var(--accent);
+      }
+      nav a:focus-visible {
+        outline: 3px solid var(--ring);
+        outline-offset: 2px;
+      }
+
+      .container {
+        width: min(1100px, 100%);
+        margin: 0 auto;
+        padding: 56px 10%;
+      }
+
+      .page-title {
+        text-align: center;
+        margin-bottom: 22px;
+        font-size: clamp(28px, 3vw, 42px);
+        color: var(--accent);
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 22px;
+        align-items: start;
+      }
+
+      .panel {
+        background: var(--panel);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 18px;
+        padding: 22px;
+        box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+      }
+
+      .lead {
+        color: var(--muted);
+        line-height: 1.7;
+        margin-top: 8px;
+      }
+
+      .field {
+        margin-top: 14px;
+      }
+      label {
+        display: block;
+        font-size: 14px;
+        color: var(--muted);
+        margin-bottom: 8px;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        background: rgba(2, 6, 23, 0.35);
+        color: var(--text);
+        padding: 12px 12px;
+        font-size: 15px;
+        outline: none;
+        transition:
+          border-color 0.2s ease,
+          box-shadow 0.2s ease;
+      }
+
+      textarea {
+        min-height: 120px;
+        resize: vertical;
+      }
+
+      input:focus,
+      textarea:focus {
+        border-color: rgba(34, 211, 238, 0.45);
+        box-shadow: 0 0 0 4px rgba(34, 211, 238, 0.14);
+      }
+
+      .actions {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-top: 18px;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 12px 16px;
+        border-radius: 12px;
+        border: 1px solid rgba(34, 211, 238, 0.35);
+        background: rgba(34, 211, 238, 0.14);
+        color: var(--text);
+        font-weight: 800;
+        text-decoration: none;
+        transition:
+          transform 0.15s ease,
+          background 0.15s ease,
+          border-color 0.15s ease;
+      }
+
+      .btn:hover {
+        transform: translateY(-1px);
+        background: rgba(34, 211, 238, 0.22);
+        border-color: rgba(34, 211, 238, 0.55);
+      }
+      .btn:focus-visible {
+        outline: 3px solid var(--ring);
+        outline-offset: 2px;
+      }
+
+      .btn.primary {
+        background: linear-gradient(
+          135deg,
+          rgba(34, 211, 238, 0.35),
+          rgba(96, 165, 250, 0.25)
+        );
+        border-color: rgba(34, 211, 238, 0.55);
+      }
+
+      .side h3 {
+        color: var(--accent);
+        font-size: 18px;
+      }
+      .side p {
+        color: var(--muted);
+        margin-top: 8px;
+        line-height: 1.7;
+      }
+
+      .list {
+        margin-top: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .item {
+        padding: 12px 14px;
+        border-radius: 14px;
+        background: rgba(2, 6, 23, 0.25);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .item .k {
+        color: var(--muted);
+        font-size: 13px;
+      }
+      .item .v {
+        margin-top: 4px;
+        font-weight: 800;
+        color: var(--text);
+        word-break: break-word;
+      }
+
+      footer {
+        margin-top: auto;
+        background: rgba(17, 24, 39, 0.72);
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        padding: 18px 10%;
+        text-align: center;
+        color: var(--muted);
+      }
+
+      /* Reduced motion */
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          scroll-behavior: auto !important;
+          transition: none !important;
+        }
+      }
+
+      @media (max-width: 900px) {
+        nav {
+          padding: 14px 6%;
+        }
+        .container {
+          padding: 44px 6%;
+        }
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <nav>
+        <div class="logo" aria-label="Brian.dev">Brian.dev</div>
+        <ul aria-label="Primary">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <main class="container" id="contact">
+        <h1 class="page-title">Contact Me</h1>
+
+        <div class="grid">
+          <section class="panel" aria-labelledby="contact-form-title">
+            <h2
+              id="contact-form-title"
+              style="color: var(--accent); font-size: 20px"
+            >
+              Send a message
+            </h2>
+            <p class="lead">
+              Use the form to generate an email draft instantly (no backend
+              required).
+            </p>
+
+            <form id="contactForm" onsubmit="return handleSubmit(event);">
+              <div class="field">
+                <label for="name">Your Name</label>
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  autocomplete="name"
+                  placeholder="e.g., Brian"
+                  required
+                />
+              </div>
+
+              <div class="field">
+                <label for="email">Your Email</label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  placeholder="e.g., you@example.com"
+                  required
+                />
+              </div>
+
+              <div class="field">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="What would you like to build or discuss?"
+                  required
+                ></textarea>
+              </div>
+
+              <div class="actions">
+                <button
+                  class="btn primary"
+                  type="submit"
+                  aria-label="Send email via mailto"
+                >
+                  Send Email
+                  <span aria-hidden="true">↗</span>
+                </button>
+                <a
+                  class="btn"
+                  id="mailtoFallback"
+                  href="mailto:bkipkorir451@gmail.com?subject=Project%20Inquiry"
+                  >Email directly</a
+                >
+              </div>
+            </form>
+
+            <script>
+              function handleSubmit(event) {
+                event.preventDefault();
+                const to = "bkipkorir451@gmail.com";
+                const name = document.getElementById("name").value.trim();
+                const email = document.getElementById("email").value.trim();
+                const message = document.getElementById("message").value.trim();
+
+                const subject = `Portfolio inquiry from ${name}`;
+                const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
+
+                const mailto = `mailto:${encodeURIComponent(to)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                window.location.href = mailto;
+                return false;
+              }
+            </script>
+          </section>
+
+          <aside class="panel side" aria-label="Contact details">
+            <h3>Quick details</h3>
+            <p>Reach out for freelance work, internships, or collaboration.</p>
+
+            <div class="list">
+              <div class="item">
+                <div class="k">Email</div>
+                <div class="v">
+                  <a href="mailto:bkipkorir451@gmail.com"
+                    >bkipkorir451@gmail.com</a
+                  >
+                </div>
+              </div>
+              <div class="item">
+                <div class="k">Location</div>
+                <div class="v">Remote / Based in Kenya</div>
+              </div>
+              <div class="item">
+                <div class="k">Response time</div>
+                <div class="v">Typically within 24–48 hours</div>
+              </div>
+            </div>
+
+            <p style="margin-top: 16px; font-size: 13px">
+              Tip: replace <strong>brian@example.com</strong> with your real
+              email anytime.
+            </p>
+          </aside>
+        </div>
+      </main>
+
+      <footer>
+        <p>© 2026 Brian Kipkorir | All Rights Reserved</p>
+      </footer>
+    </div>
+  </body>
+</html>

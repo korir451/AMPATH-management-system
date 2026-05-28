@@ -1,0 +1,644 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Projects by Brian Kipkorir - frontend and web development work."
+    />
+    <title>Projects | Brian Kipkorir</title>
+
+    <meta property="og:title" content="Projects | Brian Kipkorir" />
+    <meta
+      property="og:description"
+      content="Frontend & web development projects by Brian Kipkorir."
+    />
+    <meta property="og:type" content="website" />
+
+    <style>
+      :root {
+        --bg: #0b1220;
+        --panel: rgba(30, 41, 59, 0.72);
+        --text: rgba(255, 255, 255, 0.92);
+        --muted: rgba(255, 255, 255, 0.7);
+        --accent: #22d3ee;
+        --accent2: #60a5fa;
+        --ring: rgba(34, 211, 238, 0.35);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        background:
+          radial-gradient(
+            1200px 600px at 10% -10%,
+            rgba(34, 211, 238, 0.18),
+            transparent 60%
+          ),
+          radial-gradient(
+            900px 500px at 90% 0%,
+            rgba(96, 165, 250, 0.14),
+            transparent 55%
+          ),
+          var(--bg);
+        color: var(--text);
+        scroll-behavior: smooth;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      nav {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        backdrop-filter: blur(10px);
+        background: rgba(17, 24, 39, 0.72);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        padding: 16px 10%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+      }
+
+      .logo {
+        font-size: 22px;
+        font-weight: 800;
+        letter-spacing: 0.2px;
+        color: var(--accent);
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 18px;
+        flex-wrap: wrap;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: var(--text);
+        padding: 8px 10px;
+        border-radius: 10px;
+        transition:
+          background 0.2s ease,
+          color 0.2s ease,
+          transform 0.2s ease;
+      }
+
+      nav a:hover {
+        background: rgba(34, 211, 238, 0.12);
+        color: var(--accent);
+      }
+      nav a:focus-visible {
+        outline: 3px solid var(--ring);
+        outline-offset: 2px;
+      }
+
+      .container {
+        width: min(1100px, 100%);
+        margin: 0 auto;
+        padding: 56px 10%;
+      }
+
+      .page-title {
+        text-align: center;
+        margin-bottom: 22px;
+        font-size: clamp(28px, 3vw, 42px);
+        color: var(--accent);
+      }
+
+      .toolbar {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 22px;
+      }
+
+      .input {
+        width: min(420px, 100%);
+        border-radius: 14px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        background: rgba(2, 6, 23, 0.35);
+        color: var(--text);
+        padding: 12px 12px;
+        outline: none;
+      }
+      .input:focus {
+        border-color: rgba(34, 211, 238, 0.45);
+        box-shadow: 0 0 0 4px rgba(34, 211, 238, 0.14);
+      }
+
+      .pill-btn {
+        cursor: pointer;
+        padding: 10px 14px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        background: rgba(2, 6, 23, 0.25);
+        color: rgba(255, 255, 255, 0.86);
+        font-weight: 800;
+        transition:
+          transform 0.15s ease,
+          background 0.15s ease,
+          border-color 0.15s ease;
+        user-select: none;
+      }
+
+      .pill-btn:hover {
+        transform: translateY(-1px);
+        border-color: rgba(34, 211, 238, 0.45);
+      }
+
+      .pill-btn.active {
+        background: rgba(34, 211, 238, 0.14);
+        border-color: rgba(34, 211, 238, 0.55);
+        color: var(--text);
+      }
+
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 16px;
+        align-items: stretch;
+      }
+
+      .project-card {
+        background: rgba(30, 41, 59, 0.72);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 18px;
+        padding: 18px;
+        transition:
+          transform 0.2s ease,
+          border-color 0.2s ease,
+          background 0.2s ease;
+        display: flex;
+        flex-direction: column;
+        min-height: 270px;
+      }
+
+      .project-card:hover {
+        transform: translateY(-6px);
+        border-color: rgba(34, 211, 238, 0.35);
+        background: rgba(30, 41, 59, 0.88);
+      }
+
+      .thumb {
+        width: 100%;
+        border-radius: 14px;
+        padding: 16px;
+        background: linear-gradient(
+          135deg,
+          rgba(34, 211, 238, 0.18),
+          rgba(96, 165, 250, 0.1)
+        );
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        margin-bottom: 14px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .thumb svg {
+        width: 60px;
+        height: 60px;
+      }
+
+      .project-card h2 {
+        color: var(--accent);
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+      .project-card p {
+        color: var(--muted);
+        line-height: 1.7;
+        margin-bottom: 12px;
+      }
+
+      .meta {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin-bottom: 12px;
+      }
+
+      .pill {
+        font-size: 12px;
+        padding: 7px 10px;
+        border-radius: 999px;
+        background: rgba(2, 6, 23, 0.28);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: rgba(255, 255, 255, 0.86);
+        font-weight: 700;
+      }
+
+      .details {
+        margin-top: auto;
+      }
+
+      .row {
+        display: flex;
+        gap: 12px;
+        margin-bottom: 10px;
+        flex-wrap: wrap;
+      }
+
+      ul {
+        padding-left: 18px;
+      }
+      li {
+        color: rgba(255, 255, 255, 0.82);
+        margin: 6px 0;
+        line-height: 1.5;
+      }
+
+      .actions {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-top: 14px;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 12px 14px;
+        border-radius: 12px;
+        border: 1px solid rgba(34, 211, 238, 0.35);
+        background: rgba(34, 211, 238, 0.14);
+        color: var(--text);
+        font-weight: 900;
+        text-decoration: none;
+        transition:
+          transform 0.15s ease,
+          background 0.15s ease,
+          border-color 0.15s ease;
+      }
+      .btn:hover {
+        transform: translateY(-1px);
+        background: rgba(34, 211, 238, 0.22);
+        border-color: rgba(34, 211, 238, 0.55);
+      }
+      .btn:focus-visible {
+        outline: 3px solid var(--ring);
+        outline-offset: 2px;
+      }
+
+      .btn.secondary {
+        background: rgba(2, 6, 23, 0.25);
+        border-color: rgba(255, 255, 255, 0.12);
+      }
+
+      footer {
+        margin-top: 30px;
+        background: rgba(17, 24, 39, 0.72);
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        padding: 18px 10%;
+        text-align: center;
+        color: var(--muted);
+      }
+
+      @media (max-width: 900px) {
+        nav {
+          padding: 14px 6%;
+        }
+        .container {
+          padding: 44px 6%;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          scroll-behavior: auto !important;
+          transition: none !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="logo" aria-label="Brian.dev">Brian.dev</div>
+      <ul aria-label="Primary">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="projects.html" aria-current="page">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main class="container">
+      <h1 class="page-title">Projects</h1>
+
+      <div class="toolbar" aria-label="Project filters">
+        <input
+          class="input"
+          id="searchInput"
+          type="search"
+          placeholder="Search projects (e.g., dashboard, web app, UI)"
+          aria-label="Search projects"
+        />
+        <div
+          class="pill-btn active"
+          data-filter="all"
+          role="button"
+          tabindex="0"
+        >
+          All
+        </div>
+        <div class="pill-btn" data-filter="web" role="button" tabindex="0">
+          Web Apps
+        </div>
+        <div
+          class="pill-btn"
+          data-filter="dashboard"
+          role="button"
+          tabindex="0"
+        >
+          Dashboards
+        </div>
+      </div>
+
+      <section
+        class="projects-grid"
+        id="projectsGrid"
+        aria-label="Projects list"
+      >
+        <article
+          class="project-card"
+          data-tags="web dashboard hospital"
+          data-category="web"
+        >
+          <div class="thumb" aria-hidden="true">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7 3v18"
+                stroke="rgba(255,255,255,.85)"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <path
+                d="M3 12h18"
+                stroke="rgba(255,255,255,.85)"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <path
+                d="M18 7v14"
+                stroke="rgba(255,255,255,.85)"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+          </div>
+
+          <h2>Hospital Management System</h2>
+          <p>
+            A healthcare system concept with staff, patients, billing, and
+            analytics modules focused on clarity and speed.
+          </p>
+
+          <div class="meta">
+            <span class="pill">Web App</span>
+            <span class="pill">Modules</span>
+            <span class="pill">Analytics</span>
+          </div>
+
+          <div class="details">
+            <div class="row">
+              <div style="min-width: 180px">
+                <strong style="color: var(--accent)">Role</strong>
+                <div style="color: var(--muted); margin-top: 6px">
+                  Frontend UI + system flows
+                </div>
+              </div>
+            </div>
+            <ul>
+              <li>Patient & staff overview screens</li>
+              <li>Billing + reporting dashboard</li>
+              <li>Responsive table/card layouts</li>
+            </ul>
+
+            <div class="actions">
+              <a class="btn" href="contact.html"
+                >Request case study <span aria-hidden="true">↗</span></a
+              >
+              <a class="btn secondary" href="index.html#projects"
+                >Back to home</a
+              >
+            </div>
+          </div>
+        </article>
+
+        <article
+          class="project-card"
+          data-tags="web portfolio ui"
+          data-category="web"
+        >
+          <div class="thumb" aria-hidden="true">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4 6h16"
+                stroke="rgba(255,255,255,.85)"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <path
+                d="M4 12h10"
+                stroke="rgba(255,255,255,.85)"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <path
+                d="M4 18h16"
+                stroke="rgba(255,255,255,.85)"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+          </div>
+
+          <h2>Portfolio Website</h2>
+          <p>
+            A modern portfolio foundation with a strong design system,
+            responsive layout, and clean navigation across pages.
+          </p>
+
+          <div class="meta">
+            <span class="pill">HTML</span>
+            <span class="pill">CSS</span>
+            <span class="pill">UX</span>
+          </div>
+
+          <div class="details">
+            <div class="row">
+              <div style="min-width: 180px">
+                <strong style="color: var(--accent)">Role</strong>
+                <div style="color: var(--muted); margin-top: 6px">
+                  Design + frontend implementation
+                </div>
+              </div>
+            </div>
+            <ul>
+              <li>Accessible components & focus states</li>
+              <li>Reusable styling patterns</li>
+              <li>Project preview cards and clear CTAs</li>
+            </ul>
+
+            <div class="actions">
+              <a class="btn" href="index.html"
+                >View layout <span aria-hidden="true">→</span></a
+              >
+              <a class="btn secondary" href="contact.html"
+                >Hire me <span aria-hidden="true">↗</span></a
+              >
+            </div>
+          </div>
+        </article>
+
+        <article
+          class="project-card"
+          data-tags="dashboard analytics data"
+          data-category="dashboard"
+        >
+          <div class="thumb" aria-hidden="true">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4 19V5"
+                stroke="rgba(255,255,255,.85)"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <path
+                d="M7 15l4-4 4 2 4-6"
+                stroke="rgba(255,255,255,.85)"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+
+          <h2>Analytics Dashboard</h2>
+          <p>
+            A dashboard concept for reports, charts, and performance
+            metrics—designed for quick scanning and decision-making.
+          </p>
+
+          <div class="meta">
+            <span class="pill">Dashboard</span>
+            <span class="pill">Insights</span>
+            <span class="pill">Data UI</span>
+          </div>
+
+          <div class="details">
+            <div class="row">
+              <div style="min-width: 180px">
+                <strong style="color: var(--accent)">Role</strong>
+                <div style="color: var(--muted); margin-top: 6px">
+                  UI structure for data visualization
+                </div>
+              </div>
+            </div>
+            <ul>
+              <li>Charts-ready layout and KPIs</li>
+              <li>Consistent spacing and typography</li>
+              <li>Responsive grid for data panels</li>
+            </ul>
+
+            <div class="actions">
+              <a class="btn" href="contact.html"
+                >Discuss dashboard <span aria-hidden="true">↗</span></a
+              >
+              <a class="btn secondary" href="projects.html#">Explore more</a>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2026 Brian Kipkorir | All Rights Reserved</p>
+    </footer>
+
+    <script>
+      (function () {
+        const grid = document.getElementById("projectsGrid");
+        const cards = Array.from(grid.querySelectorAll(".project-card"));
+        const search = document.getElementById("searchInput");
+        const filterButtons = Array.from(
+          document.querySelectorAll(".pill-btn"),
+        );
+
+        let activeFilter = "all";
+
+        function normalize(s) {
+          return (s || "").toLowerCase().trim();
+        }
+
+        function apply() {
+          const q = normalize(search ? search.value : "");
+          cards.forEach((card) => {
+            const category = card.getAttribute("data-category");
+            const tags = normalize(card.getAttribute("data-tags"));
+            const matchesFilter =
+              activeFilter === "all" ? true : category === activeFilter;
+            const matchesSearch =
+              q.length === 0
+                ? true
+                : normalize(card.querySelector("h2")?.textContent).includes(
+                    q,
+                  ) ||
+                  tags.includes(q) ||
+                  normalize(card.innerText).includes(q);
+
+            card.style.display = matchesFilter && matchesSearch ? "" : "none";
+          });
+        }
+
+        filterButtons.forEach((btn) => {
+          const setActive = () => {
+            filterButtons.forEach((b) => b.classList.remove("active"));
+            btn.classList.add("active");
+            activeFilter = btn.getAttribute("data-filter") || "all";
+            apply();
+          };
+          btn.addEventListener("click", setActive);
+          btn.addEventListener("keydown", (e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              setActive();
+            }
+          });
+        });
+
+        if (search) {
+          search.addEventListener("input", apply);
+        }
+
+        apply();
+      })();
+    </script>
+  </body>
+</html>
