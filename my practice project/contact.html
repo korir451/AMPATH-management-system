@@ -10,21 +10,23 @@
     <title>Contact | Brian Kipkorir</title>
     <style>
       :root {
-        --bg: #0b1220;
-        --panel: rgba(30, 41, 59, 0.72);
+        --bg: #0b1120;
+        --panel: rgba(30, 41, 59, 0.72); /* Cards/Navbar: #1e293b */
         --panelSolid: #1e293b;
-        --text: rgba(255, 255, 255, 0.92);
-        --muted: rgba(255, 255, 255, 0.7);
-        --accent: #22d3ee; /* cyan-400 */
-        --accent2: #60a5fa; /* blue-400 */
-        --ring: rgba(34, 211, 238, 0.35);
+        --text: #f8fafc;
+        --muted: #cbd5e1;
+        --accent: #38bdf8; /* Primary Accent */
+        --accent2: #818cf8; /* Secondary Accent */
+        --ring: rgba(56, 189, 248, 0.35);
       }
+
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap");
 
       * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        font-family: Arial, sans-serif;
+        font-family: "Poppins", sans-serif;
       }
 
       html,
@@ -127,7 +129,11 @@
       }
 
       .panel {
-        background: var(--panel);
+        background: linear-gradient(
+          135deg,
+          rgba(30, 41, 59, 0.78),
+          rgba(17, 24, 39, 0.45)
+        );
         border: 1px solid rgba(255, 255, 255, 0.08);
         border-radius: 18px;
         padding: 22px;
